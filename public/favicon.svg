@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="70" height="70">
+	<style>
+		#antlers { fill: #000000;}
+		@media (prefers-color-scheme: dark) {
+			#antlers { fill: #ffffff }
+		}
+	</style>
+	<g id="antlers">
+		<path id="right-antlers" d="M66.8,36.2L61,41.9V27.9l8.3-8.3L66.9,17L61,22.8V3.5h-3.6v8.9l-5.8-5.8l-2.6,2.5l8.3,8.3v15.8l-5.8-5.8L49.1,30l8.3,8.4
+			v7.2l-8.3,8.3v-8.3h-3.6v11.9L39.1,64l2.5,2.6l27.7-27.9L66.8,36.2z"></path>
+		<path id="left-antlers" d="M24.4,45.5h-3.6v8.3l-8.3-8.3v-7.2l8.3-8.3l-2.5-2.5l-5.8,5.8V17.4l8.3-8.3l-2.5-2.5l-5.8,5.8V3.5H9v19.3L3.2,17l-2.6,2.6
+			L9,27.9v14.1l-5.7-5.8l-2.6,2.5l27.8,27.9L31,64l-6.5-6.6V45.5z"></path>
+	</g>
+</svg>
