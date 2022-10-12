@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import HamburgerMenu from '../components/HamburgerMenu/HamburgerMenu'
 import Header from '../components/Header/Header'
 import styles from '../styles/Home.module.scss'
+import { navigation } from '../data/NavigationData'
 
 const Home: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,13 +17,15 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
 
-     <Header />
+      <header>
+        <Header />
+        <HamburgerMenu navigation={navigation}  />
+      </header>
 
       <main className={styles.main}>
         <p className={styles.title}>Work</p>
         <p className={styles.title}>Jorik / Tech stack</p>
         <p className={styles.title}>Contact</p>
-        
       </main>
 
       <footer className={styles.footer}>

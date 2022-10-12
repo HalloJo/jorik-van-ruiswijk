@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import Hamburger from '../Hamburger/Hamburger'
 import styles from '../Header/Header.module.scss'
 import Logo from '../Logo/Logo'
+import NavigationList from '../NavigationList/NavigationList'
+import { navigation } from '../../data/NavigationData'
 
 const Header = () => {
 
@@ -12,6 +15,7 @@ const Header = () => {
                     <p className={styles.header__name}>Jorik</p>
                 </div>
                 <Hamburger />
+                <NavigationList navigation={navigation} />
             </nav>
             <p className={styles.title}>Hero</p>
 

@@ -1,9 +1,15 @@
 .hamburger {
+  display: block;
+
   &__line {
-    width: 35px;
-    height: 4px;
+    width: 30px;
+    height: 3px;
     background-color: #d6c3e6;
     display: block;
     margin: 6px 0;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
   }
 }
