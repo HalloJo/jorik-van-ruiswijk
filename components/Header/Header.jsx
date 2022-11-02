@@ -17,7 +17,7 @@ const Header = () => {
                 <Hamburger />
                 <NavigationList navigation={navigation} />
             </nav>
-            <p className={styles.title}>Hero content</p>
+            <p className={styles.title}>Hero</p>
       </header>
     )
 }
