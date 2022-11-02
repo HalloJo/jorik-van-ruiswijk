@@ -18,7 +18,6 @@ const Header = () => {
                 <NavigationList navigation={navigation} />
             </nav>
             <p className={styles.title}>Hero</p>
-
       </header>
     )
 }
