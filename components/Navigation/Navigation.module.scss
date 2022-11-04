@@ -1,0 +1,15 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7vw;
+    position: fixed;
+
+    &__logoWrapper {
+        display: flex;
+        align-items: center;
+      }
+  }
+
+  

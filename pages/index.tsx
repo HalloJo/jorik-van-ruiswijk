@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Navigation from '../components/Navigation/Navigation'
 import Image from 'next/image'
 import HamburgerMenu from '../components/HamburgerMenu/HamburgerMenu'
 import Header from '../components/Header/Header'
@@ -18,8 +19,9 @@ const Home: NextPage = () => {
       </Head>
 
       <header>
+        <Navigation />
         <Header />
-        <HamburgerMenu navigation={navigation}  />
+        {/* <HamburgerMenu navigation={navigation}  /> */}
       </header>
 
       <main className={styles.main}>
