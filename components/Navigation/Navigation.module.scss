@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 7vw;
     position: fixed;
+    z-index: 99;
 
     &__logoWrapper {
         display: flex;
