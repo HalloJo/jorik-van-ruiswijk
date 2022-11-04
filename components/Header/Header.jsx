@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import HeroArt from '../HeroArt/HeroArt'
+import Button from '../Button/Button'
 import styles from '../Header/Header.module.scss'
 
 
@@ -15,7 +16,8 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.header__callToActions}>
-
+                <Button label={"See work"} href={"/work"} style={"orange"} />
+                <Button label={"See me"} href={"/me"} style={"green"} />
             </div>
       </header>
     )

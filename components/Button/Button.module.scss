@@ -1,0 +1,28 @@
+.link {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    background: #F9F2E9;
+    border: 2px solid #FF6C00;
+    padding: 15px;
+    border-radius: 40px;
+    color: #FF6C00;
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    transform: translateY(-3px);
+    
+    filter: drop-shadow(0 4px 0 #FF6C00);
+
+    &:active {
+        transform: translateY(0px);
+        filter: none;
+    }
+
+    &__green {
+    // 
+    }
+}
