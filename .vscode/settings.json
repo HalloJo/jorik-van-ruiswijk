@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "Nord",
+    "workbench.colorCustomizations": {
+    "[Nord]": {
+        "button.background": "#2db4af",
+        "button.hoverBackground": "#218a87",
+        "sideBar.foreground":"#86a4a6",
+        "list.activeSelectionBackground":"#3a4f5d",
+        "list.activeSelectionForeground":"#fefefe",
+        
+    },
+    
+    }
+}
