@@ -12,11 +12,9 @@ const Work = () => {
             <div className={styles.work__carousel}>
                 {carouselData.map((item)=>{
                     return (
-                        <Link href={item.href} >
-                            <a className={styles.work__link} target="_blank" rel="noopener noreferrer">
-                                <WorkCard  key={item.label} {...item} />
-                            </a>
-                        </Link>
+                        <a key={item.alt} href={item.href} className={styles.work__link} target="_blank" rel="noopener noreferrer">
+                            <WorkCard   {...item} />
+                        </a>
                     )
                 })}
             </div>

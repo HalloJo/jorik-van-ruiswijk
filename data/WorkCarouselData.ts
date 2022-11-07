@@ -14,13 +14,13 @@ export const carouselData = [
     {
         href: "https://react-jiffy.netlify.app/",
         src: "/assets/jiffy.png",
-        alt: "Bookclub logo",
+        alt: "Jiffy logo",
         label: "Application / React / Api"
     },
     {
         href: "https://4-good-times.superhi.com/",
         src: "/assets/goodtimes.png",
-        alt: "Bookclub logo",
+        alt: "Good Times logo",
         label: "Website / HTML5"
     },
 ];

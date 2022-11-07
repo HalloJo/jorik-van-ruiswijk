@@ -1,0 +1,40 @@
+.me {
+    padding: 7vw;
+
+    &__heading {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 0 0;
+    }
+
+    &__socialIcon {
+        box-sizing: border-box;
+        width: 75px;
+        height: 50px;
+        transform: translateY(-3px);
+        background: #F9F2E9;
+        padding: 20px;
+        border-radius: 25px;
+        border: 2px solid #FF6C00;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            
+        filter: drop-shadow(0 4px 0 #FF6C00);
+
+        &:active {
+            transform: translateY(0px);
+            filter: none;
+        }
+    }
+
+    &__fontAwesomeIcon {
+        width: 100%;
+    }
+}
