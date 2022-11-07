@@ -1,58 +1,58 @@
 export const skills = [
     {
-        icon: ['fa','atom'],
+        icon: "/assets/skills/atom-solid.svg",
         skill: "React.js"
     },
     {
-        icon: ['fa','forward'],
+        icon: "/assets/skills/arrow-right-solid.svg",
         skill: "Next.js"
     },
     {
-        icon: ['fa','rocket'],
+        icon: "/assets/skills/user-astronaut-solid.svg",
         skill: "Astro"
     },
     {
-        icon: ['fa','superscript'],
+        icon: "/assets/skills/keyboard-solid.svg",
         skill: "TypeScript"
     },
     {
-        icon: ['fa','hand-peace'],
+        icon: "/assets/skills/react.svg",
         skill: "Vue.js"
     },
     {
-        icon: ['fa','spider'],
+        icon: "/assets/skills/react.svg",
         skill: "Webdesign"
     },
     {
-        icon: ['fa','code'],
+        icon: "/assets/skills/react.svg",
         skill: "HTML5"
     },
     {
-        icon: ['fa','pencil'],
+        icon: "/assets/skills/react.svg",
         skill: "Illustration"
     },
     {
-        icon: ['fa','arrows-turn-right'],
+        icon: "/assets/skills/react.svg",
         skill: "GSAP"
     },
     {
-        icon: ['fa','palette'],
+        icon: "/assets/skills/react.svg",
         skill: "Branding"
     },
     {
-        icon: ['fa','a'],
+        icon: "/assets/skills/react.svg",
         skill: "Adobe"
     },
     {
-        icon: ['fa','shirt'],
+        icon: "/assets/skills/react.svg",
         skill: "CSS3"
     },
     {
-        icon: ['fa','rocket'],
+        icon: "/assets/skills/react.svg",
         skill: "Figma"
     },
     {
-        icon: ['fa','scroll'],
+        icon: "/assets/skills/react.svg",
         skill: "Print"
     },
 ];

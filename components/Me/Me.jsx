@@ -16,7 +16,8 @@ const Me = () => {
                     { skills.map((skill)=> {
                         return (
                             <div className={styles.me__skillWrapper} key={skill.skill}>
-                                <FontAwesomeIcon className={styles.me__skillIcon} icon={skill.icon} />
+                                <img className={styles.me__skillIcon} src={skill.icon} alt="" />
+                                {/* <FontAwesomeIcon className={styles.me__skillIcon} icon={skill.icon} /> */}
                                 <p className={styles.me__skillTitle}>{skill.skill}</p>
                             </div>
                         )
