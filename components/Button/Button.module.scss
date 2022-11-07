@@ -21,8 +21,10 @@
         transform: translateY(0px);
         filter: none;
     }
-
-    &__green {
-    // 
-    }
 }
+
+.green {
+    border: 2px solid #016F62;
+    color: #016F62;
+    filter: drop-shadow(0 4px 0 #016F62);
+   }
