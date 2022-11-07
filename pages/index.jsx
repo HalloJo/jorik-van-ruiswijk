@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navigation from '../components/Navigation/Navigation'
 import Image from 'next/image'
@@ -6,8 +5,9 @@ import HamburgerMenu from '../components/HamburgerMenu/HamburgerMenu'
 import Header from '../components/Header/Header'
 import styles from '../styles/Home.module.scss'
 import { navigation } from '../data/NavigationData'
+import Work from '../components/Work/Work'
 
-const Home: NextPage = () => {
+const Home = () => {
 
   return (
     <div className={styles.container}>
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       </header>
 
       <main className={styles.main}>
-        <p className={styles.title}>Work</p>
+        <Work />
         <p className={styles.title}>Jorik / Tech stack</p>
         <p className={styles.title}>Contact</p>
       </main>

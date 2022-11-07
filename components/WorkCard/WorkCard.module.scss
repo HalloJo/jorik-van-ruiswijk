@@ -1,0 +1,37 @@
+.workCard {
+    position: relative;
+    min-width: 86vw;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #F9F2E9;
+    scroll-snap-align: start;
+    filter: drop-shadow(0 2.8px 0 #016F62);
+    border: 3px solid #016F62;
+    box-sizing: border-box; 
+    transform: translateY(-3px);
+    
+    &:active {
+        transform: translateY(0px);
+        filter: none;
+    }
+    
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__label {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        z-index: 10;
+        padding: 6px 8px 6px 10px;
+        font-size: 14px;
+        background-color: #016F62;
+        color: #fff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}

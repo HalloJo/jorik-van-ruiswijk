@@ -1,0 +1,21 @@
+.work {
+    background: #FFF;
+    box-sizing: border-box;
+    padding: 0 0 7vw 0;
+
+    &__heading {
+        font-size: 30px;
+        font-weight: 800;
+        padding: 7vw 0 0 7vw;
+    }
+
+    &__carousel {
+        display: flex;
+        overflow-x: scroll;
+        padding: 7vw;
+        scroll-padding: 7vw;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        box-sizing:border-box
+    }
+}
