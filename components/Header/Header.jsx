@@ -16,8 +16,8 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.header__callToActions}>
-                <Button label={"See work"} href={"/work"} style={"orange"} />
-                <Button label={"See me"} href={"/me"} style={"green"} />
+                <Button label={"See work"} href={"#work"} style={"orange"} />
+                <Button label={"See me"} href={"#me"} style={"green"} />
             </div>
       </header>
     )

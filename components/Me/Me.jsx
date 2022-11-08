@@ -5,7 +5,7 @@ import { skills } from '../../data/Skills'
 
 const Me = () => {
     return (
-        <section className={styles.me}>
+        <section id='me' className={styles.me}>
              <h2 className={styles.me__heading}>Me</h2>
              <div className={styles.me__synopsis}>
                 <p className={styles.me__text}>Jorik van Ruiswijk. 31 years of age. Based in the Netherlands. Self-taught front-end developer. Graduated graphic designer and illustrator. Loves his kids, family and football. Helps people with their design or development problems.</p>
