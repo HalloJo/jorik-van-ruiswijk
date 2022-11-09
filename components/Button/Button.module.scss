@@ -1,5 +1,9 @@
 .link {
     width: 100%;
+
+    @media (min-width: 1024px) {
+        width:auto;
+      }
 }
 
 .button {
@@ -21,6 +25,11 @@
         transform: translateY(0px);
         filter: none;
     }
+
+    @media (min-width: 1024px) {
+        width: auto;
+        margin: 0 20px 0 0;
+      }
 }
 
 .green {

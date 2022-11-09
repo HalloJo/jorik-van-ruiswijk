@@ -1,4 +1,8 @@
 .heroArt {
+    @media (min-width: 1024px) {
+        width: 80%;
+    }
+
     &__svg {
         fill: var(--color-green);
     }

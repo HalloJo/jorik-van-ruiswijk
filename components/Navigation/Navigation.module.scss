@@ -7,6 +7,10 @@
     position: fixed;
     z-index: 99;
 
+    @media (min-width: 1024px) {
+        padding: 2vw;
+      }
+
     &__logoWrapper {
         display: flex;
         align-items: center;
