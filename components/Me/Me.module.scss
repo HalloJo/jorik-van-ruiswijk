@@ -1,12 +1,5 @@
 .me {
-    padding: 7vw;
-
-    &__heading {
-        font-size: 30px;
-        font-weight: 800;
-    }
-
-    &__subHeading {
+     &__subHeading {
         color:#FF6C00;
         margin: 0 0 25px 0;
     }
@@ -47,6 +40,7 @@
 
     &__skillTitle {
         color: #8e8e8e;
+        font-size: 14px;
         font-family: 'Kantumruy Pro', sans-serif;
         font-weight: 300;
     }

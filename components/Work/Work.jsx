@@ -2,12 +2,13 @@ import React from 'react';
 import styles from '../Work/Work.module.scss'
 import { carouselData } from '../../data/WorkCarouselData'
 import WorkCard from '../WorkCard/WorkCard';
+import Heading from '../Heading/Heading';
 
 const Work = () => {
 
     return (
         <section id='work' className={styles.work}>
-            <h2 className={styles.work__heading}>Work</h2>
+            <Heading heading="Work" exception={"work"} />
             <div className={styles.work__carousel}>
                 {carouselData.map((item)=>{
                     return (

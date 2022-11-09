@@ -2,11 +2,12 @@ import styles from '../Me/Me.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faInstagram, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { skills } from '../../data/Skills'
+import Heading from '../Heading/Heading'
 
 const Me = () => {
     return (
         <section id='me' className={styles.me}>
-             <h2 className={styles.me__heading}>Me</h2>
+             <Heading heading="Me" />
              <div className={styles.me__synopsis}>
                 <p className={styles.me__text}>Jorik van Ruiswijk. 31 years of age. Based in the Netherlands. Self-taught front-end developer. Graduated graphic designer and illustrator. Loves his kids, family and football. Helps people with their design or development problems.</p>
              </div>
@@ -17,7 +18,6 @@ const Me = () => {
                         return (
                             <div className={styles.me__skillWrapper} key={skill.skill}>
                                 <img className={styles.me__skillIcon} src={skill.icon} alt="" />
-                                {/* <FontAwesomeIcon className={styles.me__skillIcon} icon={skill.icon} /> */}
                                 <p className={styles.me__skillTitle}>{skill.skill}</p>
                             </div>
                         )

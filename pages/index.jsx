@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.scss'
 import { navigation } from '../data/NavigationData'
 import Work from '../components/Work/Work'
 import Me from '../components/Me/Me'
+import Contact from '../components/Contact/Contact'
 
 const Home = () => {
 
@@ -28,7 +29,7 @@ const Home = () => {
       <main className={styles.main}>
         <Work />
         <Me />
-        <p className={styles.title}>Contact</p>
+        <Contact />
       </main>
 
       <footer className={styles.footer}>
