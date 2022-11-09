@@ -3,7 +3,7 @@ export const carouselData = [
         href: "https://buitenkanz.com/",
         src: "/assets/work/buitenkanz.png",
         alt: "Buitenkanz logo",
-        label: "Website / identity"
+        label: "Website / Identity"
     },
     {
         href: "https://master--react-bookclub.netlify.app/",
@@ -22,6 +22,12 @@ export const carouselData = [
         src: "/assets/work/jiffy.png",
         alt: "Jiffy logo",
         label: "Application / React / Api"
+    },
+    {
+        href: "https://react-milkymood.netlify.app/",
+        src: "/assets/work/milkymood.png",
+        alt: "Milkymood logo",
+        label: "Website / React "
     },
     {
         href: "https://1-project-fifty-festival.superhi.com/",
