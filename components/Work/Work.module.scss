@@ -1,12 +1,11 @@
 .work {
     background: var(--color-white);
     box-sizing: border-box;
-    padding: 0 0 7vw 0;
+    padding: 0 0 10vw 0;
 
     &__heading {
         font-size: 30px;
         font-weight: 800;
-        padding: 7vw 0 0 7vw;
     }
 
     &__carousel {

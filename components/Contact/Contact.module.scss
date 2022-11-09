@@ -1,3 +1,52 @@
 .contact {
     background-color: var(--color-green);
+    
+
+    &__form {
+        font-family: 'Kantumruy Pro', sans-serif;
+        color: var(--color-beige);
+        margin: 25px 0;
+    }
+
+    &__inputWrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px 0;
+    }
+
+    &__inputLabel {
+        margin: 0 0 10px 0;
+    }
+
+    &__input {
+        font-family: 'Kantumruy Pro', sans-serif;
+        background: var(--color-beige);
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        color: var(--color-green);
+        font-weight: 400;
+
+        &::placeholder {
+            color: var(--color-gray)
+        }
+
+        &:focus {
+            filter: drop-shadow(0 4px 0 var(--color-orange));
+            outline: none;
+        }
+    }
+
+    &__errorMessage {
+        font-size: 14px;
+        padding: 5px 15px;
+        background-color: var(--color-error);
+        border-radius: 8px;
+        margin: 10px 0 0 0;
+    }
+
+    textarea {
+        min-height: 150px;
+    }
 }
+

@@ -6,7 +6,8 @@
   --color-orange: #FF6C00;
   --color-beige: #F9F2E9;
   --color-white: #FFF;
-  --color-gray: #8e8e8e
+  --color-gray: #8e8e8e;
+  --color-error: #d124f8;
 }
 
 html,
@@ -27,7 +28,7 @@ a {
 }
 
 section {
-  padding: 7vw;   
+  padding: 10vw 7vw;   
 }
 
 * {
