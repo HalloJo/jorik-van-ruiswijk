@@ -4,18 +4,18 @@
 
 .button {
     width: 100%;
-    background: #F9F2E9;
-    border: 2px solid #FF6C00;
+    background: var(--color-beige);
+    border: 2px solid var(--color-orange);
     padding: 15px;
     border-radius: 40px;
-    color: #FF6C00;
+    color: var(--color-orange);
     font-family: 'Syne', sans-serif;
     font-size: 20px;
     font-weight: 800;
     margin: 0 0 10px 0;
     transform: translateY(-3px);
     
-    filter: drop-shadow(0 4px 0 #FF6C00);
+    filter: drop-shadow(0 4px 0 var(--color-orange));
 
     &:active {
         transform: translateY(0px);
@@ -24,7 +24,7 @@
 }
 
 .green {
-    border: 2px solid #016F62;
-    color: #016F62;
-    filter: drop-shadow(0 4px 0 #016F62);
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+    filter: drop-shadow(0 4px 0 var(--color-green));
    }

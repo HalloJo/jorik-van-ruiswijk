@@ -1,5 +1,5 @@
 .work {
-    background: #FFF;
+    background: var(--color-white);
     box-sizing: border-box;
     padding: 0 0 7vw 0;
 
@@ -17,5 +17,20 @@
         scroll-snap-type: x mandatory;
         gap: 10px;
         box-sizing:border-box
+    }
+
+    ::-webkit-scrollbar {
+        height: 5px;
+      }
+
+    ::-webkit-scrollbar-track {
+        margin: 0 7vw;
+        background-color: var(--color-beige);
+        border-radius: 10px;
+    }
+      
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--color-orange);
     }
 }

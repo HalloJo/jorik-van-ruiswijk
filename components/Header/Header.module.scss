@@ -13,7 +13,7 @@
 .header {
   min-height: 100vh;
   width: 100%;
-  color: #016F62;
+  color: var(--color-green);
   padding: 7vw;
 
   display: flex;
@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
 
-  background: #F9F2E9;
+  background: var(--color-beige);
 
   &__content {
     width: 100%;

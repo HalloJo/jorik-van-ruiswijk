@@ -1,8 +1,8 @@
 .heroArt {
     &__svg {
-        fill: #016F62;
+        fill: var(--color-green);
     }
     &__emphasis {
-        fill: #FF6C00;
+        fill: var(--color-orange);
     }
 }

@@ -4,10 +4,10 @@
     height: 100%;
     overflow: hidden;
     border-radius: 15px;
-    background: #F9F2E9;
+    background: var(--color-white);
     scroll-snap-align: start;
-    filter: drop-shadow(0 2.8px 0 #016F62);
-    border: 3px solid #016F62;
+    filter: drop-shadow(0 2.8px 0 var(--color-green));
+    border: 3px solid var(--color-green);
     box-sizing: border-box; 
     transform: translateY(-3px);
     
@@ -23,14 +23,16 @@
     }
 
     &__label {
+        font-weight: 300;
+        font-family: 'Kantumruy Pro', sans-serif;
         position: absolute;
         right: 0;
         bottom: 15px;
         z-index: 10;
         padding: 6px 8px 6px 10px;
         font-size: 14px;
-        background-color: #016F62;
-        color: #fff;
+        background-color: var(--color-green);
+        color: var(--color-white);
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
     }

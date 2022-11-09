@@ -1,6 +1,13 @@
-@import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;300;400&display=swap');
+
+:root {
+  --color-green: #016F62;
+  --color-orange: #FF6C00;
+  --color-beige: #F9F2E9;
+  --color-white: #FFF;
+  --color-gray: #8e8e8e
+}
 
 html,
 body {
@@ -10,7 +17,7 @@ body {
   font-family: 'Syne', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #016F62;
+  color: var(--color-green);
   scroll-behavior: smooth;
 }
 
@@ -34,7 +41,7 @@ section {
     color-scheme: dark;
   }
   body {
-    color: #016F62;
+    color: var(--color-green);;
     background: black;
   }
 }
