@@ -20,7 +20,7 @@ const Home = () => {
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
 
-      <header>
+      <header className={styles.header}>
         <Navigation />
         <Header />
         {/* <HamburgerMenu navigation={navigation}  /> */}

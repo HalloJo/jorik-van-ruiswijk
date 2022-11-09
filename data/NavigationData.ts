@@ -1,14 +1,14 @@
 export const navigation = [
   {
     label: "work",
-    id: "/work",
+    id: "#work",
   },
   {
-    label: "jorik",
-    id: "/jorik",
+    label: "me",
+    id: "#me",
   },
   {
     label: "contact",
-    id: "/contact",
+    id: "#contact",
   },
 ];

@@ -11,7 +11,7 @@ const Navigation = () => {
                 <Logo />
             </div>
             <Hamburger />
-            {/* <NavigationList navigation={navigation} /> */}
+            <NavigationList navigation={navigation} />
             </nav>
     )
 }

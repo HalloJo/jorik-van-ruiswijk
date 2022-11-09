@@ -8,9 +8,11 @@ const NavigationList = ({navigation}) => {
                 const {label, id} = item
 
                 return (
-                    <a key={label} href={id}>
-                        <li>{label}</li>
-                    </a>
+                    <ul>
+                        <a key={label} href={id}>
+                            <li>{label}</li>
+                        </a>
+                    </ul>
                 )
             })}
         </ul>

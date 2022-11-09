@@ -13,7 +13,10 @@
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding: 2vw;
+    max-width: 1400px;
   }
 
   &__content {
