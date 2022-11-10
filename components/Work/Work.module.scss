@@ -10,7 +10,7 @@
         flex-direction: column;
         justify-content: center;
         max-width: 1200px;
-        padding: 0 0 3vw 0;
+        padding: 0 0 5vw 0;
       }
 
     &__carousel {
@@ -23,7 +23,7 @@
         box-sizing:border-box;
         
         @media (min-width: 1024px) {
-            padding: 2vw;
+            padding: 0;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 10px;
