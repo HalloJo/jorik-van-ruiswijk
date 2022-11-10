@@ -119,13 +119,11 @@
             width: fit-content;
             padding: 10px 15px;
             gap: 10px;
-            transition: all 0.3s ease;
 
             &:hover {
                 cursor: pointer;
                 filter: drop-shadow(0 4px 0 var(--color-green));
                 border: 2px solid var(--color-green);
-                transform: translateY(-10px);
                 background: var(--color-orange);
     
                 .me__fontAwesomeIcon,
