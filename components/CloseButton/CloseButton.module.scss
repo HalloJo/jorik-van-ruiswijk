@@ -1,0 +1,20 @@
+.closeButton {
+    display: block;
+    transform: translateY(-3px);
+    background: var(--color-green);
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--color-beige);
+    height: fit-content;
+    position: absolute;
+    right: 7vw;
+    top: 7vw;
+    line-height: 0.8;
+      
+    filter: drop-shadow(0 4px 0 var(--color-beige));
+  
+    &:active {
+      transform: translateY(0px);
+      filter: none;
+  }
+}

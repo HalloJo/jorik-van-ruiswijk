@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation/Navigation'
-import Image from 'next/image'
-import HamburgerMenu from '../components/HamburgerMenu/HamburgerMenu'
 import Header from '../components/Header/Header'
 import styles from '../styles/Home.module.scss'
-import { navigation } from '../data/NavigationData'
 import Work from '../components/Work/Work'
 import Me from '../components/Me/Me'
 import Contact from '../components/Contact/Contact'
@@ -23,7 +20,6 @@ const Home = () => {
       <header className={styles.header}>
         <Navigation />
         <Header />
-        {/* <HamburgerMenu navigation={navigation}  /> */}
       </header>
 
       <main className={styles.main}>

@@ -1,5 +1,5 @@
 .hamburgerMenu {
-  background-color: red;
+  background-color: var(--color-green);
   display: flex;
   position: fixed;
   width: 100%;
@@ -8,9 +8,35 @@
   left: 0;
   overflow: hidden;
   text-align: center;
-  transform: translateX(-50%);
+  z-index: 99;
+  padding: 7vw;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+
+  &.open {
+    transform: translateX(0%);
+  }
 
   &__list {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  &__link {
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--color-beige)
+  }
+
+  &__close {
+    position: absolute;
+    right: 7vw;
+    top: 7vw;
+    color: var(--color-beige)
   }
 }
