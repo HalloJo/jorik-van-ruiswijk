@@ -1,6 +1,10 @@
 .heading {
     font-size: 30px;
     font-weight: 800;
+
+    @media (min-width: 1024px) {
+        font-size: 60px;
+    }
 }
 
 .beige {
@@ -9,4 +13,8 @@
 
 .work {
     padding: 10vw 0 0 7vw;
+
+    @media (min-width: 1024px) {
+        padding: 4vw 0 3vw 0;
+    }
 }

@@ -14,5 +14,9 @@
     &:hover {
       color: var(--color-orange)
     }
+
+    &:active {
+      transform: translateY(2px);
+  }
   }
 }

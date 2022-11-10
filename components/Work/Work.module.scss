@@ -2,11 +2,16 @@
     background: var(--color-white);
     box-sizing: border-box;
     padding: 0 0 10vw 0;
+    width: 100%;
 
-    &__heading {
-        font-size: 30px;
-        font-weight: 800;
-    }
+    @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1200px;
+        padding: 0 0 3vw 0;
+      }
 
     &__carousel {
         display: flex;
@@ -15,7 +20,16 @@
         scroll-padding: 7vw;
         scroll-snap-type: x mandatory;
         gap: 10px;
-        box-sizing:border-box
+        box-sizing:border-box;
+        
+        @media (min-width: 1024px) {
+            padding: 2vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 10px;
+            row-gap: 15px;
+            overflow-x: unset;
+        }
     }
 
     ::-webkit-scrollbar {
