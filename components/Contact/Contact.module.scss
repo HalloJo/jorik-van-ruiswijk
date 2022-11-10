@@ -1,11 +1,33 @@
 .contact {
     background-color: var(--color-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+        padding: 6vw 5vw;
+    }
     
+    &__container {
+        width: 100%;
+        
+        @media (min-width: 1024px) {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 
     &__form {
         font-family: 'Kantumruy Pro', sans-serif;
         color: var(--color-beige);
         margin: 25px 0;
+
+        @media (min-width: 1024px) {
+        }
+
     }
 
     &__inputWrapper {
