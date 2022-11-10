@@ -1,28 +1,47 @@
-import { useState } from 'react'
-import HeroArt from '../HeroArt/HeroArt'
-import Button from '../Button/Button'
-import styles from '../Header/Header.module.scss'
-
+import { useState } from "react";
+import HeroArt from "../HeroArt/HeroArt";
+import Button from "../Button/Button";
+import styles from "../Header/Header.module.scss";
+import { motion as m } from "framer-motion";
 
 const Header = () => {
+  const item = {
+    hidden: { opacity: 0, translateX: -40 },
+    visible: {
+      opacity: 1,
+      translateX: 0,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-    return (
-        <header className={styles.header}>
-            <div className={styles.header__content}>
-                <HeroArt />
-            </div>
-            <div className={styles.header__callToActions}>
-                <div className={styles.header__contentText}>
-                    <h1 className={styles.header__name}>Jorik</h1>
-                    <p className={styles.header__subTitle}>Design & Development</p>
-                </div>
-                <div className={styles.header__buttons}>
-                    <Button label={"See work"} href={"#work"} style={"orange"} />
-                    <Button label={"See me"} href={"#me"} style={"green"} />
-                </div>
-            </div>
-      </header>
-    )
-}
+  return (
+    <header className={styles.header}>
+      <div className={styles.header__content}>
+        <HeroArt />
+      </div>
+      <div className={styles.header__callToActions}>
+        <m.div
+          initial="hidden"
+          animate="visible"
+          variants={item}
+          className={styles.header__contentText}
+        >
+          <m.h1 variants={item} className={styles.header__name}>
+            Jorik
+          </m.h1>
+          <m.p variants={item} className={styles.header__subTitle}>
+            Design & Development
+          </m.p>
+        </m.div>
+        <div className={styles.header__buttons}>
+          <Button label={"See work"} href={"#work"} style={"orange"} />
+          <Button label={"See me"} href={"#me"} style={"green"} />
+        </div>
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
