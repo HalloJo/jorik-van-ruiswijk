@@ -11,7 +11,9 @@ const Header = () => {
       opacity: 1,
       translateX: 0,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.5,
+        delayChildren: 1.5,
+        duration: 0.5,
       },
     },
   };

@@ -1,6 +1,11 @@
 .logo {
+  width: 100px;
+  height: 100px;
+  height: min-content;
+
   &__svg {
     fill: var(--color-green);
-    width: 50px;
   }
 }
+
+
