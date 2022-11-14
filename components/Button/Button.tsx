@@ -1,8 +1,15 @@
 import { type } from 'os';
 import styles from '../Button/Button.module.scss'
 
+type ButtonProps = {
+    label: string,
+    href: string,
+    style: string,
+    type: "button" | "submit" | "reset"
+}
 
-const Button = ({label, href, style, type}:{label: string; href: string; style: string; type: "button" | "submit" | "reset"}) => {
+
+const Button = ({label, href, style, type}:ButtonProps) => {
 
     return (
             <a href={href} className={styles.link}>
