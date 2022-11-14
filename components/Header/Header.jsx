@@ -11,9 +11,13 @@ const Header = () => {
       opacity: 1,
       translateX: 0,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.3,
         delayChildren: 1.5,
         duration: 0.5,
+        type: "spring",
+        damping: 10,
+        mass: 0.75,
+        stiffness: 100,
       },
     },
   };
