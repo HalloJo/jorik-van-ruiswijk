@@ -1,7 +1,12 @@
 import styles from "../Heading/Heading.module.scss";
 import { motion as m } from "framer-motion";
 
-const Heading = ({ heading, exception }) => {
+type HeadingProps = {
+  heading: string;
+  exception: string;
+};
+
+const Heading = ({ heading, exception }: HeadingProps) => {
   const headingAnimation = {
     hidden: {
       opacity: 0,
