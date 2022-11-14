@@ -22,24 +22,6 @@ const Header = () => {
     },
   };
 
-  const buttonItem = {
-    hidden: { opacity: 0, translateX: -40 },
-    visible: {
-      opacity: 1,
-      translateX: 0,
-      transition: {
-        // staggerChildren: 0.3,
-        // delayChildren: 1.5,
-        delay: 2,
-        duration: 0.3,
-        type: "spring",
-        damping: 10,
-        mass: 0.75,
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.header__content}>
@@ -59,15 +41,10 @@ const Header = () => {
             Design & Development
           </m.p>
         </m.div>
-        <m.div
-          initial="hidden"
-          animate="visible"
-          variants={buttonItem}
-          className={styles.header__buttons}
-        >
+        <div className={styles.header__buttons}>
           <Button label={"See work"} href={"#work"} style={"orange"} />
           <Button label={"See me"} href={"#me"} style={"green"} />
-        </m.div>
+        </div>
       </div>
     </header>
   );
