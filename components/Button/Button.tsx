@@ -6,7 +6,7 @@ type ButtonProps = {
   label: string;
   href: string;
   style: string;
-  type: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset";
 };
 
 const Button = ({ label, href, style, type }: ButtonProps) => {

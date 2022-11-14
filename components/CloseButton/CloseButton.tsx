@@ -1,8 +1,8 @@
 import styles from "../CloseButton/CloseButton.module.scss";
 
 type CloseButtonProps = {
-  open: string;
-  setOpen: (string) => void;
+  open: boolean;
+  setOpen: (value: boolean) => void;
 };
 
 const CloseButton = ({ open, setOpen }: CloseButtonProps) => {

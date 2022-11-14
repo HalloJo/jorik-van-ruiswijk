@@ -1,4 +1,11 @@
-export const navigation = [
+type NavigationItem = {
+  label: string,
+  id: string
+}
+
+export type Navigation = NavigationItem[]
+
+export const navigation: Navigation = [
   {
     label: "work",
     id: "#work",

@@ -1,4 +1,9 @@
-export const skills = [
+type SkillsProps = {
+    icon: string,
+    skill: string
+}
+
+export const skills: SkillsProps[] = [
     {
         icon: "/assets/skills/react.svg",
         skill: "React.js"

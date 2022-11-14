@@ -16,7 +16,7 @@
     "incremental": true,
     "checkJs": true
   },
-  "include": ["next-env.d.ts", "**/*.js", "**/*.jsx", "pages/_app.jsx", "pages/index.jsx", "components/Button/Button.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_app.tsx", "pages/index.tsx", "components/Button/Button.tsx"],
   "exclude": ["node_modules", "**/node_modules/*"],
   "baseUrl": ".",
   "paths": {

@@ -1,4 +1,11 @@
-export const carouselData = [
+export type WorkCard = {
+    href: string,
+    src: string,
+    alt: string,
+    label: string
+}
+
+export const carouselData:WorkCard[] = [
     {
         href: "https://buitenkanz.com/",
         src: "/assets/work/buitenkanz.png",

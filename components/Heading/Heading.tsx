@@ -3,7 +3,7 @@ import { motion as m } from "framer-motion";
 
 type HeadingProps = {
   heading: string;
-  exception: string;
+  exception?: string;
 };
 
 const Heading = ({ heading, exception }: HeadingProps) => {
