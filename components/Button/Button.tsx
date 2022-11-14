@@ -13,11 +13,11 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
   const buttonAnimation = {
     hidden: {
       opacity: 0,
-      translateX: -200,
+      translateY: 40,
     },
     visible: {
       opacity: 1,
-      translateX: 0,
+      translateY: 0,
       transition: {
         delay: 0.5,
         type: "spring",
