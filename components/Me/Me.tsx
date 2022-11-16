@@ -10,6 +10,7 @@ import { social } from "../../data/SocialData";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
+import SocialButton from "../SocialButton/SocialButton";
 
 const Me = () => {
   const item: Variants = {
@@ -83,62 +84,11 @@ const Me = () => {
           >
             {social.map((socialItem) => {
               return (
-                <m.a
-                  variants={item}
-                  key={socialItem.label}
-                  className={styles.me__socialIcon}
-                  href={socialItem.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className={styles.me__socialIconImage}
-                    src={socialItem.icon}
-                    alt=""
-                  />
-                  <p className={styles.me__socialIconTitle}>
-                    {socialItem.label}
-                  </p>
-                </m.a>
+                <m.div variants={item}>
+                  <SocialButton {...socialItem} />
+                </m.div>
               );
             })}
-
-            {/* <a
-              className={styles.me__socialIcon}
-              href="https://www.linkedin.com/in/jorikvanruiswijk/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                className={styles.me__fontAwesomeIcon}
-                icon={faLinkedin}
-              />
-              <p className={styles.me__socialIconTitle}>LinkedIn</p>
-            </a>
-            <a
-              className={styles.me__socialIcon}
-              href="https://www.instagram.com/jorik.van.ruiswijk/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                className={styles.me__fontAwesomeIcon}
-                icon={faInstagram}
-              />
-              <p className={styles.me__socialIconTitle}>Instagram</p>
-            </a>
-            <a
-              className={styles.me__socialIcon}
-              href="https://github.com/HalloJo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                className={styles.me__fontAwesomeIcon}
-                icon={faGithub}
-              />
-              <p className={styles.me__socialIconTitle}>GitHub</p>
-            </a> */}
           </m.div>
         </div>
       </div>

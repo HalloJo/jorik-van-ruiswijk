@@ -1,10 +1,4 @@
-import {
-    faInstagram,
-    faGithub,
-    faLinkedin,
-  } from "@fortawesome/free-brands-svg-icons";
-
-type SocialItem = {
+export type SocialItem = {
     label: string,
     href: string
     icon: string,
@@ -31,6 +25,12 @@ type SocialItem = {
         href: "https://github.com/HalloJo",
         icon: "/assets/social/github.svg",
         alt: "GitHub logo"
+    },
+    {
+        label: "Behance",
+        href: "https://www.behance.net/HiJorikVanRuiswijk",
+        icon: "/assets/social/behance.svg",
+        alt: "Behance logo"
     },
   ];
   
