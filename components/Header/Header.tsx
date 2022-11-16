@@ -2,10 +2,10 @@ import { useState } from "react";
 import HeroArt from "../HeroArt/HeroArt";
 import Button from "../Button/Button";
 import styles from "../Header/Header.module.scss";
-import { motion as m } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 
 const Header = () => {
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, translateX: -40 },
     visible: {
       opacity: 1,

@@ -1,5 +1,5 @@
 import styles from "../Heading/Heading.module.scss";
-import { motion as m } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 
 type HeadingProps = {
   heading: string;
@@ -7,7 +7,7 @@ type HeadingProps = {
 };
 
 const Heading = ({ heading, exception }: HeadingProps) => {
-  const headingAnimation = {
+  const headingAnimation: Variants = {
     hidden: {
       opacity: 0,
       translateY: 40,

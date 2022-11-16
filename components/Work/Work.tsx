@@ -3,10 +3,10 @@ import styles from "../Work/Work.module.scss";
 import { carouselData } from "../../data/WorkCarouselData";
 import WorkCard from "../WorkCard/WorkCard";
 import Heading from "../Heading/Heading";
-import { motion as m } from "framer-motion";
+import { motion as m, Variants } from "framer-motion";
 
 const Work = () => {
-  const cardItem = {
+  const cardItem: Variants = {
     hidden: { opacity: 0, translateX: 20 },
     visible: {
       opacity: 1,
