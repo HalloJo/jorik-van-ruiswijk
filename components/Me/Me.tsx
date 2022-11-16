@@ -11,13 +11,15 @@ import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
 
 const Me = () => {
-  const text: Variants = {
+  const item: Variants = {
     hidden: {
       opacity: 0,
     },
     visible: {
       opacity: 1,
       transition: {
+        staggerChildren: 0.1,
+        // delayChildren: 1,
         duration: 1,
       },
     },
@@ -31,7 +33,7 @@ const Me = () => {
             <Heading heading="Me" />
             <div className={styles.me__synopsis}>
               <m.p
-                variants={text}
+                variants={item}
                 initial="hidden"
                 whileInView="visible"
                 className={styles.me__text}
@@ -45,25 +47,39 @@ const Me = () => {
           </div>
           <div className={styles.me__skills}>
             <SmallHeading label="Skills" />
-            <div className={styles.me__skillsGrid}>
+            <m.div
+              initial="hidden"
+              whileInView="visible"
+              variants={item}
+              className={styles.me__skillsGrid}
+            >
               {skills.map((skill) => {
                 return (
-                  <div className={styles.me__skillWrapper} key={skill.skill}>
+                  <m.div
+                    variants={item}
+                    className={styles.me__skillWrapper}
+                    key={skill.skill}
+                  >
                     <img
                       className={styles.me__skillIcon}
                       src={skill.icon}
                       alt=""
                     />
                     <p className={styles.me__skillTitle}>{skill.skill}</p>
-                  </div>
+                  </m.div>
                 );
               })}
-            </div>
+            </m.div>
           </div>
         </div>
         <div className={styles.me__socials}>
           <SmallHeading label="Find me here" />
-          <div className={styles.me__icons}>
+          <m.div
+            initial="hidden"
+            whileInView="visible"
+            variants={item}
+            className={styles.me__icons}
+          >
             <a
               className={styles.me__socialIcon}
               href="https://www.linkedin.com/in/jorikvanruiswijk/"
@@ -100,7 +116,7 @@ const Me = () => {
               />
               <p className={styles.me__socialIconTitle}>GitHub</p>
             </a>
-          </div>
+          </m.div>
         </div>
       </div>
     </section>

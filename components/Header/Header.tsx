@@ -6,18 +6,13 @@ import { motion as m, Variants } from "framer-motion";
 
 const Header = () => {
   const item: Variants = {
-    hidden: { opacity: 0, translateX: -40 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      translateX: 0,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 1.5,
-        duration: 0.5,
-        type: "spring",
-        damping: 10,
-        mass: 0.75,
-        stiffness: 100,
+        // delayChildren: 1.5,
+        duration: 1,
       },
     },
   };
