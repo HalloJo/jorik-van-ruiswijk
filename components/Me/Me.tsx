@@ -6,6 +6,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { skills } from "../../data/Skills";
+import { social } from "../../data/SocialData";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
@@ -80,7 +81,29 @@ const Me = () => {
             variants={item}
             className={styles.me__icons}
           >
-            <a
+            {social.map((socialItem) => {
+              return (
+                <m.a
+                  variants={item}
+                  key={socialItem.label}
+                  className={styles.me__socialIcon}
+                  href={socialItem.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className={styles.me__socialIconImage}
+                    src={socialItem.icon}
+                    alt=""
+                  />
+                  <p className={styles.me__socialIconTitle}>
+                    {socialItem.label}
+                  </p>
+                </m.a>
+              );
+            })}
+
+            {/* <a
               className={styles.me__socialIcon}
               href="https://www.linkedin.com/in/jorikvanruiswijk/"
               target="_blank"
@@ -115,7 +138,7 @@ const Me = () => {
                 icon={faGithub}
               />
               <p className={styles.me__socialIconTitle}>GitHub</p>
-            </a>
+            </a> */}
           </m.div>
         </div>
       </div>
