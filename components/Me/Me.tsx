@@ -8,6 +8,7 @@ import {
 import { skills } from "../../data/Skills";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
+import SmallHeading from "../SmallHeading/SmallHeading";
 
 const Me = () => {
   const text: Variants = {
@@ -43,7 +44,7 @@ const Me = () => {
             </div>
           </div>
           <div className={styles.me__skills}>
-            <h3 className={styles.me__subHeading}>Skills</h3>
+            <SmallHeading label="Skills" />
             <div className={styles.me__skillsGrid}>
               {skills.map((skill) => {
                 return (
@@ -61,7 +62,7 @@ const Me = () => {
           </div>
         </div>
         <div className={styles.me__socials}>
-          <h3 className={styles.me__subHeading}>Find me here</h3>
+          <SmallHeading label="Find me here" />
           <div className={styles.me__icons}>
             <a
               className={styles.me__socialIcon}
