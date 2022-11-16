@@ -7,10 +7,10 @@ import { motion as m, Variants } from "framer-motion";
 
 const Work = () => {
   const cardItem: Variants = {
-    hidden: { opacity: 0, translateX: 20 },
+    hidden: { opacity: 0, translateY: 20 },
     visible: {
       opacity: 1,
-      translateX: 0,
+      translateY: 0,
       transition: {
         staggerChildren: 0.4,
         // delayChildren: 1,

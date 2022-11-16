@@ -21,10 +21,11 @@ const Logo = () => {
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
               transition={{
-                duration: 4,
+                duration: 6,
                 repeat: Infinity,
                 repeatType: "reverse",
                 repeatDelay: 2,
+                delay: 3.5,
               }}
               stroke="#016F62"
               strokeWidth="2.5"
