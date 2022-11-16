@@ -4,8 +4,8 @@ import { motion as m } from "framer-motion";
 
 type ButtonProps = {
   label: string;
-  href: string;
-  style: string;
+  href?: string;
+  style?: string;
   type?: "button" | "submit" | "reset";
 };
 

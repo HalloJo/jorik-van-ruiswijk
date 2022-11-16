@@ -4,30 +4,53 @@ import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import ContactArt from "../ContactArt/ContactArt";
 
+type FormInput = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormInput>();
+
+  const handleOnSubmit = async (data: FormInput) => {
+    try {
+      fetch("/api/mail", {
+        method: "post",
+        body: JSON.stringify(data),
+      });
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(data);
+  };
 
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.contact__container}>
         <div className={styles.contact__formWrapper}>
           <Heading heading="Contact" exception={"beige"} />
-          <form onSubmit={handleSubmit()} className={styles.contact__form}>
+          <form
+            onSubmit={handleSubmit(handleOnSubmit)}
+            className={styles.contact__form}
+          >
             <div className={styles.contact__inputWrapper}>
               <label className={styles.contact__inputLabel} htmlFor="">
                 Full name*
               </label>
               <input
-                {...register("fullName", { required: true })}
+                {...register("name", { required: true })}
                 className={styles.contact__input}
                 type="text"
                 placeholder="Type your full name here.."
               />
-              {errors.fullName && (
+              {errors.name && (
                 <span className={styles.contact__errorMessage}>
                   👆 Your full name is required!
                 </span>
@@ -48,6 +71,7 @@ const Contact = () => {
                 className={styles.contact__input}
                 type="email"
                 placeholder="example@provider.com"
+                autoComplete="off"
               />
               {errors.email && (
                 <span className={styles.contact__errorMessage}>
@@ -60,9 +84,8 @@ const Contact = () => {
                 Your message*
               </label>
               <textarea
-                {...register("message", { required: true })}
+                {...register("message", { required: true, min: 18, max: 99 })}
                 className={styles.contact__input}
-                type="text"
                 placeholder="Your message.."
               />
               {errors.message && (
