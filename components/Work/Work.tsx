@@ -12,9 +12,9 @@ const Work = () => {
       opacity: 1,
       translateY: 0,
       transition: {
-        staggerChildren: 0.4,
+        staggerChildren: 0.2,
         // delayChildren: 1,
-        duration: 0.5,
+        duration: 0.3,
       },
     },
   };
