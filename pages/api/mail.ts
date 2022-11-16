@@ -16,7 +16,7 @@ export default function handler(
 
   const message = `
     Name: ${body.name}\r\n
-    Email: ${body.email}\r\n
+    E-mail: ${body.email}\r\n
     Message: ${body.message}\r\n
   `
 
