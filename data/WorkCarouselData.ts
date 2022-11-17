@@ -19,6 +19,12 @@ export const carouselData:WorkCard[] = [
         label: "React / Api"
     },
     {
+        href: "https://react-zesty.netlify.app/",
+        src: "/assets/work/zesty.png",
+        alt: "Zesty logo",
+        label: "Website / React"
+    },
+    {
         href: "https://www.behance.net/gallery/65567759/midocean",
         src: "/assets/work/midocean.png",
         alt: "midocean logo",
