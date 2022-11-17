@@ -16,7 +16,7 @@ const Navigation = () => {
       translateY: 0,
       transition: {
         duration: 0.6,
-        delay: 3,
+        delay: 2,
         type: "spring",
         damping: 10,
         mass: 0.75,

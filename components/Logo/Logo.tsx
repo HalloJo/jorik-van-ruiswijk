@@ -25,7 +25,7 @@ const Logo = () => {
                 repeat: Infinity,
                 repeatType: "reverse",
                 repeatDelay: 2,
-                delay: 3.5,
+                delay: 2.5,
               }}
               stroke="#016F62"
               strokeWidth="2.5"
