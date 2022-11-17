@@ -3,11 +3,23 @@ import Heading from "../Heading/Heading";
 import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import ContactArt from "../ContactArt/ContactArt";
+import { motion as m, Variants } from "framer-motion";
 
 type FormInput = {
   name: string;
   email: string;
   message: string;
+};
+
+const formItem: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      duration: 0.5,
+    },
+  },
 };
 
 const Contact = () => {
@@ -36,11 +48,14 @@ const Contact = () => {
       <div className={styles.contact__container}>
         <div className={styles.contact__formWrapper}>
           <Heading heading="Contact" exception={"beige"} />
-          <form
+          <m.form
+            initial="hidden"
+            whileInView="visible"
+            variants={formItem}
             onSubmit={handleSubmit(handleOnSubmit)}
             className={styles.contact__form}
           >
-            <div className={styles.contact__inputWrapper}>
+            <m.div variants={formItem} className={styles.contact__inputWrapper}>
               <label className={styles.contact__inputLabel} htmlFor="">
                 Full name*
               </label>
@@ -55,8 +70,8 @@ const Contact = () => {
                   👆 Your full name is required!
                 </span>
               )}
-            </div>
-            <div className={styles.contact__inputWrapper}>
+            </m.div>
+            <m.div variants={formItem} className={styles.contact__inputWrapper}>
               <label className={styles.contact__inputLabel} htmlFor="">
                 E-mail*
               </label>
@@ -78,8 +93,8 @@ const Contact = () => {
                   👆 A real email address is required!
                 </span>
               )}
-            </div>
-            <div className={styles.contact__inputWrapper}>
+            </m.div>
+            <m.div variants={formItem} className={styles.contact__inputWrapper}>
               <label className={styles.contact__inputLabel} htmlFor="">
                 Your message*
               </label>
@@ -93,9 +108,9 @@ const Contact = () => {
                   👆 A message is required!
                 </span>
               )}
-            </div>
+            </m.div>
             <Button type="submit" label="Submit" />
-          </form>
+          </m.form>
         </div>
         <ContactArt />
       </div>
