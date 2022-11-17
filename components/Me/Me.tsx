@@ -11,6 +11,7 @@ import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
 import SocialButton from "../SocialButton/SocialButton";
+import Skill from "../Skill/Skill";
 
 const Me = () => {
   const item: Variants = {
@@ -60,14 +61,9 @@ const Me = () => {
                   <m.div
                     variants={item}
                     className={styles.me__skillWrapper}
-                    key={skill.skill}
+                    key={skill.skillTitle}
                   >
-                    <img
-                      className={styles.me__skillIcon}
-                      src={skill.icon}
-                      alt=""
-                    />
-                    <p className={styles.me__skillTitle}>{skill.skill}</p>
+                    <Skill {...skill} />
                   </m.div>
                 );
               })}

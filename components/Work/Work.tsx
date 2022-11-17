@@ -7,14 +7,13 @@ import { motion as m, Variants } from "framer-motion";
 
 const Work = () => {
   const cardItem: Variants = {
-    hidden: { opacity: 0, translateY: 20 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      translateY: 0,
       transition: {
         staggerChildren: 0.2,
         // delayChildren: 1,
-        duration: 0.3,
+        duration: 0.5,
       },
     },
   };
@@ -25,7 +24,6 @@ const Work = () => {
       <m.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
         variants={cardItem}
         className={styles.work__carousel}
       >

@@ -1,67 +1,67 @@
-type SkillsProps = {
+export type SkillsProps = {
     icon: string,
-    skill: string
+    skillTitle: string
 }
 
 export const skills: SkillsProps[] = [
     {
         icon: "/assets/skills/react.svg",
-        skill: "React.js"
+        skillTitle: "React.js"
     },
     {
         icon: "/assets/skills/arrow-right-solid.svg",
-        skill: "Next.js"
+        skillTitle: "Next.js"
     },
     {
         icon: "/assets/skills/user-astronaut-solid.svg",
-        skill: "Astro"
+        skillTitle: "Astro"
     },
     {
         icon: "/assets/skills/keyboard-solid.svg",
-        skill: "TypeScript"
+        skillTitle: "TypeScript"
     },
     {
         icon: "/assets/skills/hand-peace-solid.svg",
-        skill: "Vue.js"
+        skillTitle: "Vue.js"
     },
     {
         icon: "/assets/skills/spider-solid.svg",
-        skill: "Webdesign"
+        skillTitle: "Webdesign"
     },
     {
         icon: "/assets/skills/html5.svg",
-        skill: "HTML"
+        skillTitle: "HTML"
     },
     {
         icon: "/assets/skills/pencil-solid.svg",
-        skill: "Illustration"
+        skillTitle: "Illustration"
     },
     {
         icon: "/assets/skills/right-left-solid.svg",
-        skill: "GSAP"
+        skillTitle: "GSAP"
     },
     {
         icon: "/assets/skills/palette-solid.svg",
-        skill: "Branding"
+        skillTitle: "Branding"
     },
     {
         icon: "/assets/skills/a-solid.svg",
-        skill: "Adobe"
+        skillTitle: "Adobe"
     },
     {
         icon: "/assets/skills/css3-alt.svg",
-        skill: "(S)CSS"
+        skillTitle: "(S)CSS"
     },
     {
         icon: "/assets/skills/figma.svg",
-        skill: "Figma"
+        skillTitle: "Figma"
     },
     {
         icon: "/assets/skills/scroll-solid.svg",
-        skill: "Print"
+        skillTitle: "Print"
     },
     {
         icon: "/assets/skills/arrows-turn-right-solid.svg",
-        skill: "Framer"
+        skillTitle: "Framer"
     },
 ];
