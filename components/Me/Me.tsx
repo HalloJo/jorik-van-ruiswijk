@@ -80,7 +80,7 @@ const Me = () => {
           >
             {social.map((socialItem) => {
               return (
-                <m.div variants={item}>
+                <m.div variants={item} key={socialItem.label}>
                   <SocialButton {...socialItem} />
                 </m.div>
               );
