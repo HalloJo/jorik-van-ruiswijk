@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
 import ContactArt from "../ContactArt/ContactArt";
 import { motion as m, Variants } from "framer-motion";
+import { useState } from "react";
 
 type FormInput = {
   name: string;
@@ -28,7 +29,9 @@ const Contact = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormInput>();
+  } = useForm<FormInput>({
+    mode: "onBlur",
+  });
 
   const handleOnSubmit = async (data: FormInput) => {
     try {
@@ -63,12 +66,17 @@ const Contact = () => {
                 {...register("name", { required: true })}
                 className={styles.contact__input}
                 type="text"
+                name="fullName"
                 placeholder="Type your full name here.."
               />
               {errors.name && (
-                <span className={styles.contact__errorMessage}>
+                <m.span
+                  whileInView="visible"
+                  variants={formItem}
+                  className={styles.contact__errorMessage}
+                >
                   👆 Your full name is required!
-                </span>
+                </m.span>
               )}
             </m.div>
             <m.div variants={formItem} className={styles.contact__inputWrapper}>
@@ -84,6 +92,7 @@ const Contact = () => {
                   },
                 })}
                 className={styles.contact__input}
+                name="email"
                 type="email"
                 placeholder="example@provider.com"
                 autoComplete="off"
@@ -101,6 +110,7 @@ const Contact = () => {
               <textarea
                 {...register("message", { required: true, min: 18, max: 99 })}
                 className={styles.contact__input}
+                name="message"
                 placeholder="Your message.."
               />
               {errors.message && (
