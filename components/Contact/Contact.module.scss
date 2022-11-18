@@ -72,6 +72,16 @@
         border-radius: 8px;
         margin: 10px 0 0 0;
     }
+    &__successMessage {
+        font-size: 14px;
+        padding: 10px 15px;
+        text-align: center;
+        background-color: var(--color-error);
+        display:block;
+        border-radius: 8px;
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
 
     textarea {
         min-height: 150px;

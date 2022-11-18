@@ -15,7 +15,7 @@ export default function handler(
   const body = JSON.parse(req.body)
 
   const message = `
-    Name: ${body.name}\r\n
+    Name: ${body.fullName}\r\n
     E-mail: ${body.email}\r\n
     Message: ${body.message}\r\n
   `
@@ -23,7 +23,7 @@ export default function handler(
   const data = {
     to: "jorikvanruiswijk@gmail.com",
     from: "hello@jorikvanruiswijk.nl",
-    subject: `You just got a message from ${body.name}!`,
+    subject: `You just got a message from ${body.fullName}!`,
     text: message,
     html: message.replace(/\r\n/g, "<br>"),
   }

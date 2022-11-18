@@ -7,7 +7,7 @@ import { motion as m, Variants } from "framer-motion";
 import { useState } from "react";
 
 type FormInput = {
-  name: string;
+  fullName: string;
   email: string;
   message: string;
 };
@@ -28,9 +28,10 @@ const Contact = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isDirty, isSubmitted },
   } = useForm<FormInput>({
     mode: "onBlur",
+    defaultValues: { fullName: "", email: "", message: "" },
   });
 
   const handleOnSubmit = async (data: FormInput) => {
@@ -63,13 +64,13 @@ const Contact = () => {
                 Full name*
               </label>
               <input
-                {...register("name", { required: true })}
+                {...register("fullName", { required: true })}
                 className={styles.contact__input}
                 type="text"
                 name="fullName"
                 placeholder="Type your full name here.."
               />
-              {errors.name && (
+              {errors.fullName && (
                 <m.span
                   whileInView="visible"
                   variants={formItem}
@@ -119,7 +120,12 @@ const Contact = () => {
                 </span>
               )}
             </m.div>
-            <Button type="submit" label="Submit" />
+            {isDirty && <Button type="submit" label="Submit" />}
+            {isSubmitted && (
+              <span className={styles.contact__successMessage}>
+                👍 Form succesfully submitted, thank you!
+              </span>
+            )}
           </m.form>
         </div>
         <ContactArt />
