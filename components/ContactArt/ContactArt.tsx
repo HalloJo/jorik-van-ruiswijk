@@ -4,12 +4,12 @@ import { motion, Variants } from "framer-motion";
 const ContactArt = () => {
   const animateSVG: Variants = {
     hidden: {
-      pathLength: 0,
+      opacity: 0,
     },
     visible: {
-      pathLength: 1,
+      opacity: 1,
       transition: {
-        duration: 10,
+        duration: 1,
       },
     },
   };
