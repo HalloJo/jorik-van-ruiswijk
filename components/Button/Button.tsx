@@ -20,6 +20,7 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
       y: 0,
       transition: {
         duration: 2,
+        delay: 1,
         type: "spring",
         damping: 10,
         mass: 0.75,
@@ -28,6 +29,16 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
     },
     hover: {
       y: -10,
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        damping: 10,
+        mass: 0.75,
+        stiffness: 100,
+      },
+    },
+    exit: {
+      y: 10,
       transition: {
         duration: 0.5,
         type: "spring",
@@ -45,6 +56,7 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
         initial="hidden"
         whileInView="visible"
         whileHover="hover"
+        exit="exit"
         type={type}
         className={`${styles.button} ${styles[style]}`}
       >

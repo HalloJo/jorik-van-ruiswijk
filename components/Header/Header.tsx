@@ -15,6 +15,7 @@ const Header = () => {
         staggerChildren: 0.3,
         // delayChildren: 1.5,
         duration: 0.5,
+        delay: 0.5,
       },
     },
   };
@@ -45,10 +46,10 @@ const Header = () => {
             Design & Development
           </m.p>
         </m.div>
-        <div className={styles.header__buttons}>
+        <m.div variants={item} className={styles.header__buttons}>
           <Button label={"See work"} href={"#work"} style={"orange"} />
           <Button label={"See me"} href={"#me"} style={"green"} />
-        </div>
+        </m.div>
       </div>
     </header>
   );
