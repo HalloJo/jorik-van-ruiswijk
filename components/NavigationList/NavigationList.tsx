@@ -1,8 +1,5 @@
+import { Navigation } from "../../data/NavigationData";
 import styles from "../NavigationList/NavigationList.module.scss";
-
-const NavigationListProps = {
-  navigation: Array<object>,
-};
 
 const NavigationList = ({ navigation }) => {
   return (
