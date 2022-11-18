@@ -13,11 +13,17 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
   const buttonAnimation: Variants = {
     hidden: {
       opacity: 0,
+      y: 20,
     },
     visible: {
       opacity: 1,
+      y: 0,
       transition: {
-        duration: 1,
+        duration: 2,
+        type: "spring",
+        damping: 10,
+        mass: 0.75,
+        stiffness: 100,
       },
     },
   };
