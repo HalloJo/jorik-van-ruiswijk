@@ -29,7 +29,7 @@ const Header = () => {
       <div className={styles.header__callToActions}>
         <m.div
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           variants={item}
           className={styles.header__contentText}
         >

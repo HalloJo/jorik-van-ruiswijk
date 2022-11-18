@@ -26,6 +26,16 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
         stiffness: 100,
       },
     },
+    hover: {
+      y: -10,
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        damping: 10,
+        mass: 0.75,
+        stiffness: 100,
+      },
+    },
   };
 
   return (
@@ -34,6 +44,7 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
         variants={buttonAnimation}
         initial="hidden"
         whileInView="visible"
+        whileHover="hover"
         type={type}
         className={`${styles.button} ${styles[style]}`}
       >
