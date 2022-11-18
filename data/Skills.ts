@@ -64,4 +64,16 @@ export const skills: SkillsProps[] = [
         icon: "/assets/skills/arrows-turn-right-solid.svg",
         skillTitle: "Framer"
     },
+    {
+        icon: "/assets/skills/bitbucket.svg",
+        skillTitle: "BitBucket"
+    },
+    {
+        icon: "/assets/skills/git-alt.svg",
+        skillTitle: "Git"
+    },
+    {
+        icon: "/assets/skills/jira.svg",
+        skillTitle: "Jira"
+    },
 ];
