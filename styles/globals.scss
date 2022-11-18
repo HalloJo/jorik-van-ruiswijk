@@ -21,6 +21,16 @@ body {
   color: var(--color-green);
   scroll-behavior: smooth;
   background-color: var(--color-beige);
+
+  ::-moz-selection {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+  }
+  
+  ::selection {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+  }
 }
 
 a {
