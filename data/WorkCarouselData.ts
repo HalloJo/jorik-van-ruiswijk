@@ -43,6 +43,12 @@ export const carouselData:WorkCard[] = [
         label: "Website / React "
     },
     {
+        href: "https://react-lostintokyo.netlify.app/",
+        src: "/assets/work/tokyo.png",
+        alt: "Lost in Tokyo logo",
+        label: "Website / React"
+    },
+    {
         href: "https://1-project-fifty-festival.superhi.com/",
         src: "/assets/work/fifty.png",
         alt: "Fifty logo",
