@@ -43,8 +43,9 @@ const Me = () => {
               >
                 Jorik van Ruiswijk. 31 years of age. Based in the Netherlands.
                 Self-taught front-end developer. Graduated graphic designer and
-                illustrator. Loves his kids, family and football. Helps people
-                with their design or development problems.
+                illustrator. Enjoys designing and building interactive websites.
+                With or without animations. Has a keen eye for details. Always
+                trying to improve his skillset. Let him help you.
               </m.p>
             </div>
           </div>
