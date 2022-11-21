@@ -1,7 +1,11 @@
 import styles from "../Wave/Wave.module.scss";
 import { motion as m, Variants } from "framer-motion";
 
-const Wave = ({ color }) => {
+type WaveProps = {
+  color: string;
+};
+
+const Wave = ({ color }: WaveProps) => {
   const wave: Variants = {
     hidden: {
       opacity: 0,

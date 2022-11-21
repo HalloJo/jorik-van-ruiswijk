@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Navigation } from "../../data/NavigationData";
 import CloseButton from "../CloseButton/CloseButton";
 import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
+import Wave from "../Wave/Wave";
 
 type HamburgerMenuProps = {
   navigation: Navigation;
@@ -28,6 +29,7 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
         })}
       </ul>
       <CloseButton open={open} setOpen={setOpen} />
+      <Wave color="#F9F2E9" />
     </nav>
   );
 };
