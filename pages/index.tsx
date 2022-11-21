@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import styles from "../styles/Home.module.scss";
 import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
+import Wave from "../components/Wave/Wave";
 import Contact from "../components/Contact/Contact";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <header className={styles.header}>
         <Navigation />
         <Header />
+        <Wave color="#fff" />
       </header>
 
       <main className={styles.main}>

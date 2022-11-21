@@ -1,0 +1,16 @@
+.wave {
+    position: absolute;
+    bottom: -1%;
+    left: 0;
+    width: 200%;
+    animation: wave linear 15s infinite;
+
+    @media (min-width: 1024px) {
+        bottom: -5%;
+    }
+}
+
+@keyframes wave {
+    0% { transform: translateX(0%);}
+    100% { transform: translateX(-50%);}
+}
