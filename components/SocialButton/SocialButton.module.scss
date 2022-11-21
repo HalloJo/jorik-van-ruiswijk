@@ -29,11 +29,6 @@
             filter: drop-shadow(0 4px 0 var(--color-green));
             border: 2px solid var(--color-green);
             background: var(--color-orange);
-
-            .me__fontAwesomeIcon,
-            .me__socialIconTitle {
-                color: var(--color-white)
-            } 
         }
 
         &:active {

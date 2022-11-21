@@ -30,6 +30,7 @@ const Button = ({ label, href, style, type }: ButtonProps) => {
     hover: {
       y: -10,
       transition: {
+        delay: 0,
         duration: 0.5,
         type: "spring",
         damping: 10,
