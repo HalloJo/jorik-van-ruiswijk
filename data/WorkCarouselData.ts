@@ -19,6 +19,12 @@ export const carouselData:WorkCard[] = [
         label: "React / Api"
     },
     {
+        href: "https://onamoreseriousnote.netlify.app",
+        src: "/assets/work/onamoreseriousnote.png",
+        alt: "On a more serious note logo",
+        label: "React / Application / Design"
+    },
+    {
         href: "https://react-zesty.netlify.app/",
         src: "/assets/work/zesty.png",
         alt: "Zesty logo",
