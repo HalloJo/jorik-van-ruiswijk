@@ -11,7 +11,9 @@ const SocialButton = ({ ...item }: SocialItem) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img className={styles.socialButton__image} src={icon} alt={alt} />
+      <picture className={styles.socialButton__picture}>
+        <img className={styles.socialButton__image} src={icon} alt={alt} />
+      </picture>
       <p className={styles.socialButton__title}>{label}</p>
     </a>
   );

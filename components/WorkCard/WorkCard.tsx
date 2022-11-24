@@ -7,7 +7,9 @@ const WorkCard = ({ ...item }: WorkCard) => {
 
   return (
     <div className={styles.workCard}>
-      <img className={styles.workCard__image} src={src} alt={alt} />
+      <picture>
+        <img className={styles.workCard__image} src={src} alt={alt} />
+      </picture>
       <p className={styles.workCard__label}>{label}</p>
     </div>
   );

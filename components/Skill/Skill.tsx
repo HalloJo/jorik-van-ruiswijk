@@ -6,7 +6,9 @@ const Skill = ({ ...skill }: SkillsProps) => {
 
   return (
     <>
-      <img className={styles.skillIcon} src={icon} alt="" />
+      <picture className={styles.skillIcon}>
+        <img src={icon} alt="" />
+      </picture>
       <p className={styles.skillTitle}>{skillTitle}</p>
     </>
   );
