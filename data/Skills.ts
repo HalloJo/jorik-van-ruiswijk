@@ -57,6 +57,10 @@ export const skills: SkillsProps[] = [
         skillTitle: "Figma"
     },
     {
+        icon: "/assets/skills/signature-solid.svg",
+        skillTitle: "BEM"
+    },
+    {
         icon: "/assets/skills/scroll-solid.svg",
         skillTitle: "Print"
     },
