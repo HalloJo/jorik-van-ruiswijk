@@ -57,6 +57,7 @@ const Header = () => {
             Design & Development
           </m.p>
         </m.div>
+
         {/* <m.div variants={item} className={styles.header__buttons}>
           <Button label={"See work"} href={"#work"} style={"orange"} />
           <Button label={"See me"} href={"#me"} style={"green"} />
