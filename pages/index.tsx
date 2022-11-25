@@ -37,7 +37,7 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://jorikvanruiswijk.nl/share_image.jpg/share_image.jpg"
+          content="https://jorikvanruiswijk.nl/share_image.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@ const Home = () => {
         />
         <meta
           property="twitter:image"
-          content="https://jorikvanruiswijk.nl/share_image.jpg/share_image.jpg"
+          content="https://jorikvanruiswijk.nl/share_image.jpg"
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
