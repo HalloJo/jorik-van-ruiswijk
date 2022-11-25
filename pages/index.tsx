@@ -35,7 +35,10 @@ const Home = () => {
           property="og:description"
           content="Need help with design or development? Jorik can help you with identity and websites. Just what you need."
         />
-        <meta property="og:image" content="/share_image.jpg" />
+        <meta
+          property="og:image"
+          content="https://jorikvanruiswijk.nl/share_image.jpg/share_image.jpg"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Jorik - Design & Development" />
@@ -43,7 +46,10 @@ const Home = () => {
           property="twitter:description"
           content="Need help with design or development? Jorik can help you with identity and websites. Just what you need."
         />
-        <meta property="twitter:image" content="/share_image.jpg" />
+        <meta
+          property="twitter:image"
+          content="https://jorikvanruiswijk.nl/share_image.jpg/share_image.jpg"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
