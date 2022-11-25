@@ -1,5 +1,6 @@
 .header {
-  min-height: 100vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   color: var(--color-green);
   padding: 7vw;
@@ -21,12 +22,12 @@
 
   &__content {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: 1024px) {
-     width: 60%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+      width: 60%;
     }
   }
 

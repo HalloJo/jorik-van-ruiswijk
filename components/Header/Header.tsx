@@ -19,6 +19,17 @@ const Header = () => {
       },
     },
   };
+  const delayItem: Variants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 1,
+      },
+    },
+  };
 
   const name = "Jorik".split("");
 
@@ -46,10 +57,10 @@ const Header = () => {
             Design & Development
           </m.p>
         </m.div>
-        <m.div variants={item} className={styles.header__buttons}>
+        {/* <m.div variants={item} className={styles.header__buttons}>
           <Button label={"See work"} href={"#work"} style={"orange"} />
           <Button label={"See me"} href={"#me"} style={"green"} />
-        </m.div>
+        </m.div> */}
       </div>
     </header>
   );

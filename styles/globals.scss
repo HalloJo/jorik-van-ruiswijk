@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;300;400&display=swap");
 
 :root {
-  --color-green: #016F62;
-  --color-orange: #FF6C00;
-  --color-beige: #F9F2E9;
-  --color-white: #FFF;
+  --color-green: #016f62;
+  --color-orange: #ff6c00;
+  --color-beige: #f9f2e9;
+  --color-white: #fff;
   --color-gray: #8e8e8e;
   --color-error: #d124f8;
+  --vh: 1vh;
 }
 
 html,
@@ -15,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: var(--color-green);
@@ -26,7 +27,7 @@ body {
     background-color: var(--color-orange);
     color: var(--color-white);
   }
-  
+
   ::selection {
     background-color: var(--color-orange);
     color: var(--color-white);
@@ -39,9 +40,8 @@ a {
 }
 
 section {
-  padding: 10vw 7vw;  
-  width: 100vw; 
-
+  padding: 10vw 7vw;
+  width: 100vw;
 }
 
 header {
@@ -63,7 +63,7 @@ header {
     color-scheme: dark;
   }
   body {
-    color: var(--color-green);;
+    color: var(--color-green);
     background-color: var(--color-beige);
   }
 }

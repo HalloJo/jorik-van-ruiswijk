@@ -6,8 +6,19 @@ import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
 import Wave from "../components/Wave/Wave";
 import Contact from "../components/Contact/Contact";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    window.addEventListener("resize", () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  });
+
   return (
     <div className={styles.container}>
       <Head>

@@ -4,6 +4,7 @@
   position: fixed;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   top: 0;
   left: 0;
   overflow: hidden;
@@ -30,13 +31,13 @@
   &__link {
     font-weight: 800;
     font-size: 36px;
-    color: var(--color-beige)
+    color: var(--color-beige);
   }
 
   &__close {
     position: absolute;
     right: 7vw;
     top: 7vw;
-    color: var(--color-beige)
+    color: var(--color-beige);
   }
 }

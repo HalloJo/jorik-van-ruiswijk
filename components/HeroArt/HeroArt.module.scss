@@ -1,12 +1,13 @@
 .heroArt {
-    @media (min-width: 1024px) {
-        width: 80%;
-    }
+  width: 100%;
 
-    &__svg {
-        fill: var(--color-green);
-    }
-    &__emphasis {
-        fill: var(--color-orange);
-    }
+  @media (min-width: 1024px) {
+  }
+
+  &__svg {
+    fill: var(--color-green);
+  }
+  &__emphasis {
+    fill: var(--color-orange);
+  }
 }
