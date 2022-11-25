@@ -19,14 +19,21 @@ const Header = () => {
       },
     },
   };
-  const delayItem: Variants = {
-    hidden: { opacity: 0, y: 10 },
+  const scrollArrow: Variants = {
+    hidden: { y: -10, rotate: 90 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: 1,
+        delay: 2,
+      },
+    },
+    end: {
+      y: -10,
+      transition: {
+        repeat: Infinity,
+        repeatType: "reverse",
+        duration: 1.5,
       },
     },
   };
@@ -50,14 +57,22 @@ const Header = () => {
               return <LetterSpan key={index}>{letter}</LetterSpan>;
             })}
           </m.div>
-          {/* <m.h1 variants={item} className={styles.header__name}>
-            Jorik
-          </m.h1> */}
           <m.p variants={item} className={styles.header__subTitle}>
             Design & Development
           </m.p>
         </m.div>
-
+        <m.picture
+          variants={scrollArrow}
+          // initial="hidden"
+          // whileInView="visible"
+          animate={["hidden", "visible", "end"]}
+          className={styles.header__scrollIcon}
+        >
+          <img
+            src="/assets/skills/arrow-right-solid-orange.svg"
+            alt="scroll down arrow"
+          />
+        </m.picture>
         {/* <m.div variants={item} className={styles.header__buttons}>
           <Button label={"See work"} href={"#work"} style={"orange"} />
           <Button label={"See me"} href={"#me"} style={"green"} />
