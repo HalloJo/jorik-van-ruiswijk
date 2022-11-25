@@ -22,6 +22,7 @@ body {
   color: var(--color-green);
   scroll-behavior: smooth;
   background-color: var(--color-beige);
+  cursor: none;
 
   ::-moz-selection {
     background-color: var(--color-orange);
@@ -37,6 +38,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: none;
 }
 
 section {

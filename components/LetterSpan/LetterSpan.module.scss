@@ -1,15 +1,14 @@
+.letterSpan {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1;
+  display: inline-block;
 
-  .letterSpan {
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 1;
-    display: inline-block;
+  @media (min-width: 1024px) {
+    font-size: calc(90px + 6 * ((100vw - 20px) / 1000));
 
-    @media (min-width: 1024px) {
-      font-size: calc(90px + 6 * ((100vw - 20px) / 1000));
-
-      &:hover {
-        cursor: default;
-      }
+    &:hover {
+      // cursor: default;
     }
   }
+}

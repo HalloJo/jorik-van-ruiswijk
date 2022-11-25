@@ -6,10 +6,37 @@ import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
 import Wave from "../components/Wave/Wave";
 import Contact from "../components/Contact/Contact";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion as m, Variants } from "framer-motion";
 
 const Home = () => {
+  type MousePositionProps = {
+    x: number;
+    y: number;
+  };
+
+  const [mousePosition, setMousePosition] = useState<MousePositionProps>({
+    x: 0,
+    y: 0,
+  });
+
+  const mouseMove = (event) => {
+    setMousePosition({
+      x: event.clientX - 7.5,
+      y: event.clientY - 7.5,
+    });
+  };
+
+  const mouseVariant: Variants = {
+    default: {
+      x: mousePosition.x,
+      y: mousePosition.y,
+    },
+  };
+
   useEffect(() => {
+    window.addEventListener("mousemove", mouseMove);
+
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 
@@ -17,7 +44,11 @@ const Home = () => {
     //   let vh = window.innerHeight * 0.01;
     //   document.documentElement.style.setProperty("--vh", `${vh}px`);
     // });
-  });
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -65,6 +96,12 @@ const Home = () => {
         <Me />
         <Contact />
       </main>
+
+      <m.div
+        variants={mouseVariant}
+        animate="default"
+        className={styles.cursor}
+      />
     </div>
   );
 };

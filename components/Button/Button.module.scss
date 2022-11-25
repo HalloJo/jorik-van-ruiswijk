@@ -1,47 +1,47 @@
 .link {
-    width: 100%;
+  width: 100%;
 
-    @media (min-width: 1024px) {
-        width:auto;
-      }
+  @media (min-width: 1024px) {
+    width: auto;
+  }
 }
 
 .button {
-    width: 100%;
-    background: var(--color-beige);
-    border: 2px solid var(--color-orange);
-    padding: 15px;
-    border-radius: 40px;
-    color: var(--color-orange);
-    font-family: 'Syne', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    margin: 0 0 10px 0;
-    transform: translateY(-3px);
-    
-    filter: drop-shadow(0 4px 0 var(--color-orange));
+  width: 100%;
+  background: var(--color-beige);
+  border: 2px solid var(--color-orange);
+  padding: 15px;
+  border-radius: 40px;
+  color: var(--color-orange);
+  font-family: "Syne", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  transform: translateY(-3px);
 
-    &:active {
-        transform: translateY(0px);
-        filter: none;
+  filter: drop-shadow(0 4px 0 var(--color-orange));
+
+  &:active {
+    transform: translateY(0px);
+    filter: none;
+  }
+
+  @media (min-width: 1024px) {
+    width: auto;
+    // margin: 0 20px 0 0;
+
+    &:hover {
+      // cursor: pointer;
+      border: 2px solid var(--color-green);
+      color: var(--color-green);
+      filter: drop-shadow(0 4px 0 var(--color-green));
+      background-color: var(--color-orange);
     }
-
-    @media (min-width: 1024px) {
-        width: auto;
-        // margin: 0 20px 0 0;
-
-        &:hover {
-            cursor: pointer;
-            border: 2px solid var(--color-green);
-            color: var(--color-green);
-            filter: drop-shadow(0 4px 0 var(--color-green));
-            background-color: var(--color-orange);
-        }
-      }
+  }
 }
 
 .green {
-    border: 2px solid var(--color-green);
-    color: var(--color-green);
-    filter: drop-shadow(0 4px 0 var(--color-green));
-   }
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+  filter: drop-shadow(0 4px 0 var(--color-green));
+}
