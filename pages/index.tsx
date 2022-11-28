@@ -100,7 +100,7 @@ const Home = () => {
       <header className={styles.header}>
         <Navigation />
         <Header />
-        <Wave color="#fff" />
+        {/* <Wave color="#016f62" /> */}
       </header>
 
       <main className={styles.main}>
