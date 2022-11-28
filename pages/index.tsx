@@ -6,6 +6,7 @@ import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
 import Contact from "../components/Contact/Contact";
 import CustomCursor from "../components/CustomCursor/CustomCursor";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -54,6 +55,9 @@ const Home = () => {
         <Me />
         <Contact />
       </main>
+
+      <Footer />
+
       <CustomCursor />
     </div>
   );

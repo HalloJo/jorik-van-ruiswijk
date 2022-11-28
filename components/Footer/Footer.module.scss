@@ -1,0 +1,42 @@
+.footer {
+  background-color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 7vw;
+  width: 100vw;
+
+  @media (min-width: 1024px) {
+    padding: 1vw 5vw;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 1024px) {
+      max-width: 1200px;
+    }
+  }
+
+  &__foot {
+    font-size: 30px;
+  }
+
+  &__name,
+  &__message {
+    color: var(--color-white);
+    font-family: "Kantumruy Pro", sans-serif;
+    font-weight: 200;
+  }
+  &__message {
+    font-weight: 400;
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
