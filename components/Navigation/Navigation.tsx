@@ -4,11 +4,20 @@ import { navigation } from "../../data/NavigationData";
 import Hamburger from "../Hamburger/Hamburger";
 import styles from "../Navigation/Navigation.module.scss";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion as m, Variants } from "framer-motion";
 
 const Navigation = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const scrolledOnPage = () => {
+      window.scrollY >= 90 ? setScrolled(true) : setScrolled(false);
+    };
+
+    window.addEventListener("scroll", scrolledOnPage);
+  });
 
   const navigationAnimation: Variants = {
     hidden: { translateY: -100 },
@@ -30,7 +39,7 @@ const Navigation = () => {
       initial="hidden"
       animate="visible"
       variants={navigationAnimation}
-      className={styles.navigation}
+      className={`${styles.navigation} ${scrolled && styles.scrolled}`}
     >
       <div className={styles.navigation__logoWrapper}>
         <Logo />

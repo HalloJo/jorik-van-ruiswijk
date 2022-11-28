@@ -1,18 +1,17 @@
 .hamburger {
   display: block;
   transform: translateY(-3px);
-  background: var(--color-beige);
+  background: var(--color-white);
   padding: 10px;
   border-radius: 25px;
   border: 2px solid var(--color-green);
-    
+
   filter: drop-shadow(0 4px 0 var(--color-green));
 
   &:active {
     transform: translateY(0px);
     filter: none;
-}
-
+  }
 
   &__line {
     width: 20px;
@@ -20,7 +19,6 @@
     background-color: var(--color-green);
     display: block;
     margin: 3px 0;
-    
   }
 
   @media (min-width: 1024px) {

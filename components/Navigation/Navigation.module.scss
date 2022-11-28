@@ -1,21 +1,29 @@
 .navigation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 7vw;
-    position: fixed;
-    z-index: 99;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7vw;
+  position: fixed;
+  z-index: 99;
+  transition: all 0.3s;
 
-    @media (min-width: 1024px) {
-        padding: 2vw;
-        // backdrop-filter: blur(5px);
-      }
-
-    &__logoWrapper {
-        display: flex;
-        align-items: center;
-      }
+  &.scrolled {
+    background-color: var(--color-white);
+    padding: 4vw 7vw;
+    filter: drop-shadow(0 4px 0 var(--color-green));
   }
 
-  
+  @media (min-width: 1024px) {
+    padding: 2vw;
+
+    &.scrolled {
+      padding: 1vw 2vw;
+    }
+  }
+
+  &__logoWrapper {
+    display: flex;
+    align-items: center;
+  }
+}

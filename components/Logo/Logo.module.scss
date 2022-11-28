@@ -1,6 +1,13 @@
 .logo {
   height: min-content;
 
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
   &__svg {
     fill: var(--color-green);
   }

@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <div className={styles.logo}>
       <Link href="/">
-        <a>
+        <a className={styles.logo__link}>
           <svg
             id="Layer_1"
             data-name="Layer 1"
