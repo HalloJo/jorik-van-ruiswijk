@@ -43,14 +43,14 @@ const Home = () => {
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+      </Head>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+      />
 
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
-        />
-
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -58,8 +58,7 @@ const Home = () => {
             gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
 
           `}
-        </Script>
-      </Head>
+      </Script>
 
       <header className={styles.header}>
         <Navigation />
