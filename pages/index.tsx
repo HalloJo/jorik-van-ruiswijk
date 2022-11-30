@@ -7,6 +7,7 @@ import Me from "../components/Me/Me";
 import Contact from "../components/Contact/Contact";
 import CustomCursor from "../components/CustomCursor/CustomCursor";
 import Footer from "../components/Footer/Footer";
+import Script from "next/script";
 
 const Home = () => {
   return (
@@ -42,6 +43,22 @@ const Home = () => {
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+        />
+
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+
+          `}
+        </Script>
       </Head>
 
       <header className={styles.header}>
