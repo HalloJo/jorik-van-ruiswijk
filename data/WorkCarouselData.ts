@@ -19,10 +19,16 @@ export const carouselData:WorkCard[] = [
         label: "React / Api"
     },
     {
+        href: "https://the-next-pokedex.netlify.app/",
+        src: "/assets/work/nextpokedex.png",
+        alt: "The Next Pokedex logo",
+        label: "Next / Api / SSR"
+    },
+    {
         href: "https://onamoreseriousnote.netlify.app",
         src: "/assets/work/onamoreseriousnote.png",
         alt: "On a more serious note logo",
-        label: "React / Application / Design"
+        label: "React / Application"
     },
     {
         href: "https://react-zesty.netlify.app/",
