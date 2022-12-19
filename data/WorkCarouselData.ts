@@ -73,9 +73,9 @@ export const carouselData:WorkCard[] = [
         label: "Application / HTML5"
     },
     {
-        href: "https://4-good-times.superhi.com/",
-        src: "/assets/work/goodtimes.png",
-        alt: "Good Times logo",
-        label: "Website / HTML5"
+        href: "https://lens-of-truth.netlify.app/",
+        src: "/assets/work/lens.png",
+        alt: "Lens of Truth logo",
+        label: "Canvas / HTML5"
     },
 ];
