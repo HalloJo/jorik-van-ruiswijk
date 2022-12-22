@@ -100,4 +100,9 @@ export const skills: SkillsProps[] = [
         skillTitle: "Jira",
         alt: "Jira"
     },
+    {
+        icon: "/assets/skills/cube-solid.svg",
+        skillTitle: "Three.js",
+        alt: "Three.js"
+    },
 ];
