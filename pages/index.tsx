@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.scss";
 import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
 import Contact from "../components/Contact/Contact";
-import CustomCursor from "../components/CustomCursor/CustomCursor";
+// import CustomCursor from "../components/CustomCursor/CustomCursor";
 import Footer from "../components/Footer/Footer";
 import Script from "next/script";
 
@@ -65,7 +65,6 @@ const Home = () => {
       <header className={styles.header}>
         <Navigation />
         <Header />
-        {/* <Wave color="#016f62" /> */}
       </header>
 
       <main className={styles.main}>
@@ -76,7 +75,7 @@ const Home = () => {
 
       <Footer />
 
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </div>
   );
 };

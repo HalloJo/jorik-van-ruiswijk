@@ -37,10 +37,10 @@ export const carouselData:WorkCard[] = [
         label: "Website / React"
     },
     {
-        href: "https://www.behance.net/gallery/65567759/midocean",
-        src: "/assets/work/midocean.png",
-        alt: "midocean logo",
-        label: "Branding / Webdesign / Illustration"
+        href: "https://stuff-that-matters.netlify.app/",
+        src: "/assets/work/matter.png",
+        alt: "Matter logo",
+        label: "Matter.js / Javascript / HTML5"
     },
     {
         href: "https://react-jiffy.netlify.app/",
@@ -76,6 +76,12 @@ export const carouselData:WorkCard[] = [
         href: "https://lens-of-truth.netlify.app/",
         src: "/assets/work/lens.png",
         alt: "Lens of Truth logo",
-        label: "Canvas / HTML5"
+        label: "Canvas / Javascript / HTML5"
+    },
+    {
+        href: "https://www.behance.net/gallery/65567759/midocean",
+        src: "/assets/work/midocean.png",
+        alt: "midocean logo",
+        label: "Branding / Webdesign / Illustration"
     },
 ];
