@@ -13,12 +13,6 @@ export const carouselData:WorkCard[] = [
         label: "Website / Identity"
     },
     {
-        href: "https://master--react-bookclub.netlify.app/",
-        src: "/assets/work/bookclub.png",
-        alt: "Bookclub logo",
-        label: "React / Api"
-    },
-    {
         href: "https://the-next-pokedex.netlify.app/",
         src: "/assets/work/nextpokedex.png",
         alt: "The Next Pokedex logo",
@@ -35,6 +29,12 @@ export const carouselData:WorkCard[] = [
         src: "/assets/work/zesty.png",
         alt: "Zesty logo",
         label: "Website / React"
+    },
+    {
+        href: "https://shapes-in-space.netlify.app/",
+        src: "/assets/work/shapes.png",
+        alt: "Shapes logo",
+        label: "Three.js / HTML5"
     },
     {
         href: "https://stuff-that-matters.netlify.app/",
@@ -59,6 +59,12 @@ export const carouselData:WorkCard[] = [
         src: "/assets/work/tokyo.png",
         alt: "Lost in Tokyo logo",
         label: "Website / React"
+    },
+    {
+        href: "https://master--react-bookclub.netlify.app/",
+        src: "/assets/work/bookclub.png",
+        alt: "Bookclub logo",
+        label: "React / Api"
     },
     {
         href: "https://1-project-fifty-festival.superhi.com/",
