@@ -105,4 +105,9 @@ export const skills: SkillsProps[] = [
         skillTitle: "Three.js",
         alt: "Three.js"
     },
+    {
+        icon: "/assets/skills/gitlab.svg",
+        skillTitle: "Gitlab",
+        alt: "Gitlab"
+    },
 ];
