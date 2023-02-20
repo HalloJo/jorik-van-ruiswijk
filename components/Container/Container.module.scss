@@ -1,0 +1,10 @@
+.container {
+  --container-padding: 2rem;
+  --container-width: 100%;
+  --container-max-width: 1200px;
+
+  background-color: red;
+  width: var(--container-width);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
