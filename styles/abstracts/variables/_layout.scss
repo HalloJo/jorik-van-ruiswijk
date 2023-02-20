@@ -1,0 +1,15 @@
+@use "sass:list";
+@use "sass:map";
+
+$breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1920px,
+);
+$max-width: list.nth(
+  map.values($breakpoints),
+  list.length(map.values($breakpoints))
+);

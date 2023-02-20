@@ -1,0 +1,15 @@
+@use "../variables/layout";
+
+@mixin breakpoint($width, $type: min) {
+  @if map_has_key(layout.$breakpoints, $width) {
+    $width: map_get(layout.$breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
