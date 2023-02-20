@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HeroArt from "../HeroArt/HeroArt";
 import Button from "../Button/Button";
-import styles from "../Header/Header.module.scss";
+import styles from "../Hero/Hero.module.scss";
 import { motion as m, Variants } from "framer-motion";
 import LetterSpan from "../LetterSpan/LetterSpan";
 
