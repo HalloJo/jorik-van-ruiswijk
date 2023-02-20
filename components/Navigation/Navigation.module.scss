@@ -1,25 +1,20 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+@use "styles/abstracts/variables/colors";
+
 .navigation {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7vw;
   position: fixed;
   z-index: 99;
   transition: all 0.3s;
+  width: 100%;
 
   &.scrolled {
-    background-color: var(--color-white);
-    padding: 4vw 7vw;
-    filter: drop-shadow(0 4px 0 var(--color-green));
   }
 
-  @media (min-width: 1024px) {
-    padding: 2vw;
-
-    &.scrolled {
-      padding: 1vw 2vw;
-    }
+  @include mixins.breakpoint(lg) {
   }
 
   &__logoWrapper {
