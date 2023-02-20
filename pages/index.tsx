@@ -1,17 +1,13 @@
 import Head from "next/head";
-import Navigation from "../components/Navigation/Navigation";
-import Header from "../components/Header/Header";
-import styles from "../styles/Home.module.scss";
 import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
 import Contact from "../components/Contact/Contact";
-// import CustomCursor from "../components/CustomCursor/CustomCursor";
-import Footer from "../components/Footer/Footer";
 import Script from "next/script";
+import PageWrapper from "../components/PageWrapper/PageWrapper";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Jorik - Design & Development</title>
         <meta name="title" content="Jorik - Design & Development" />
@@ -61,22 +57,13 @@ const Home = () => {
 
           `}
       </Script>
-
-      <header className={styles.header}>
-        <Navigation />
-        <Header />
-      </header>
-
-      <main className={styles.main}>
+            
+      <PageWrapper>
         <Work />
         <Me />
         <Contact />
-      </main>
-
-      <Footer />
-
-      {/* <CustomCursor /> */}
-    </div>
+      </PageWrapper>
+    </>
   );
 };
 
