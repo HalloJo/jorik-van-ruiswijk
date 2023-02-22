@@ -1,9 +1,9 @@
 type NavigationItem = {
-  label: string,
-  id: string
-}
+  label: string;
+  id: string;
+};
 
-export type Navigation = NavigationItem[]
+export type Navigation = NavigationItem[];
 
 export const navigation: Navigation = [
   {
