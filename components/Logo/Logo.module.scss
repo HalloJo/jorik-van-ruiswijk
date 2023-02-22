@@ -1,14 +1,16 @@
-.logo {
-  height: min-content;
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+@use "styles/abstracts/variables/colors";
 
+.logo {
   &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-  }
 
-  &__svg {
-    fill: var(--color-green);
+    svg {
+      fill: colors.$lightGray;
+      width: 2.5rem;
+    }
   }
 }
