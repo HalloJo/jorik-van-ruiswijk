@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import cn from "clsx";
 import styles from "../Hamburger/Hamburger.module.scss";
 
 type HamburgerProps = {
@@ -15,7 +16,10 @@ const Hamburger = ({ open, setOpen }: HamburgerProps) => {
   }, [open]);
 
   return (
-    <div className={styles.hamburger} onClick={() => setOpen(!open)}>
+    <div
+      className={cn(styles.hamburger, open && styles.open)}
+      onClick={() => setOpen(!open)}
+    >
       <span className={styles.hamburger__line}></span>
       <span className={styles.hamburger__line}></span>
       <span className={styles.hamburger__line}></span>

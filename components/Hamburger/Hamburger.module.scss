@@ -1,27 +1,29 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+@use "styles/abstracts/variables/colors";
+
 .hamburger {
-  display: block;
-  transform: translateY(-3px);
-  background: var(--color-white);
-  padding: 10px;
-  border-radius: 25px;
-  border: 2px solid var(--color-green);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-  filter: drop-shadow(0 4px 0 var(--color-green));
-
-  &:active {
-    transform: translateY(0px);
-    filter: none;
+  &.open {
+    .hamburger__line {
+      transition: all 0.4s ease-in-out;
+      width: 1.6rem;
+      transform: rotate(180deg);
+    }
   }
 
   &__line {
-    width: 20px;
-    height: 3px;
-    background-color: var(--color-green);
-    display: block;
-    margin: 3px 0;
+    width: 1.3rem;
+    transform: rotate(-45deg);
+    height: 2.5px;
+    background-color: colors.$lightGray;
+    transition: all 0.4s ease-in-out;
   }
 
-  @media (min-width: 1024px) {
+  @include mixins.breakpoint(md) {
     display: none;
   }
 }

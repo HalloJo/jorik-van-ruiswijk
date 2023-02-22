@@ -1,5 +1,21 @@
+@use "styles/abstracts/variables/colors";
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hamburgerMenu {
-  background-color: var(--color-green);
+  background: radial-gradient(circle at 100%, #333, rgb(0, 0, 0) 75%);
+  background-size: 150% 150%;
+  animation: gradient 5s ease infinite;
   display: flex;
   position: fixed;
   width: 100%;
@@ -8,37 +24,41 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  text-align: center;
-  z-index: 99;
-  padding: 7vw;
-  transform: translateX(100%);
+  z-index: -1;
+  transform: translateY(-100%);
   transition: all 0.4s ease-out;
 
   &.open {
-    transform: translateX(0%);
+    transform: translateY(0%);
+  }
+
+  &__container {
+    display: grid;
+    grid-template:
+      ". " 20fr
+      "navigation"
+      ". " 30fr
+      "socials "
+      ". " 10fr;
   }
 
   &__list {
-    list-style-type: none;
+    grid-area: navigation;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
+    gap: 1.5rem;
   }
 
   &__link {
-    font-weight: 800;
     font-size: 36px;
-    font-family: "Epilogue", sans-serif;
-    color: var(--color-beige);
   }
 
-  &__close {
-    position: absolute;
-    right: 7vw;
-    top: 7vw;
-    color: var(--color-beige);
+  &__socials {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 700;
   }
 }

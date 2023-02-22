@@ -2,23 +2,39 @@
 @use "styles/abstracts/variables";
 @use "styles/abstracts/variables/colors";
 
-.navigation {
+.container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   z-index: 99;
+
+  // @include mixins.breakpoint(lg) {
+  //   flex-direction: row;
+  // }
+}
+
+.navigation {
+  position: fixed;
   transition: all 0.3s;
   width: 100%;
+  backdrop-filter: blur(10px);
 
   &.scrolled {
-  }
-
-  @include mixins.breakpoint(lg) {
   }
 
   &__logoWrapper {
     display: flex;
     align-items: center;
+    gap: 2rem;
+  }
+
+  &__span {
+    display: none;
+    font-weight: 700;
+
+    @include mixins.breakpoint(md) {
+      display: flex;
+    }
   }
 }

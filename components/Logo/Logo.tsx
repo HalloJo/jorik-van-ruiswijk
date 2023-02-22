@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../Logo/Logo.module.scss";
-import { motion } from "framer-motion";
 
 const Logo = () => {
   const alt = "Logo Jorik van Ruiswijk";

@@ -1,22 +1,22 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
 .navigationList {
   display: none;
+  list-style-type: none;
 
-  @media (min-width: 1024px) {
+  @include mixins.breakpoint(lg) {
     display: block;
-    list-style-type: none;
     display: flex;
     gap: 25px;
   }
 
   &__item {
-    font-weight: 800;
+    font-weight: 500;
+    transition: color 0.5s ease;
 
     &:hover {
-      color: var(--color-orange)
+      color: colors.$white;
     }
-
-    &:active {
-      transform: translateY(2px);
-  }
   }
 }

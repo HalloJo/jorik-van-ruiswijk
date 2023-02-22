@@ -4,7 +4,6 @@ import { navigation } from "../../data/NavigationData";
 import Hamburger from "../Hamburger/Hamburger";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { useEffect, useState } from "react";
-import { motion as m, Variants } from "framer-motion";
 import Container from "../Container/Container";
 import styles from "../Navigation/Navigation.module.scss";
 
@@ -20,37 +19,18 @@ const Navigation = () => {
     window.addEventListener("scroll", scrolledOnPage);
   });
 
-  const navigationAnimation: Variants = {
-    hidden: { translateY: -100 },
-    visible: {
-      translateY: 0,
-      transition: {
-        duration: 0.6,
-        delay: 2,
-        type: "spring",
-        damping: 10,
-        mass: 0.75,
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
-    <m.nav
-      initial="hidden"
-      animate="visible"
-      variants={navigationAnimation}
-      className={`${styles.navigation} ${scrolled && styles.scrolled}`}
-    >
-      <Container>
+    <nav className={`${styles.navigation} ${scrolled && styles.scrolled}`}>
+      <Container className={styles.container}>
         <div className={styles.navigation__logoWrapper}>
           <Logo />
+          <span className={styles.navigation__span}>Jorik van Ruiswijk</span>
         </div>
         <NavigationList navigation={navigation} />
-        {/* <Hamburger open={open} setOpen={setOpen} /> */}
-        {/* <HamburgerMenu navigation={navigation} open={open} setOpen={setOpen} /> */}
+        <Hamburger open={open} setOpen={setOpen} />
       </Container>
-    </m.nav>
+      <HamburgerMenu navigation={navigation} open={open} setOpen={setOpen} />
+    </nav>
   );
 };
 
