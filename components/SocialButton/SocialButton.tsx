@@ -2,7 +2,7 @@ import { SocialItem } from "../../data/SocialData";
 import styles from "../SocialButton/SocialButton.module.scss";
 
 const SocialButton = ({ ...item }: SocialItem) => {
-  const { label, href, alt, icon } = item;
+  const { label, href } = item;
 
   return (
     <a
@@ -11,9 +11,6 @@ const SocialButton = ({ ...item }: SocialItem) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <picture className={styles.socialButton__picture}>
-        <img className={styles.socialButton__image} src={icon} alt={alt} />
-      </picture>
       <p className={styles.socialButton__title}>{label}</p>
     </a>
   );
