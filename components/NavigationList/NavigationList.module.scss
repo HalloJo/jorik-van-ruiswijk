@@ -8,7 +8,7 @@
   @include mixins.breakpoint(lg) {
     display: block;
     display: flex;
-    gap: 25px;
+    gap: 3rem;
   }
 
   &__item {
