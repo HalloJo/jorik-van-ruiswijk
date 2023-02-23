@@ -1,0 +1,10 @@
+@use "styles/abstracts/mixins";
+
+.heroIcon {
+  svg {
+    width: 100%;
+
+    @include mixins.breakpoint(md) {
+    }
+  }
+}

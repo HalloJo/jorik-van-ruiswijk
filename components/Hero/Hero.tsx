@@ -1,9 +1,9 @@
-import { useState } from "react";
-import HeroArt from "../HeroArt/HeroArt";
-import Button from "../Button/Button";
 import styles from "../Hero/Hero.module.scss";
 import { motion as m, Variants } from "framer-motion";
-import LetterSpan from "../LetterSpan/LetterSpan";
+import Container from "../Container/Container";
+import Row from "../Row/Row";
+import Column from "../Column/Column";
+import HeroIcon from "../HeroIcon/HeroIcon";
 
 const Header = () => {
   const item: Variants = {
@@ -18,61 +18,22 @@ const Header = () => {
       },
     },
   };
-  const scrollArrow: Variants = {
-    hidden: { opacity: 0, y: -10, rotate: 90 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 2,
-      },
-    },
-    end: {
-      y: -10,
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 1.5,
-      },
-    },
-  };
-
-  const name = "Jorik".split("");
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__content}>
-        <HeroArt />
-      </div>
-      <div className={styles.header__callToActions}>
-        <m.div
-          initial="hidden"
-          whileInView="visible"
-          variants={item}
-          className={styles.header__contentText}
-        >
-          <m.div variants={item}>
-            {name.map((letter, index) => {
-              return <LetterSpan key={index}>{letter}</LetterSpan>;
-            })}
-          </m.div>
-          <m.p variants={item} className={styles.header__subTitle}>
-            Design & Development
-          </m.p>
+      <Container className={styles.header__container}>
+        <m.div initial="hidden" whileInView="visible" variants={item}>
+          <Row>
+            <Column className={styles.header__text} width="12 md:8">
+              <h1 className={styles.header__title}>Design & Development.</h1>
+              <h2 className={styles.header__subtitle}>Just what you need.</h2>
+            </Column>
+            <Column className={styles.header__image} width="3 md:4">
+              <HeroIcon />
+            </Column>
+          </Row>
         </m.div>
-        <m.picture
-          variants={scrollArrow}
-          // initial="hidden"
-          whileInView={["hidden", "visible", "end"]}
-          // animate={["hidden", "visible", "end"]}
-          className={styles.header__scrollIcon}
-        >
-          <img
-            src="/assets/skills/arrow-right-solid-orange.svg"
-            alt="scroll down arrow"
-          />
-        </m.picture>
-      </div>
+      </Container>
     </header>
   );
 };
