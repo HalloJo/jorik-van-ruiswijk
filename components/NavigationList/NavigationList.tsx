@@ -1,4 +1,3 @@
-import cn from "clsx";
 import styles from "../NavigationList/NavigationList.module.scss";
 
 const NavigationList = ({ navigation }) => {

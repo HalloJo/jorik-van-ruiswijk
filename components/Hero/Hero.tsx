@@ -4,6 +4,7 @@ import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
 import HeroIcon from "../HeroIcon/HeroIcon";
+import Button from "../Button/Button";
 
 const Header = () => {
   const item: Variants = {
@@ -20,15 +21,19 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
-      <Container className={styles.header__container}>
+    <header className={styles.hero}>
+      <Container className={styles.hero__container}>
         <m.div initial="hidden" whileInView="visible" variants={item}>
           <Row>
-            <Column className={styles.header__text} width="12 md:8">
-              <h1 className={styles.header__title}>Design & Development.</h1>
-              <h2 className={styles.header__subtitle}>Just what you need.</h2>
+            <Column className={styles.hero__text} width="12 md:8">
+              <h1 className={styles.hero__title}>Design & Development.</h1>
+              <h2 className={styles.hero__subtitle}>Just what you need.</h2>
+              <div className={styles.hero__buttons}>
+                <Button label="See work" href="#work" />
+                <Button label="About me" href="#me" />
+              </div>
             </Column>
-            <Column className={styles.header__image} width="3 md:4">
+            <Column className={styles.hero__image} width="3 md:4">
               <HeroIcon />
             </Column>
           </Row>
