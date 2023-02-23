@@ -6,6 +6,7 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { useEffect, useState } from "react";
 import Container from "../Container/Container";
 import styles from "../Navigation/Navigation.module.scss";
+import Link from "next/link";
 
 const Navigation = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -24,7 +25,13 @@ const Navigation = () => {
       <Container className={styles.container}>
         <div className={styles.navigation__logoWrapper}>
           <Logo />
-          <span className={styles.navigation__span}>Jorik van Ruiswijk</span>
+          <Link href="/">
+            <a>
+              <span className={styles.navigation__span}>
+                Jorik van Ruiswijk
+              </span>
+            </a>
+          </Link>
         </div>
         <NavigationList navigation={navigation} />
         <Hamburger open={open} setOpen={setOpen} />

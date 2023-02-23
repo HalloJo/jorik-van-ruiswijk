@@ -1,6 +1,7 @@
 type NavigationItem = {
   label: string;
   id: string;
+  secondary?: boolean;
 };
 
 export type Navigation = NavigationItem[];
@@ -17,5 +18,6 @@ export const navigation: Navigation = [
   {
     label: "contact",
     id: "#contact",
+    secondary: true,
   },
 ];
