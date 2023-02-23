@@ -73,6 +73,10 @@
   &__buttons {
     display: flex;
     gap: 1rem;
+
+    @include mixins.breakpoint(md) {
+      flex-direction: row;
+    }
   }
 
   &__image {
