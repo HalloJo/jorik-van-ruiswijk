@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+
+  @include mixins.breakpoint(md) {
+    grid-gap: 1.8rem;
+  }
+}

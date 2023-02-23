@@ -1,0 +1,17 @@
+@use "sass:math";
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+
+@each $size, $value in variables.$layout-breakpoints {
+  @include mixins.breakpoint(#{$size}) {
+    @for $i from 0 through 12 {
+      .#{$size}-#{$i} {
+        grid-column: span #{$i};
+      }
+
+      .offset-#{$size}-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
