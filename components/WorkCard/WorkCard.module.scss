@@ -1,37 +1,39 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
 .workCard {
   position: relative;
   min-width: 86vw;
   height: 100%;
   overflow: hidden;
   border-radius: 15px;
-  background: var(--color-white);
   scroll-snap-align: start;
-  filter: drop-shadow(0 2.8px 0 var(--color-green));
-  border: 3px solid var(--color-green);
+  border: 1px solid colors.$darkGray;
   box-sizing: border-box;
-  transform: translateY(-3px);
 
-  @media (min-width: 1024px) {
+  @include mixins.breakpoint(md) {
     min-width: 100%;
 
     &:hover {
-      // cursor: pointer;
-      filter: drop-shadow(0 2.8px 0 var(--color-orange));
-      border: 3px solid var(--color-orange);
-
       .workCard__label {
-        background-color: var(--color-orange);
+        transform: translateY(0);
+      }
+
+      .workCard__picture {
+        filter: grayscale(0);
       }
     }
   }
 
-  &:active {
-    transform: translateY(0px);
-    filter: none;
-  }
-
   &__picture {
-    // object-fit: cover;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    @include mixins.breakpoint(md) {
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
+    }
   }
 
   &__image {
@@ -40,17 +42,51 @@
   }
 
   &__label {
-    font-weight: 300;
-    font-family: "Kantumruy Pro", sans-serif;
     position: absolute;
-    right: 0;
-    bottom: 15px;
+    bottom: 0;
+    left: 0;
     z-index: 10;
-    padding: 6px 8px 6px 10px;
+    display: grid;
+    grid-template:
+      "title  " auto
+      ".      " 1rem
+      "list   " auto;
+
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    border-radius: 15px;
     font-size: 14px;
-    background-color: var(--color-green);
-    color: var(--color-white);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    transition: all 0.5s ease-out;
+    transform: translateY(100%);
+  }
+
+  &__title {
+    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
+    font-weight: 700;
+    color: colors.$white;
+    grid-area: title;
+  }
+
+  &__list {
+    grid-area: list;
+    display: flex;
+    gap: 0.5rem;
+    flex-flow: row wrap;
+    // display: grid;
+    // grid-gap: 0.2rem;
+    // grid-auto-flow: column;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__listItem {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: colors.$brightGreen;
+    color: colors.$black;
+    border-radius: 20px;
+    padding: 0.3rem 0.5rem;
   }
 }

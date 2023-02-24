@@ -1,12 +1,13 @@
-import styles from "../Heading/Heading.module.scss";
 import { motion as m, Variants } from "framer-motion";
+import cn from "clsx";
+import styles from "../Heading/Heading.module.scss";
 
 type HeadingProps = {
   heading: string;
-  exception?: string;
+  className?: string;
 };
 
-const Heading = ({ heading, exception }: HeadingProps) => {
+const Heading = ({ heading, className }: HeadingProps) => {
   const headingAnimation: Variants = {
     hidden: {
       opacity: 0,
@@ -27,7 +28,7 @@ const Heading = ({ heading, exception }: HeadingProps) => {
       whileInView="visible"
       viewport={{ once: false }}
       variants={headingAnimation}
-      className={`${styles.heading} ${styles[exception]}`}
+      className={cn(styles.heading, className)}
     >
       {heading}
     </m.h2>

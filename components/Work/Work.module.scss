@@ -1,49 +1,69 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .work {
-    background: var(--color-white);
+  width: 100%;
+  border-top: 1px solid colors.$darkGray;
+  border-bottom: 1px solid colors.$darkGray;
+
+  background: radial-gradient(
+    circle at 60% 50%,
+    rgba(2, 199, 133, 0.3),
+    rgb(0, 0, 0) 30%
+  );
+  background-size: 160% 150%;
+  animation: gradient 10s ease infinite;
+
+  &__synopsis {
+    margin: 2rem 0;
+    color: colors.$gray;
+    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
+  }
+
+  &__carousel {
+    --carousel-padding: 1.5rem;
+
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: none;
+    padding: 0 var(--carousel-padding);
+    scroll-padding: var(--carousel-padding);
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
     box-sizing: border-box;
-    padding: 12vw 0 14vw 0;
-    width: 100%;
 
-    @media (min-width: 1024px) {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 1200px;
-        padding: 5vw 0 5vw 0;
-      }
-
-    &__carousel {
-        display: flex;
-        overflow-x: scroll;
-        padding: 7vw;
-        scroll-padding: 7vw;
-        scroll-snap-type: x mandatory;
-        gap: 10px;
-        box-sizing:border-box;
-        
-        @media (min-width: 1024px) {
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 10px;
-            row-gap: 15px;
-            overflow-x: unset;
-        }
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    ::-webkit-scrollbar {
-        height: 5px;
-      }
+    @include mixins.breakpoint(md) {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: var(--carousel-padding);
+      overflow-x: unset;
+    }
+  }
 
-    ::-webkit-scrollbar-track {
-        margin: 0 7vw;
-        background-color: var(--color-beige);
-        border-radius: 10px;
+  &__carouselContainer {
+    margin-left: calc(-1 * var(--container-padding));
+    margin-right: calc(-1 * var(--container-padding));
+    overflow: auto;
+
+    @include mixins.breakpoint(md) {
+      margin: 0;
     }
-      
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background-color: var(--color-orange);
-    }
+  }
 }

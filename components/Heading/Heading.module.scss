@@ -1,20 +1,12 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables";
+@use "styles/abstracts/variables/colors";
+
 .heading {
-    font-size: 30px;
-    font-weight: 800;
+  font-size: calc(40px + 6 * ((100vw - 20px) / 1000));
+  font-weight: 500;
+  color: colors.$white;
 
-    @media (min-width: 1024px) {
-        font-size: 60px;
-    }
-}
-
-.beige {
-    color: var(--color-beige);
-}
-
-.work {
-    padding: 0 0 0 7vw;
-
-    @media (min-width: 1024px) {
-        padding: 0 0 3vw 0;
-    }
+  @include mixins.breakpoint(md) {
+  }
 }
