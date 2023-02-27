@@ -52,7 +52,7 @@ const Contact = () => {
     <section id="contact" className={styles.contact}>
       <div className={styles.contact__container}>
         <div className={styles.contact__formWrapper}>
-          <Heading heading="Contact" exception={"beige"} />
+          <Heading heading="Contact" />
           <m.form
             initial="hidden"
             whileInView="visible"

@@ -58,12 +58,11 @@ const Home = () => {
 
           `}
       </Script>
-            
+
       <PageWrapper>
         <Hero />
         <Work />
         <Me />
-        <Contact />
       </PageWrapper>
     </>
   );

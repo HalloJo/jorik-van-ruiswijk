@@ -1,42 +1,103 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
 .footer {
-  background-color: var(--color-error);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4vw 7vw;
-  width: 100vw;
-
-  @media (min-width: 1024px) {
-    padding: 1vw 5vw;
-  }
-
   &__container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 
-    @media (min-width: 1024px) {
-      max-width: 1200px;
+    @include mixins.breakpoint(md) {
+      padding-bottom: 5rem;
     }
   }
 
-  &__foot {
-    font-size: 30px;
+  &__row {
+    row-gap: 8rem;
+    grid-template:
+      "info "
+      "social";
+
+    @include mixins.breakpoint(md) {
+      row-gap: 0;
+      grid-template:
+        "info  social" auto
+        "info  .     " 0.75rem;
+    }
   }
 
-  &__name,
-  &__message {
-    color: var(--color-white);
-    font-family: "Kantumruy Pro", sans-serif;
-    font-weight: 200;
+  &__info {
+    display: grid;
+    grid-area: info;
+    grid-template:
+      "title " 0.5fr
+      "links " auto;
+    grid-gap: 1.5rem;
   }
-  &__message {
-    font-weight: 400;
-    display: none;
 
-    @media (min-width: 1024px) {
-      display: block;
+  &__title {
+    grid-area: title;
+    font-weight: 500;
+  }
+
+  &__links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include mixins.breakpoint(md) {
+      font-size: calc(34px + 6 * ((100vw - 20px) / 1000));
+    }
+  }
+
+  &__link {
+    font-size: calc(22px + 6 * ((100vw - 20px) / 1000));
+    font-weight: 600;
+    color: colors.$white;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: colors.$brightGreen;
+    }
+
+    @include mixins.breakpoint(md) {
+      font-size: calc(34px + 6 * ((100vw - 20px) / 1000));
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-gap: 2rem;
+    grid-area: social;
+  }
+
+  &__socialLinks {
+    display: flex;
+    justify-self: flex-start;
+    gap: 1.5rem;
+    font-weight: 700;
+    color: colors.$gray;
+
+    @include mixins.breakpoint(md) {
+      justify-self: flex-end;
+    }
+  }
+
+  &__socialItem {
+    transition: color 0.5s ease;
+    &:hover {
+      color: colors.$white;
+    }
+  }
+
+  &__copyright {
+    justify-self: flex-start;
+    align-self: flex-end;
+    line-height: 1;
+
+    @include mixins.breakpoint(md) {
+      justify-self: flex-end;
+      align-self: flex-end;
     }
   }
 }

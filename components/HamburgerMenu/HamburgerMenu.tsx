@@ -1,13 +1,10 @@
-import { useRef } from "react";
-import { Navigation } from "../../data/NavigationData";
-import { social } from "../../data/SocialData";
-import CloseButton from "../CloseButton/CloseButton";
+import { LinkProps, Navigation, Social } from "../../data/Links";
 import Container from "../Container/Container";
 import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
-import Wave from "../Wave/Wave";
 
 type HamburgerMenuProps = {
-  navigation: Navigation;
+  navigation: LinkProps[];
+  social: LinkProps[];
   open: boolean;
   setOpen: (value: boolean) => void;
 };
@@ -18,12 +15,12 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
       <Container className={styles.hamburgerMenu__container}>
         <ul className={styles.hamburgerMenu__list}>
           {navigation.map((item) => {
-            const { label, id } = item;
+            const { label, href } = item;
             return (
               <a
                 className={styles.hamburgerMenu__link}
                 key={label}
-                href={id}
+                href={href}
                 onClick={() => setOpen(!open)}
               >
                 <li className={styles.hamburgerMenu__label}>{label}</li>
@@ -32,11 +29,13 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
           })}
         </ul>
         <ul className={styles.hamburgerMenu__socials}>
-          {social.map((socialItem, index) => {
+          {Social.map((socialItem, index) => {
             const { label, href } = socialItem;
             return (
               <li className={styles.hamburgerMenu__socialItem} key={index}>
-                <a href={href}>{label}</a>
+                <a href={href} target="_blank" rel="noreferrer">
+                  {label}
+                </a>
               </li>
             );
           })}

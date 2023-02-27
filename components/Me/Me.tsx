@@ -1,6 +1,6 @@
 import styles from "../Me/Me.module.scss";
 import { skills } from "../../data/Skills";
-import { social } from "../../data/SocialData";
+import { Social } from "../../data/Links";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
@@ -46,7 +46,7 @@ const Me = () => {
               trying to improve his skillset. Let him help you.
             </m.p>
             <ul className={styles.me__socials}>
-              {social.map((socialItem, index) => {
+              {Social.map((socialItem, index) => {
                 const { label, href } = socialItem;
                 return (
                   <li className={styles.me__socialItem} key={index}>

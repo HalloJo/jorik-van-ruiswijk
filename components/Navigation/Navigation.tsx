@@ -1,14 +1,20 @@
+import { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import NavigationList from "../NavigationList/NavigationList";
-import { navigation } from "../../data/NavigationData";
 import Hamburger from "../Hamburger/Hamburger";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { useEffect, useState } from "react";
 import Container from "../Container/Container";
 import styles from "../Navigation/Navigation.module.scss";
 import Link from "next/link";
+import { LinkProps } from "../../data/Links";
 
-const Navigation = () => {
+const Navigation = ({
+  navigation,
+  social,
+}: {
+  navigation: LinkProps[];
+  social: LinkProps[];
+}) => {
   const [open, setOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
@@ -36,7 +42,12 @@ const Navigation = () => {
         <NavigationList navigation={navigation} />
         <Hamburger open={open} setOpen={setOpen} />
       </Container>
-      <HamburgerMenu navigation={navigation} open={open} setOpen={setOpen} />
+      <HamburgerMenu
+        navigation={navigation}
+        social={social}
+        open={open}
+        setOpen={setOpen}
+      />
     </nav>
   );
 };
