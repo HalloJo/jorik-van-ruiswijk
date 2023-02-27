@@ -27,6 +27,7 @@
   z-index: -1;
   transform: translateY(-100%);
   transition: all 0.4s ease-out;
+  border-bottom: 1px solid colors.$brightGreen;
 
   &.open {
     transform: translateY(0%);
