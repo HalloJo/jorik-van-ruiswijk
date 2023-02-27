@@ -6,10 +6,12 @@
   --container-width: 100%;
   --container-max-width: 1400px;
 
-  width: var(--container-width);
-  max-width: var(--container-max-width);
-  padding: var(--container-top-bottom-padding) var(--container-padding);
-  margin: 0 auto;
+  @include mixins.breakpoint(xs) {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    padding: var(--container-top-bottom-padding) var(--container-padding);
+    margin: 0 auto;
+  }
 
   @include mixins.breakpoint(md) {
     --container-padding: 2rem;
