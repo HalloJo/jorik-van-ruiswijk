@@ -3,6 +3,7 @@ import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
 import { LinkProps } from "../../data/Links";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Footer = ({
   social,
@@ -31,7 +32,11 @@ const Footer = ({
             </ul>
           </Column>
           <Column width="12 md:6" className={styles.footer__social}>
-            <ul className={styles.footer__socialLinks}>
+            <SocialLinks
+              socials={social}
+              className={styles.footer__socialLinks}
+            />
+            {/* <ul className={styles.footer__socialLinks}>
               {social.map((item, index) => {
                 const { label, href } = item;
                 return (
@@ -42,7 +47,7 @@ const Footer = ({
                   </li>
                 );
               })}
-            </ul>
+            </ul> */}
             <p className={styles.footer__copyright}>
               &copy; Jorik van Ruiswijk | {currentDate}
             </p>

@@ -72,21 +72,10 @@
   }
 
   &__socialLinks {
-    display: flex;
     justify-self: flex-start;
-    gap: 1.5rem;
-    font-weight: 700;
-    color: colors.$gray;
 
     @include mixins.breakpoint(md) {
       justify-self: flex-end;
-    }
-  }
-
-  &__socialItem {
-    transition: color 0.5s ease;
-    &:hover {
-      color: colors.$white;
     }
   }
 

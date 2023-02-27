@@ -8,6 +8,7 @@ import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
 import { Personal } from "../../data/Personal";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 const Me = () => {
   const item: Variants = {
@@ -40,16 +41,7 @@ const Me = () => {
             >
               {Personal.synopsis}
             </m.p>
-            <ul className={styles.me__socials}>
-              {Social.map((socialItem, index) => {
-                const { label, href } = socialItem;
-                return (
-                  <li className={styles.me__socialItem} key={index}>
-                    <a href={href}>{label}</a>
-                  </li>
-                );
-              })}
-            </ul>
+            <SocialLinks socials={Social} className={styles.me__socials} />
           </Column>
           <Column
             offset="1"

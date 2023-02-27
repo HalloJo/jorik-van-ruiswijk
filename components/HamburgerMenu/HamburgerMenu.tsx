@@ -1,6 +1,7 @@
 import { LinkProps, Navigation, Social } from "../../data/Links";
 import Container from "../Container/Container";
 import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 type HamburgerMenuProps = {
   navigation: LinkProps[];
@@ -28,18 +29,11 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
             );
           })}
         </ul>
-        <ul className={styles.hamburgerMenu__socials}>
-          {Social.map((socialItem, index) => {
-            const { label, href } = socialItem;
-            return (
-              <li className={styles.hamburgerMenu__socialItem} key={index}>
-                <a href={href} target="_blank" rel="noreferrer">
-                  {label}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <SocialLinks
+          isStacked
+          socials={Social}
+          className={styles.hamburgerMenu__socials}
+        />
       </Container>
     </nav>
   );
