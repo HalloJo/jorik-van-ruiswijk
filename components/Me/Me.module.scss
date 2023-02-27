@@ -33,6 +33,10 @@
     padding: 1rem;
     grid-gap: 2rem;
 
+    @include mixins.breakpoint(sm) {
+      padding: 2rem;
+    }
+
     @include mixins.breakpoint(md) {
       padding: 6rem 0;
     }
@@ -58,7 +62,15 @@
       "text     " 1fr
       "socials  " 0.5fr;
 
-    @include mixins.breakpoint(md) {
+    @include mixins.breakpoint(xs) {
+      grid-template:
+        "heading  " 0.75fr
+        "text     " 1fr
+        ".        " 1rem
+        "socials  " 0.5fr;
+    }
+
+    @include mixins.breakpoint(sm) {
       grid-template:
         "heading  " 1fr
         "text     " 1fr
@@ -72,7 +84,6 @@
   }
 
   &__picture {
-    aspect-ratio: 1;
     border-radius: var(--border-radius);
     overflow: hidden;
     height: 100%;
@@ -113,6 +124,10 @@
     border-radius: var(--border-radius);
     padding: 2rem 1rem;
 
+    @include mixins.breakpoint(sm) {
+      padding: 3rem 2rem;
+    }
+
     @include mixins.breakpoint(md) {
       grid-template-columns: repeat(5, 1fr);
       grid-gap: 2rem;
@@ -124,6 +139,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1.5rem;
+
+    @include mixins.breakpoint(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include mixins.breakpoint(md) {
       grid-template-columns: repeat(5, 1fr);

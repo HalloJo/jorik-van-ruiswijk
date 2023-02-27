@@ -3,12 +3,11 @@ import { skills } from "../../data/Skills";
 import { Social } from "../../data/Links";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
-import SmallHeading from "../SmallHeading/SmallHeading";
 import Skill from "../Skill/Skill";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
-import SocialButton from "../SocialButton/SocialButton";
+import { Personal } from "../../data/Personal";
 
 const Me = () => {
   const item: Variants = {
@@ -31,7 +30,7 @@ const Me = () => {
     <section id="me" className={styles.me}>
       <Container className={styles.me__container}>
         <Row className={styles.me__infoRow}>
-          <Column offset="1" width="12 lg:5" className={styles.me__info}>
+          <Column offset="1 sm:0" width="12 md:5" className={styles.me__info}>
             <Heading heading="About me" className={styles.me__heading} />
             <m.p
               variants={item}
@@ -39,11 +38,7 @@ const Me = () => {
               whileInView="visible"
               className={styles.me__text}
             >
-              Jorik van Ruiswijk. 31 years of age. Based in the Netherlands.
-              Self-taught front-end developer. Graduated graphic designer and
-              illustrator. Enjoys designing and building interactive websites.
-              With or without animations. Has a keen eye for details. Always
-              trying to improve his skillset. Let him help you.
+              {Personal.synopsis}
             </m.p>
             <ul className={styles.me__socials}>
               {Social.map((socialItem, index) => {
@@ -58,7 +53,7 @@ const Me = () => {
           </Column>
           <Column
             offset="1"
-            width="12 lg:4"
+            width="12 sm:12 md:4"
             className={styles.me__pictureColumn}
           >
             <picture className={styles.me__picture}>
