@@ -7,6 +7,8 @@ import Container from "../Container/Container";
 import styles from "../Navigation/Navigation.module.scss";
 import Link from "next/link";
 import { LinkProps } from "../../data/Links";
+import useScrollDirection from "../../utils/use-scroll-direction";
+import cn from "clsx";
 
 const Navigation = ({
   navigation,
@@ -16,18 +18,14 @@ const Navigation = ({
   social: LinkProps[];
 }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
-
-  useEffect(() => {
-    const scrolledOnPage = () => {
-      window.scrollY >= 90 ? setScrolled(true) : setScrolled(false);
-    };
-
-    window.addEventListener("scroll", scrolledOnPage);
-  });
+  const scrollDirection = useScrollDirection();
 
   return (
-    <nav className={`${styles.navigation} ${scrolled && styles.scrolled}`}>
+    <nav
+      className={cn(styles.navigation, {
+        [styles.navigation_isHidden]: scrollDirection === "down",
+      })}
+    >
       <Container className={styles.container}>
         <div className={styles.navigation__logoWrapper}>
           <Logo />
