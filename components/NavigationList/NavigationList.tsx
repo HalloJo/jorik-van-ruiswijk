@@ -4,10 +4,10 @@ const NavigationList = ({ navigation }) => {
   return (
     <ul className={styles.navigationList}>
       {navigation.map((item) => {
-        const { label, id, secondary } = item;
+        const { label, href, secondary } = item;
 
         return (
-          <a className={styles.navigationList__item} key={label} href={id}>
+          <a className={styles.navigationList__item} key={label} href={href}>
             <li className={secondary && styles.secondary}>{label}</li>
           </a>
         );
