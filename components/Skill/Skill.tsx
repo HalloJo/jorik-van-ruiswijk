@@ -5,12 +5,12 @@ const Skill = ({ ...skill }: SkillsProps) => {
   const { icon, skillTitle, alt } = skill;
 
   return (
-    <>
-      <picture className={styles.skillIcon}>
+    <div className={styles.skill}>
+      <picture className={styles.skill__icon}>
         <img src={icon} alt={alt} />
       </picture>
-      <p className={styles.skillTitle}>{skillTitle}</p>
-    </>
+      <p className={styles.skill__title}>{skillTitle}</p>
+    </div>
   );
 };
 

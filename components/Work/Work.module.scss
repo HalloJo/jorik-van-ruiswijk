@@ -54,6 +54,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: var(--carousel-padding);
       overflow-x: unset;
+      overflow-y: hidden;
     }
   }
 

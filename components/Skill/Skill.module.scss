@@ -1,20 +1,21 @@
-.skillIcon {
-    width: 15%;
-    margin: 0 8px 0 0;
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
 
-    @media (min-width: 1024px) {
-        width: 12%;
-        margin: 0 14px 0 0;
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__icon {
+    width: 1.5rem;
+    display: flex;
+
+    @include mixins.breakpoint(md) {
+      //   width: 12%;
     }
-}
+  }
 
-.skillTitle {
-    color: var(--color-gray);
-    font-size: 14px;
-    font-family: 'Kantumruy Pro', sans-serif;
-    font-weight: 300;
-
-    @media (min-width: 1024px) {
-        font-size: 16px;
-    }
+  &__title {
+    color: colors.$gray;
+  }
 }

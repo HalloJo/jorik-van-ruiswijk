@@ -1,17 +1,14 @@
 import styles from "../Me/Me.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 import { skills } from "../../data/Skills";
 import { social } from "../../data/SocialData";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import SmallHeading from "../SmallHeading/SmallHeading";
-import SocialButton from "../SocialButton/SocialButton";
 import Skill from "../Skill/Skill";
+import Container from "../Container/Container";
+import Row from "../Row/Row";
+import Column from "../Column/Column";
+import SocialButton from "../SocialButton/SocialButton";
 
 const Me = () => {
   const item: Variants = {
@@ -32,27 +29,51 @@ const Me = () => {
 
   return (
     <section id="me" className={styles.me}>
-      <div className={styles.me__container}>
-        <div className={styles.me__introWrapper}>
-          <div className={styles.me__intro}>
-            <Heading heading="Me" />
-            <div className={styles.me__synopsis}>
-              <m.p
-                variants={item}
-                initial="hidden"
-                whileInView="visible"
-                className={styles.me__text}
-              >
-                Jorik van Ruiswijk. 31 years of age. Based in the Netherlands.
-                Self-taught front-end developer. Graduated graphic designer and
-                illustrator. Enjoys designing and building interactive websites.
-                With or without animations. Has a keen eye for details. Always
-                trying to improve his skillset. Let him help you.
-              </m.p>
-            </div>
-          </div>
-          <div className={styles.me__skills}>
-            <SmallHeading label="Skills" />
+      <Container className={styles.me__container}>
+        <Row className={styles.me__infoRow}>
+          <Column offset="1" width="12 lg:5" className={styles.me__info}>
+            <Heading heading="About me" className={styles.me__heading} />
+            <m.p
+              variants={item}
+              initial="hidden"
+              whileInView="visible"
+              className={styles.me__text}
+            >
+              Jorik van Ruiswijk. 31 years of age. Based in the Netherlands.
+              Self-taught front-end developer. Graduated graphic designer and
+              illustrator. Enjoys designing and building interactive websites.
+              With or without animations. Has a keen eye for details. Always
+              trying to improve his skillset. Let him help you.
+            </m.p>
+            <ul className={styles.me__socials}>
+              {social.map((socialItem, index) => {
+                const { label, href } = socialItem;
+                return (
+                  <li className={styles.me__socialItem} key={index}>
+                    <a href={href}>{label}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </Column>
+          <Column
+            offset="1"
+            width="12 lg:4"
+            className={styles.me__pictureColumn}
+          >
+            <picture className={styles.me__picture}>
+              <img
+                className={styles.me__image}
+                src="./assets/jorik.jpg"
+                alt="Jorik van Ruiswijk"
+              />
+            </picture>
+          </Column>
+        </Row>
+
+        <Row className={styles.me__skillRow}>
+          <Column offset="1" width="12 lg:10">
+            <Heading heading="Skills" className={styles.me__skillTitle} />
             <m.div
               initial="hidden"
               whileInView="visible"
@@ -71,26 +92,9 @@ const Me = () => {
                 );
               })}
             </m.div>
-          </div>
-        </div>
-        <div className={styles.me__socials}>
-          <SmallHeading label="Find me here" />
-          <m.div
-            initial="hidden"
-            whileInView="visible"
-            variants={item}
-            className={styles.me__icons}
-          >
-            {social.map((socialItem) => {
-              return (
-                <m.div variants={item} key={socialItem.label}>
-                  <SocialButton {...socialItem} />
-                </m.div>
-              );
-            })}
-          </m.div>
-        </div>
-      </div>
+          </Column>
+        </Row>
+      </Container>
     </section>
   );
 };
