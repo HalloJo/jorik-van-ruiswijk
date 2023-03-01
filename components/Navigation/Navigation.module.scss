@@ -29,9 +29,14 @@
   &__span {
     display: none;
     font-weight: 700;
+    transition: color 0.5s ease;
 
     @include mixins.breakpoint(md) {
       display: flex;
+    }
+
+    &:hover {
+      color: colors.$white;
     }
   }
 
