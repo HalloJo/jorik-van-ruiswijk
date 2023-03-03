@@ -26,7 +26,7 @@ const Heading = ({ heading, className }: HeadingProps) => {
     <m.h2
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       variants={headingAnimation}
       className={cn(styles.heading, className)}
     >

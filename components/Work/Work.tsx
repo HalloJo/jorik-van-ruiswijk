@@ -32,6 +32,7 @@ const Work = () => {
           <m.ul
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             variants={cardItem}
             className={styles.work__carousel}
           >

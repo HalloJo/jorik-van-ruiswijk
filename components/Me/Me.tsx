@@ -39,6 +39,7 @@ const Me = () => {
               variants={item}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className={styles.me__text}
             >
               {Personal.synopsis}
@@ -65,6 +66,7 @@ const Me = () => {
             <m.div
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               variants={item}
               className={styles.me__skillsGrid}
             >
@@ -88,6 +90,7 @@ const Me = () => {
               <m.div
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={item}
                 className={styles.me__skillsGrid}
               >

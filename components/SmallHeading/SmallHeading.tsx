@@ -27,6 +27,7 @@ const SmallHeading = ({ label, className }: SmallHeadingProps) => {
       variants={headingAnimation}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true }}
       className={cn(styles.smallHeading, className)}
     >
       {label}

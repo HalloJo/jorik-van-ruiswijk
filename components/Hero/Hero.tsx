@@ -23,7 +23,12 @@ const Header = () => {
   return (
     <header className={styles.hero}>
       <Container className={styles.hero__container}>
-        <m.div initial="hidden" whileInView="visible" variants={item}>
+        <m.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={item}
+        >
           <Row>
             <Column className={styles.hero__text} width="12 md:8">
               <h1 className={styles.hero__title}>Design & Development.</h1>
