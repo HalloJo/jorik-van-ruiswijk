@@ -1,0 +1,41 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.marquee {
+  --gap: 2rem;
+
+  background-color: colors.$brightGreen;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  padding: 0.25rem 0;
+  //   background: -webkit-linear-gradient(
+  //     400deg,
+  //     colors.$brightGreen 50%,
+  //     colors.$black
+  //   );
+  gap: var(--gap);
+  // transform: skewY(-3deg);
+
+  &__group {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    color: colors.$black;
+
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: scroll 50s linear infinite;
+  }
+}

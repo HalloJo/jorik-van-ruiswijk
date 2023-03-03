@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Work from "../components/Work/Work";
 import Me from "../components/Me/Me";
-import Contact from "../components/Contact/Contact";
 import Script from "next/script";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import Hero from "../components/Hero/Hero";

@@ -57,7 +57,6 @@ const Me = () => {
             </picture>
           </Column>
         </Row>
-
         <Row className={styles.me__skillRow}>
           <Column offset="1" width="12 lg:10">
             <Heading heading="Skills" className={styles.me__skillTitle} />

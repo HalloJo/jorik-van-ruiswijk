@@ -4,6 +4,7 @@ import Row from "../Row/Row";
 import Column from "../Column/Column";
 import { LinkProps } from "../../data/Links";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import Marquee from "../Marquee/Marquee";
 
 const Footer = ({
   social,
@@ -36,24 +37,13 @@ const Footer = ({
               socials={social}
               className={styles.footer__socialLinks}
             />
-            {/* <ul className={styles.footer__socialLinks}>
-              {social.map((item, index) => {
-                const { label, href } = item;
-                return (
-                  <li className={styles.footer__socialItem} key={index}>
-                    <a href={href} target="_blank" rel="noreferrer">
-                      {label}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul> */}
             <p className={styles.footer__copyright}>
               &copy; Jorik van Ruiswijk | {currentDate}
             </p>
           </Column>
         </Row>
       </Container>
+      <Marquee item={"Have a great day! 🕶️"} />
     </footer>
   );
 };
