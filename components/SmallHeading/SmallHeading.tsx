@@ -1,11 +1,13 @@
 import styles from "../SmallHeading/SmallHeading.module.scss";
+import cn from "clsx";
 import { motion as m, Variants } from "framer-motion";
 
 type SmallHeadingProps = {
   label: string;
+  className?: string;
 };
 
-const SmallHeading = ({ label }: SmallHeadingProps) => {
+const SmallHeading = ({ label, className }: SmallHeadingProps) => {
   const headingAnimation: Variants = {
     hidden: {
       opacity: 0,
@@ -25,7 +27,7 @@ const SmallHeading = ({ label }: SmallHeadingProps) => {
       variants={headingAnimation}
       initial="hidden"
       whileInView="visible"
-      className={styles.smallHeading}
+      className={cn(styles.smallHeading, className)}
     >
       {label}
     </m.h3>

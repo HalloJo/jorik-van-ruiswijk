@@ -1,5 +1,6 @@
 import styles from "../Me/Me.module.scss";
-import { skills } from "../../data/Skills";
+import cn from "clsx";
+import { experiences, skills } from "../../data/Skills";
 import { Social } from "../../data/Links";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
@@ -9,6 +10,7 @@ import Row from "../Row/Row";
 import Column from "../Column/Column";
 import { Personal } from "../../data/Personal";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import SmallHeading from "../SmallHeading/SmallHeading";
 
 const Me = () => {
   const item: Variants = {
@@ -58,7 +60,7 @@ const Me = () => {
           </Column>
         </Row>
         <Row className={styles.me__skillRow}>
-          <Column offset="1" width="12 lg:10">
+          <Column offset="1" width="12 md:10">
             <Heading heading="Skills" className={styles.me__skillTitle} />
             <m.div
               initial="hidden"
@@ -78,8 +80,58 @@ const Me = () => {
                 );
               })}
             </m.div>
+            <div>
+              <SmallHeading
+                label={"And experience with.."}
+                className={styles.me__experienceTitle}
+              />
+              <m.div
+                initial="hidden"
+                whileInView="visible"
+                variants={item}
+                className={styles.me__skillsGrid}
+              >
+                {experiences.map((skill) => {
+                  return (
+                    <m.div
+                      variants={item}
+                      className={styles.me__skillWrapper}
+                      key={skill.skillTitle}
+                    >
+                      <Skill {...skill} />
+                    </m.div>
+                  );
+                })}
+              </m.div>
+            </div>
           </Column>
         </Row>
+        {/* <Row className={cn(styles.me__skillRow, styles.me__experiences)}>
+          <Column offset="1" width="12 md:10">
+            <SmallHeading
+              label={"And experience with.."}
+              className={styles.me__experienceTitle}
+            />
+            <m.div
+              initial="hidden"
+              whileInView="visible"
+              variants={item}
+              className={styles.me__skillsGrid}
+            >
+              {experiences.map((skill) => {
+                return (
+                  <m.div
+                    variants={item}
+                    className={styles.me__skillWrapper}
+                    key={skill.skillTitle}
+                  >
+                    <Skill {...skill} />
+                  </m.div>
+                );
+              })}
+            </m.div>
+          </Column>
+        </Row> */}
       </Container>
     </section>
   );

@@ -5,14 +5,21 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  background-color: colors.$veryDarkGray;
+  padding: 0.75rem 1.25rem;
+  border-radius: 25px;
+  cursor: default;
+  user-select: none;
+  border: 1px solid colors.$black;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 1px solid colors.$gray;
+  }
 
   &__icon {
-    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
-
-    @include mixins.breakpoint(md) {
-      //   width: 12%;
-    }
   }
 
   &__title {

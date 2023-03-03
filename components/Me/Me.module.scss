@@ -116,40 +116,65 @@
     margin: 0 0 3rem 0;
   }
 
+  &__experienceTitle {
+    margin: 0 0 3rem 0;
+    color: colors.$white;
+  }
+
   &__skillRow {
     background-color: colors.$black;
     border-radius: var(--border-radius);
     padding: 2rem 1rem;
 
     @include mixins.breakpoint(sm) {
-      padding: 3rem 2rem;
+      padding: 2rem;
     }
 
     @include mixins.breakpoint(md) {
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 2rem;
-      padding: 6rem 0;
+      padding: 4rem 0;
     }
   }
 
+  &__experiences {
+    background-color: colors.$veryDarkGray;
+  }
+
   &__skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 0 3rem 0;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // row-gap: 1.5rem;
 
-    @include mixins.breakpoint(sm) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    // @include mixins.breakpoint(sm) {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
 
-    @include mixins.breakpoint(md) {
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 2rem;
+    // @include mixins.breakpoint(md) {
+    //   grid-template-columns: repeat(5, 1fr);
+    //   grid-gap: 2rem;
+    // }
+    &:last-child {
+      margin: 0;
     }
   }
 
   &__skillWrapper {
     display: flex;
     align-items: center;
+
+    &:nth-of-type(3n + 1) {
+      div {
+        background-color: colors.$darkGray;
+      }
+    }
+    &:nth-of-type(3n + 2) {
+      div {
+        background-color: colors.$middleGray;
+      }
+    }
   }
 
   &__icons {
