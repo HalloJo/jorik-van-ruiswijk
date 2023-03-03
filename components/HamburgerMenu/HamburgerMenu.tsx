@@ -1,6 +1,7 @@
 import { LinkProps, Navigation, Social } from "../../data/Links";
 import Container from "../Container/Container";
 import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
+import Marquee from "../Marquee/Marquee";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 type HamburgerMenuProps = {
@@ -35,6 +36,7 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
           className={styles.hamburgerMenu__socials}
         />
       </Container>
+      <Marquee item={"Found what you're looking for? 🔎"} />
     </nav>
   );
 };

@@ -1,6 +1,6 @@
 import styles from "../Marquee/Marquee.module.scss";
 
-const Marquee = ({ item }) => {
+const Marquee = ({ item }: { item: string }) => {
   return (
     <div className={styles.marquee}>
       <ul className={styles.marquee__group}>

@@ -17,6 +17,7 @@
   background-size: 150% 150%;
   animation: gradient 5s ease infinite;
   display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -27,13 +28,14 @@
   z-index: -1;
   transform: translateY(-100%);
   transition: all 0.4s ease-out;
-  border-bottom: 1px solid colors.$brightGreen;
+  // border-bottom: 1px solid colors.$brightGreen;
 
   &.open {
     transform: translateY(0%);
   }
 
   &__container {
+    height: 100%;
     display: grid;
     grid-template:
       ". " 20fr
