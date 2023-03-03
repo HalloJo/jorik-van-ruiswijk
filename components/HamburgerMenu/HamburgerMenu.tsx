@@ -3,6 +3,7 @@ import Container from "../Container/Container";
 import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
 import Marquee from "../Marquee/Marquee";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import cn from "clsx";
 
 type HamburgerMenuProps = {
   navigation: LinkProps[];
@@ -13,7 +14,7 @@ type HamburgerMenuProps = {
 
 const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
   return (
-    <nav className={`${styles.hamburgerMenu} ${open ? styles.open : null}`}>
+    <nav className={cn(styles.hamburgerMenu, open && styles.open)}>
       <Container className={styles.hamburgerMenu__container}>
         <ul className={styles.hamburgerMenu__list}>
           {navigation.map((item) => {
