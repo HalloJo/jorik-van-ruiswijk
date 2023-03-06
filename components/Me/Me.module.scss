@@ -17,7 +17,7 @@
   --border-radius: 20px;
   width: 100%;
   border-bottom: 1px solid colors.$middleGray;
-  background: radial-gradient(circle at 0% 100%, #333, rgb(0, 0, 0) 50%);
+  background: radial-gradient(circle at 0% 50%, #666, rgb(0, 0, 0) 50%);
   background-size: 160% 160%;
   animation: gradient 10s ease infinite;
 
@@ -32,17 +32,12 @@
   }
 
   &__infoRow {
-    background-color: colors.$darkGray;
-    border-radius: var(--border-radius);
-    padding: 1rem;
     grid-gap: 2rem;
-
-    @include mixins.breakpoint(sm) {
-      padding: 2rem;
-    }
+    padding-bottom: 3rem;
+    border-bottom: solid 1px colors.$middleGray;
 
     @include mixins.breakpoint(md) {
-      padding: 6rem 0;
+      padding-bottom: 6rem;
     }
   }
 
@@ -89,6 +84,7 @@
 
   &__picture {
     border-radius: var(--border-radius);
+    border: 1px solid colors.$darkGray;
     overflow: hidden;
     height: 100%;
     display: block;

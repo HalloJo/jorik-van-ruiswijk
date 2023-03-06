@@ -33,7 +33,7 @@ const Me = () => {
     <section id="me" className={styles.me}>
       <Container className={styles.me__container}>
         <Row className={styles.me__infoRow}>
-          <Column offset="1 sm:0" width="12 md:5" className={styles.me__info}>
+          <Column width="12 md:6" className={styles.me__info}>
             <Heading heading="About me" className={styles.me__heading} />
             <m.p
               variants={item}
@@ -48,7 +48,7 @@ const Me = () => {
           </Column>
           <Column
             offset="1"
-            width="12 sm:12 md:4"
+            width="12 sm:12 md:5"
             className={styles.me__pictureColumn}
           >
             <picture className={styles.me__picture}>

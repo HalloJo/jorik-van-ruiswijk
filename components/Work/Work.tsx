@@ -26,7 +26,7 @@ const Work = () => {
         <Heading className={styles.work__heading} heading="Work" />
         <p className={styles.work__synopsis}>
           Below is a small grasp of projects. Projects that I have drawn,
-          designed, worked on and developed.
+          designed, collaborated on and developed.
         </p>
         <div className={styles.work__carouselContainer}>
           <m.ul
