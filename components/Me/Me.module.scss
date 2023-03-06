@@ -16,7 +16,7 @@
 .me {
   --border-radius: 20px;
   width: 100%;
-  border-bottom: 1px solid colors.$brightGreen;
+  border-bottom: 1px solid colors.$middleGray;
   background: radial-gradient(circle at 0% 100%, #333, rgb(0, 0, 0) 50%);
   background-size: 160% 160%;
   animation: gradient 10s ease infinite;
@@ -25,6 +25,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include mixins.breakpoint(md) {
+      gap: 6rem;
+    }
   }
 
   &__infoRow {
@@ -122,17 +126,17 @@
   }
 
   &__skillRow {
-    background-color: colors.$black;
-    border-radius: var(--border-radius);
-    padding: 2rem 1rem;
+    // background-color: colors.$black;
+    // border-radius: var(--border-radius);
+    // padding: 2rem 1rem;
 
-    @include mixins.breakpoint(sm) {
-      padding: 2rem;
-    }
+    // @include mixins.breakpoint(sm) {
+    //   padding: 2rem;
+    // }
 
-    @include mixins.breakpoint(md) {
-      padding: 4rem 0;
-    }
+    // @include mixins.breakpoint(md) {
+    //   padding: 4rem 0;
+    // }
   }
 
   &__experiences {
