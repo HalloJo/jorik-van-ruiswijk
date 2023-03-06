@@ -46,6 +46,11 @@ const Header = () => {
                 <p className={styles.hero__arrow}>&darr;</p>
                 <p className={styles.hero__arrow}>&darr;</p>
                 <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
               </div>
             </Column>
           </Row>
