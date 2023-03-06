@@ -4,6 +4,7 @@ import Me from "../components/Me/Me";
 import Script from "next/script";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import Hero from "../components/Hero/Hero";
+import Brands from "../components/Brands/Brands";
 
 const Home = () => {
   return (
@@ -62,6 +63,7 @@ const Home = () => {
         <Hero />
         <Work />
         <Me />
+        <Brands />
       </PageWrapper>
     </>
   );

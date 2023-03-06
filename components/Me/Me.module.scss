@@ -17,7 +17,7 @@
   --border-radius: 20px;
   width: 100%;
   border-bottom: 1px solid colors.$middleGray;
-  background: radial-gradient(circle at 0% 50%, #666, rgb(0, 0, 0) 50%);
+  background: radial-gradient(circle at 100% 50%, #666, rgb(0, 0, 0) 50%);
   background-size: 160% 160%;
   animation: gradient 10s ease infinite;
 

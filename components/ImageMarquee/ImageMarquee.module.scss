@@ -1,0 +1,65 @@
+@use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.marquee {
+  --gap: 5rem;
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  padding: 2rem 0;
+  gap: var(--gap);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent, #000 100%);
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, transparent, #000 100%);
+  }
+
+  &__group {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    color: colors.$black;
+
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: scroll 50s linear infinite;
+  }
+
+  &__item {
+    picture {
+      height: 2.5rem;
+      display: flex;
+    }
+  }
+}
