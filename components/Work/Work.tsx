@@ -25,7 +25,7 @@ const Work = () => {
       <Container className={styles.work__container}>
         <Heading className={styles.work__heading} heading="Work" />
         <p className={styles.work__synopsis}>
-          Below is a collection of projects. Projects that I have drawn,
+          Below is a small grasp of projects. Projects that I have drawn,
           designed, worked on and developed.
         </p>
         <div className={styles.work__carouselContainer}>
