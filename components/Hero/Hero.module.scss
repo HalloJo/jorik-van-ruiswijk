@@ -32,6 +32,8 @@
 
   &__text {
     align-self: center;
+    // text-align: center;
+    cursor: default;
     order: 1;
   }
 
@@ -40,34 +42,71 @@
     position: relative;
     z-index: 1;
     line-height: 1;
-    color: colors.$white;
+    width: fit-content;
+    color: colors.$lightGray;
     margin: 1rem 0;
     transition: all 0.5s ease;
 
-    background: -webkit-linear-gradient(
-      300deg,
-      colors.$brightGreen 10%,
-      colors.$darkGray
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    span {
+      font-weight: 700;
+    }
+
+    // background: -webkit-linear-gradient(
+    //   300deg,
+    //   colors.$brightGreen 10%,
+    //   colors.$darkGray
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
 
     @include mixins.breakpoint(md) {
       font-size: calc(60px + 6 * ((100vw - 20px) / 1000));
-      line-height: 1.2;
       margin: 0;
     }
   }
 
   &__subtitle {
-    font-weight: 300;
-    font-size: calc(30px + 6 * ((100vw - 20px) / 1000));
-    color: colors.$lightGray;
+    color: colors.$middleGray;
     margin: 0 0 2rem 0;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    font-size: calc(44px + 6 * ((100vw - 20px) / 1000));
+    transition: all 0.5s ease;
 
     @include mixins.breakpoint(md) {
-      font-size: calc(40px + 6 * ((100vw - 20px) / 1000));
+      font-size: calc(60px + 6 * ((100vw - 20px) / 1000));
+
+      &::after {
+        content: "";
+        width: 101%;
+        height: 100%;
+        background-color: colors.$brightGreen;
+        position: absolute;
+        top: 0;
+        left: -1rem;
+        z-index: -1;
+        border-radius: 50px;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
     }
+  }
+
+  &__summary {
+    color: colors.$gray;
+    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
+    width: 50%;
   }
 
   &__buttons {
