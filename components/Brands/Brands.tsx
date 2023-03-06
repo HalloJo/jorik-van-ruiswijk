@@ -6,12 +6,12 @@ import SmallHeading from "../SmallHeading/SmallHeading";
 
 const Brands = () => {
   return (
-    <>
+    <section className={styles.brands}>
       <Container className={styles.container}>
         <SmallHeading label={"Worked for and with:"} className={styles.title} />
         <ImageMarquee brands={brands} />
       </Container>
-    </>
+    </section>
   );
 };
 

@@ -61,7 +61,7 @@ const Me = () => {
           </Column>
         </Row>
         <Row className={styles.me__skillRow}>
-          <Column offset="2" width="12 md:8">
+          <Column width="12 md:12">
             <Heading heading="Skills" className={styles.me__skillTitle} />
             <m.div
               initial="hidden"

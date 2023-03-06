@@ -1,8 +1,12 @@
 @use "styles/abstracts/mixins";
 @use "styles/abstracts/variables/colors";
 
-.container {
+.brands {
+  width: 100%;
   border-bottom: 1px solid colors.$darkGray;
+}
+
+.container {
   text-align: center;
 
   padding-top: 5rem;
