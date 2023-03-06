@@ -1,16 +1,53 @@
-
-import cn from 'clsx'
+import cn from "clsx";
+import React from "react";
+import {
+  PolymorphicComponentPropWithRef,
+  PolymorphicRef,
+} from "../../types/Polymorphic";
 import styles from "../Container/Container.module.scss";
 
-interface ContainerProps {
-    children: React.ReactNode
-    className?: string,
-}
+const defaultElement = "div";
 
-const Container = ({children, className}: ContainerProps) => {
+type ContainerProps<
+  ContainerType extends React.ElementType = typeof defaultElement
+> = PolymorphicComponentPropWithRef<
+  ContainerType,
+  {
+    as?: ContainerType;
+    children: React.ReactNode;
+    className?: string;
+  }
+>;
+
+type ContainerComponent = <
+  ContainerType extends React.ElementType = typeof defaultElement
+>(
+  props: ContainerProps<ContainerType>
+) => React.ReactElement | null;
+
+// eslint-disable-next-line react/display-name
+const Container: ContainerComponent = React.forwardRef(
+  <ContainerType extends React.ElementType = typeof defaultElement>(
+    {
+      as: givenAs,
+      children,
+      className,
+      ...props
+    }: ContainerProps<ContainerType>,
+    ref: PolymorphicRef<ContainerType>
+  ) => {
+    const Component = givenAs || defaultElement;
+
     return (
-        <div className={cn(styles.container, className)}>{children}</div>
-    )
-}
+      <Component
+        className={cn(styles.container, className)}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
 
-export default Container
+export default Container;
