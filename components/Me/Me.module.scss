@@ -125,20 +125,6 @@
     color: colors.$white;
   }
 
-  &__skillRow {
-    // background-color: colors.$black;
-    // border-radius: var(--border-radius);
-    // padding: 2rem 1rem;
-
-    // @include mixins.breakpoint(sm) {
-    //   padding: 2rem;
-    // }
-
-    // @include mixins.breakpoint(md) {
-    //   padding: 4rem 0;
-    // }
-  }
-
   &__experiences {
     background-color: colors.$veryDarkGray;
   }
@@ -146,20 +132,13 @@
   &__skillsGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 0 0 3rem 0;
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // row-gap: 1.5rem;
 
-    // @include mixins.breakpoint(sm) {
-    //   grid-template-columns: repeat(3, 1fr);
-    // }
+    @include mixins.breakpoint(md) {
+      gap: 1rem;
+    }
 
-    // @include mixins.breakpoint(md) {
-    //   grid-template-columns: repeat(5, 1fr);
-    //   grid-gap: 2rem;
-    // }
     &:last-child {
       margin: 0;
     }
