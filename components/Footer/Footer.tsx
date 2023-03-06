@@ -43,7 +43,7 @@ const Footer = ({
           </Column>
         </Row>
       </Container>
-      <Marquee item={"Have a great day! 🕶️"} />
+      {/* <Marquee item={"Have a great day! 🕶️"} /> */}
     </footer>
   );
 };
