@@ -35,26 +35,24 @@ const Header = () => {
               <h2 className={styles.hero__subtitle}>Designer & Developer.</h2>
               <p className={styles.hero__summary}>
                 Let me help you with identity, logo design, websites,
-                application, illustrations, icon design and more. Check out my
+                applications, illustrations, icon design and more. Check out my
                 work and let me know what you need.
               </p>
-              {/* <div className={styles.hero__buttons}>
-                <Button label="See work" href="#work" />
-                <Button label="About me" href="#me" />
-              </div> */}
+              <div className={styles.hero__arrows}>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+                <p className={styles.hero__arrow}>&darr;</p>
+              </div>
             </Column>
-            {/* <Column className={styles.hero__image} width="3 md:4">
-              <HeroIcon />
-            </Column> */}
           </Row>
         </m.div>
       </Container>
     </header>
   );
 };
-
-// front-end developer&nbsp;&nbsp;🖥️, graphic
-//                 designer&nbsp;&nbsp;🎨, illustrator&nbsp;&nbsp;🖍️,
-//                 dutch&nbsp;&nbsp;🐄, papasaurus&nbsp;&nbsp;🦖,
 
 export default Header;

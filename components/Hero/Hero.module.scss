@@ -44,7 +44,6 @@
     line-height: 1;
     width: fit-content;
     color: colors.$lightGray;
-    margin: 1rem 0;
     transition: all 0.5s ease;
 
     span {
@@ -105,26 +104,44 @@
 
   &__summary {
     color: colors.$gray;
-    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
-    width: 50%;
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 1rem;
+    font-size: calc(16px + 6 * ((100vw - 20px) / 1000));
+    width: 100%;
+    margin-bottom: 3rem;
 
     @include mixins.breakpoint(md) {
-      flex-direction: row;
+      width: 50%;
+      font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
     }
   }
 
-  &__image {
-    align-self: center;
-    justify-self: flex-end;
-    order: 0;
+  @keyframes scrollDown {
+    0% {
+      -webkit-transform: translate(0, -10px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0, 10px);
+      opacity: 0;
+    }
+  }
 
-    @include mixins.breakpoint(md) {
-      order: 1;
+  &__arrows {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__arrow {
+    font-size: calc(24px + 6 * ((100vw - 20px) / 1000));
+    animation: scrollDown 3s ease-in-out infinite;
+    color: colors.$brightGreen;
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: 200ms * $i;
+      }
     }
   }
 }
