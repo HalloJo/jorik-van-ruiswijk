@@ -17,10 +17,9 @@ body {
   color: colors.$lightGray;
   background-color: colors.$black;
 
-  ::-moz-selection {
-  }
-
   ::selection {
+    background-color: colors.$veryDarkGray;
+    color: colors.$brightGreen;
   }
 }
 
