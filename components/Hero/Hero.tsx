@@ -1,45 +1,34 @@
 import styles from "../Hero/Hero.module.scss";
 import { motion as m, Variants } from "framer-motion";
+import * as Animation from "../../utils/animations";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
 
 const Header = () => {
-  const container: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: 1,
-        // delayChildren: 1,
-        ease: "easeIn",
-      },
-    },
-  };
+  // const container: Variants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       staggerChildren: 0.2,
+  //       staggerDirection: 1,
+  //       // delayChildren: 1,
+  //       ease: "easeIn",
+  //     },
+  //   },
+  // };
 
-  const item: Variants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
-
-  const arrows: Variants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 1,
-      },
-    },
-  };
+  // const item: Variants = {
+  //   hidden: { opacity: 0, y: 10 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 0.3,
+  //     },
+  //   },
+  // };
 
   return (
     <header className={styles.hero}>
@@ -47,25 +36,22 @@ const Header = () => {
         <Row>
           <Column
             as={m.div}
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            {...Animation.inViewContainer}
             className={styles.hero__text}
             width="12 md:10"
           >
-            <m.h1 variants={item} className={styles.hero__title}>
+            <m.h1 {...Animation.inViewChild} className={styles.hero__title}>
               Jorik van Ruiswijk.
             </m.h1>
-            <m.h2 variants={item} className={styles.hero__subtitle}>
+            <m.h2 {...Animation.inViewChild} className={styles.hero__subtitle}>
               Designer & Developer.
             </m.h2>
-            <m.p variants={item} className={styles.hero__summary}>
+            <m.p {...Animation.inViewChild} className={styles.hero__summary}>
               Let me help you with identity, logo design, websites,
               applications, illustrations, icon design and more. Check out my
               work and let me know what you need.
             </m.p>
-            <m.div variants={arrows} className={styles.hero__arrows}>
+            <m.div {...Animation.arrows} className={styles.hero__arrows}>
               <p className={styles.hero__arrow}>&darr;</p>
               <p className={styles.hero__arrow}>&darr;</p>
               <p className={styles.hero__arrow}>&darr;</p>
