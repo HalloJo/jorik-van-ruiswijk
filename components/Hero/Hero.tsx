@@ -5,6 +5,7 @@ import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
 import Typography from "../Typography/Typography";
+import HeroArt from "../HeroArt/HeroArt";
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
             as={m.div}
             {...Animation.inViewContainer}
             className={styles.hero__text}
-            width="12 md:10"
+            width="12 md:8"
           >
             <Typography
               variant="h1"
@@ -75,6 +76,9 @@ const Header = () => {
                 &darr;
               </Typography>
             </m.div>
+          </Column>
+          <Column width="5 md:4" className={styles.hero__art}>
+            <HeroArt />
           </Column>
         </Row>
       </Container>

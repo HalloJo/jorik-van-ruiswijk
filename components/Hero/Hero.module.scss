@@ -32,7 +32,7 @@
 
   &__text {
     align-self: center;
-    order: 1;
+    order: 0;
   }
 
   &__title {
@@ -135,5 +135,10 @@
         animation-delay: 200ms * $i;
       }
     }
+  }
+
+  &__art {
+    display: flex;
+    justify-content: flex-end;
   }
 }
