@@ -1,0 +1,37 @@
+@use "../variables/fonts";
+@use "../variables/colors";
+@use "./layout";
+
+@mixin fontDefault {
+  font-family: fonts.$body;
+  color: colors.$lightGray;
+  font-weight: 400;
+  font-size: calc(16px + 6 * ((100vw - 20px) / 1000));
+
+  @include layout.breakpoint(md) {
+    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
+  }
+}
+
+// HEADINGS
+
+@mixin headingH1 {
+  @include fontDefault;
+
+  font-weight: 700;
+  font-size: calc(44px + 6 * ((100vw - 20px) / 1000));
+  z-index: 1;
+  line-height: 1;
+  position: relative;
+  width: fit-content;
+
+  @include layout.breakpoint(md) {
+    font-size: calc(60px + 6 * ((100vw - 20px) / 1000));
+  }
+}
+
+// BODY
+
+@mixin body {
+  @include fontDefault;
+}
