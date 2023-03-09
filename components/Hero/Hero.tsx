@@ -17,8 +17,13 @@ const Header = () => {
             className={styles.hero__text}
             width="12 md:10"
           >
-            <Typography variant="h1" as={m.div} {...Animation.inViewChild}>
-              Jorik van Ruiswijk
+            <Typography
+              variant="h1"
+              as={m.div}
+              className={styles.hero__title}
+              {...Animation.inViewChild}
+            >
+              Jorik van Ruiswijk.
             </Typography>
             <Typography
               variant="h1"

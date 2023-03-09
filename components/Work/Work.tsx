@@ -1,7 +1,6 @@
 import styles from "../Work/Work.module.scss";
 import { carouselData } from "../../data/WorkCarouselData";
 import WorkCard from "../WorkCard/WorkCard";
-import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
 import Container from "../Container/Container";
 import * as Animation from "../../utils/animations";
@@ -10,12 +9,22 @@ import Typography from "../Typography/Typography";
 const Work = () => {
   return (
     <section id="work" className={styles.work}>
-      <Container className={styles.work__container}>
-        <Typography variant="h2" className={styles.work__heading}>
+      <Container
+        as={m.div}
+        {...Animation.inViewContainer}
+        className={styles.work__container}
+      >
+        <Typography
+          variant="h2"
+          as={m.div}
+          {...Animation.inViewChild}
+          className={styles.work__heading}
+        >
           Work
         </Typography>
         <Typography
           variant="body"
+          as={m.div}
           {...Animation.inViewChild}
           className={styles.work__synopsis}
         >

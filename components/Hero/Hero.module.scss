@@ -35,23 +35,53 @@
     order: 1;
   }
 
+  &__title {
+    transition: all 0.5s ease;
+    cursor: default;
+
+    @include mixins.breakpoint(md) {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: colors.$darkerGreen;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover {
+        color: colors.$black;
+        &::after {
+          transform: scaleX(1);
+          transform-origin: right;
+        }
+      }
+    }
+  }
+
   &__subtitle {
     color: colors.$middleGray !important;
     margin: 0 0 2rem 0;
+    cursor: default;
     transition: all 0.5s ease;
 
     @include mixins.breakpoint(md) {
       margin: 0 0 2rem 0;
       &::after {
         content: "";
-        width: 101%;
+        width: 100%;
         height: 100%;
         background-color: colors.$brightGreen;
         position: absolute;
         top: 0;
-        left: -1rem;
+        left: 0;
         z-index: -1;
-        border-radius: 50px;
 
         transform: scaleX(0);
         transform-origin: right;
