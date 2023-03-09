@@ -1,0 +1,9 @@
+@use "styles/abstracts/mixins";
+
+.h1 {
+  @include mixins.headingH1;
+}
+
+.body {
+  @include mixins.body;
+}
