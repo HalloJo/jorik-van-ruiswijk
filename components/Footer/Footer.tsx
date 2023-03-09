@@ -5,6 +5,7 @@ import Column from "../Column/Column";
 import { LinkProps } from "../../data/Links";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import Marquee from "../Marquee/Marquee";
+import Typography from "../Typography/Typography";
 
 const Footer = ({
   social,
@@ -22,7 +23,13 @@ const Footer = ({
       <Container className={styles.footer__container}>
         <Row className={styles.footer__row}>
           <Column width="12 md:6" className={styles.footer__info}>
-            <p className={styles.footer__title}>Contact me</p>
+            <Typography
+              variant="body"
+              size="small"
+              className={styles.footer__title}
+            >
+              Contact me
+            </Typography>
             <ul className={styles.footer__links}>
               <a className={styles.footer__link} href={email.href}>
                 {email.label}
@@ -37,9 +44,13 @@ const Footer = ({
               socials={social}
               className={styles.footer__socialLinks}
             />
-            <p className={styles.footer__copyright}>
+            <Typography
+              variant="body"
+              size="small"
+              className={styles.footer__copyright}
+            >
               &copy; Jorik van Ruiswijk | {currentDate}
-            </p>
+            </Typography>
           </Column>
         </Row>
       </Container>

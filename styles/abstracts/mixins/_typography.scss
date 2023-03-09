@@ -67,10 +67,12 @@
 
 @mixin bodyLarge {
   @include fontDefault;
-  font-size: calc(18px + 6 * ((100vw - 20px) / 1000));
+
+  font-size: calc(22px + 6 * ((100vw - 20px) / 1000));
+  font-weight: 600;
 
   @include layout.breakpoint(md) {
-    font-size: calc(14px + 6 * ((100vw - 20px) / 1000));
+    font-size: calc(34px + 6 * ((100vw - 20px) / 1000));
   }
 }
 
