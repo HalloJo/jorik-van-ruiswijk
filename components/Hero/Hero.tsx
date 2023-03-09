@@ -4,6 +4,7 @@ import * as Animation from "../../utils/animations";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
+import Typography from "../Typography/Typography";
 
 const Header = () => {
   return (
@@ -16,30 +17,58 @@ const Header = () => {
             className={styles.hero__text}
             width="12 md:10"
           >
-            <m.h1 {...Animation.inViewChild} className={styles.hero__title}>
-              Jorik van Ruiswijk.
-            </m.h1>
-            <m.h2 {...Animation.inViewChild} className={styles.hero__subtitle}>
+            <Typography variant="h1" as={m.div} {...Animation.inViewChild}>
+              Jorik van Ruiswijk
+            </Typography>
+            <Typography
+              variant="h1"
+              as={m.div}
+              {...Animation.inViewChild}
+              className={styles.hero__subtitle}
+            >
               Designer & Developer.
-            </m.h2>
-            <m.p {...Animation.inViewChild} className={styles.hero__summary}>
+            </Typography>
+            <Typography
+              variant="body"
+              as={m.div}
+              {...Animation.inViewChild}
+              className={styles.hero__summary}
+            >
               Let me help you with identity, logo design, websites,
               applications, illustrations, icon design and more. Check out my
               work and let me know what you need.
-            </m.p>
+            </Typography>
             <m.div {...Animation.arrows} className={styles.hero__arrows}>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
-              <p className={styles.hero__arrow}>&darr;</p>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
+              <Typography variant="body" className={styles.hero__arrow}>
+                &darr;
+              </Typography>
             </m.div>
           </Column>
         </Row>

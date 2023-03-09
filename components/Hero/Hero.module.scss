@@ -35,46 +35,13 @@
     order: 1;
   }
 
-  &__title {
-    font-size: calc(44px + 6 * ((100vw - 20px) / 1000));
-    position: relative;
-    z-index: 1;
-    line-height: 1;
-    width: fit-content;
-    color: colors.$lightGray;
-    transition: all 0.5s ease;
-
-    span {
-      font-weight: 700;
-    }
-
-    // background: -webkit-linear-gradient(
-    //   300deg,
-    //   colors.$brightGreen 10%,
-    //   colors.$darkGray
-    // );
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-
-    @include mixins.breakpoint(md) {
-      font-size: calc(60px + 6 * ((100vw - 20px) / 1000));
-      margin: 0;
-    }
-  }
-
   &__subtitle {
-    color: colors.$middleGray;
+    color: colors.$middleGray !important;
     margin: 0 0 2rem 0;
-    line-height: 1;
-    position: relative;
-    z-index: 1;
-    width: fit-content;
-    font-size: calc(44px + 6 * ((100vw - 20px) / 1000));
     transition: all 0.5s ease;
 
     @include mixins.breakpoint(md) {
-      font-size: calc(60px + 6 * ((100vw - 20px) / 1000));
-
+      margin: 0 0 2rem 0;
       &::after {
         content: "";
         width: 101%;
@@ -102,13 +69,11 @@
 
   &__summary {
     color: colors.$gray;
-    font-size: calc(16px + 6 * ((100vw - 20px) / 1000));
     width: 100%;
     margin-bottom: 3rem;
 
     @include mixins.breakpoint(md) {
       width: 50%;
-      font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
     }
   }
 
@@ -132,9 +97,8 @@
   }
 
   &__arrow {
-    font-size: calc(24px + 6 * ((100vw - 20px) / 1000));
     animation: scrollDown 3s ease-in-out infinite;
-    color: colors.$brightGreen;
+    color: colors.$brightGreen !important;
 
     @for $i from 1 through 12 {
       &:nth-child(#{$i}) {
