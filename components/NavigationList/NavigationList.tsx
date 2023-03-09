@@ -1,4 +1,5 @@
 import styles from "../NavigationList/NavigationList.module.scss";
+import Typography from "../Typography/Typography";
 
 const NavigationList = ({ navigation }) => {
   return (

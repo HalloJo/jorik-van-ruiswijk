@@ -4,6 +4,7 @@ import styles from "../HamburgerMenu/HamburgerMenu.module.scss";
 import Marquee from "../Marquee/Marquee";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import cn from "clsx";
+import Typography from "../Typography/Typography";
 
 type HamburgerMenuProps = {
   navigation: LinkProps[];
@@ -26,7 +27,9 @@ const HamburgerMenu = ({ navigation, open, setOpen }: HamburgerMenuProps) => {
                 href={href}
                 onClick={() => setOpen(!open)}
               >
-                <li className={styles.hamburgerMenu__label}>{label}</li>
+                <li className={styles.hamburgerMenu__label}>
+                  <Typography variant="h2">{label}</Typography>
+                </li>
               </a>
             );
           })}

@@ -16,8 +16,17 @@ export type TypographyProps<
     as?: MorphType;
     children: ReactNode;
     className?: string;
-    variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "body" | "caption";
-    size?: "default" | "small" | "medium" | "large";
+    variant?:
+      | "display"
+      | "h1"
+      | "h2"
+      | "h3"
+      | "h4"
+      | "h5"
+      | "body"
+      | "caption"
+      | "marquee";
+    size?: "default" | "small" | "large";
   }
 >;
 
@@ -33,6 +42,7 @@ const defaultComponents: Record<TypographyProps["variant"], ElementType> = {
   h4: "h4",
   h5: "h5",
   caption: "h6",
+  marquee: "p",
   body: defaultElement,
 };
 
@@ -59,10 +69,10 @@ const Typography: TypographyComponent = forwardRef(
         [styles.h5]: variant === "h5",
         [styles.body]: variant === "body",
         [styles.caption]: variant === "caption",
+        [styles.marquee]: variant === "marquee",
 
         [styles.sizeSmall]: size === "small",
         [styles.sizeDefault]: size === "default",
-        [styles.sizeMedium]: size === "medium",
         [styles.sizeLarge]: size === "large",
       },
       givenClassName

@@ -30,8 +30,49 @@
   }
 }
 
+@mixin headingH2 {
+  @include fontDefault;
+
+  font-size: calc(34px + 6 * ((100vw - 20px) / 1000));
+
+  @include layout.breakpoint(md) {
+    font-size: calc(50px + 6 * ((100vw - 20px) / 1000));
+  }
+}
+
 // BODY
+
+@mixin bodySmall {
+  @include fontDefault;
+  font-size: calc(12px + 6 * (100vw - 20px) / 1000);
+
+  @include layout.breakpoint(md) {
+    font-size: calc(8px + 6 * ((100vw - 20px) / 1000));
+  }
+}
 
 @mixin body {
   @include fontDefault;
+}
+
+@mixin bodyLarge {
+  @include fontDefault;
+  font-size: calc(18px + 6 * ((100vw - 20px) / 1000));
+
+  @include layout.breakpoint(md) {
+    font-size: calc(14px + 6 * ((100vw - 20px) / 1000));
+  }
+}
+
+// MARQUEE
+
+@mixin marquee {
+  @include fontDefault;
+
+  font-size: calc(10px + 6 * ((100vw - 20px) / 1000));
+  color: colors.$black;
+
+  @include layout.breakpoint(md) {
+    font-size: calc(8px + 6 * ((100vw - 20px) / 1000));
+  }
 }

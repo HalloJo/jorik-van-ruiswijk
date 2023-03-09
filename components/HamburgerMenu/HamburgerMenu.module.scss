@@ -28,7 +28,6 @@
   z-index: -1;
   transform: translateY(-100%);
   transition: all 0.4s ease-out;
-  // border-bottom: 1px solid colors.$brightGreen;
 
   &.open {
     transform: translateY(0%);
@@ -51,10 +50,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-  }
-
-  &__link {
-    font-size: 36px;
   }
 
   &__socials {

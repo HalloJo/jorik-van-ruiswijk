@@ -1,11 +1,12 @@
 @use "styles/abstracts/mixins";
+@use "styles/abstracts/mixins/typography";
 @use "styles/abstracts/variables/colors";
 
 .navigationList {
   display: none;
   list-style-type: none;
 
-  @include mixins.breakpoint(lg) {
+  @include mixins.breakpoint(md) {
     display: block;
     display: flex;
     align-items: center;
@@ -13,22 +14,24 @@
   }
 
   &__item {
+    @include typography.bodySmall;
+
     font-weight: 500;
     transition: color 0.5s ease;
     text-transform: capitalize;
 
     &:hover {
-      color: colors.$white;
+      color: colors.$white !important;
     }
   }
 }
 
 .secondary {
-  @include mixins.breakpoint(lg) {
+  @include mixins.breakpoint(md) {
     background-color: colors.$brightGreen;
-    color: colors.$black;
     padding: 0.5rem 1.3rem;
     border-radius: 20px;
+    color: colors.$black;
     border: 1px solid colors.$darkGray;
     transition: background-color 0.5s ease;
 

@@ -4,6 +4,22 @@
   @include mixins.headingH1;
 }
 
+.h2 {
+  @include mixins.headingH2;
+}
+
 .body {
-  @include mixins.body;
+  &.sizeSmall {
+    @include mixins.bodySmall;
+  }
+  &.sizeDefault {
+    @include mixins.body;
+  }
+  &.sizeLarge {
+    @include mixins.bodyLarge;
+  }
+}
+
+.marquee {
+  @include mixins.marquee;
 }

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { LinkProps } from "../../data/Links";
 import useScrollDirection from "../../utils/use-scroll-direction";
 import cn from "clsx";
+import Typography from "../Typography/Typography";
 
 const Navigation = ({
   navigation,
@@ -31,9 +32,13 @@ const Navigation = ({
           <Logo />
           <Link href="/">
             <a>
-              <span className={styles.navigation__span}>
+              <Typography
+                variant="body"
+                size="small"
+                className={styles.navigation__span}
+              >
                 Jorik van Ruiswijk
-              </span>
+              </Typography>
             </a>
           </Link>
         </div>

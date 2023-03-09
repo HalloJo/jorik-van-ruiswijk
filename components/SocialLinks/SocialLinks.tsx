@@ -2,6 +2,7 @@ import React from "react";
 import cn from "clsx";
 import { LinkProps } from "../../data/Links";
 import styles from "../SocialLinks/SocialLinks.module.scss";
+import Typography from "../Typography/Typography";
 
 interface SocialLinksProps {
   socials: LinkProps[];
@@ -27,7 +28,9 @@ const SocialLinks = ({
         return (
           <li className={styles.socialLinks__item} key={index}>
             <a href={href} target="_blank" rel="noreferrer">
-              {label}
+              <Typography variant="body" size="small">
+                {label}
+              </Typography>
             </a>
           </li>
         );

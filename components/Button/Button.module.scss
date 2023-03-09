@@ -3,6 +3,8 @@
 @use "styles/abstracts/variables/colors";
 
 .button {
+  @include typography.headingH1;
+
   color: colors.$white;
   background-color: colors.$black;
   border: 1px solid colors.$darkGray;
@@ -12,7 +14,6 @@
   width: 100%;
 
   @include mixins.breakpoint(md) {
-    font-size: calc(10px + 6 * ((100vw - 20px) / 1280));
     width: auto;
 
     &:hover {
