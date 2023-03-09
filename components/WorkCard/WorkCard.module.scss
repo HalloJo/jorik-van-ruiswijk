@@ -65,7 +65,7 @@
   &__title {
     @include typography.body;
 
-    font-weight: 700;
+    font-weight: 600;
     color: colors.$white;
     grid-area: title;
   }
