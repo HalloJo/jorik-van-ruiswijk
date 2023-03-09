@@ -6,30 +6,6 @@ import Row from "../Row/Row";
 import Column from "../Column/Column";
 
 const Header = () => {
-  // const container: Variants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.2,
-  //       staggerDirection: 1,
-  //       // delayChildren: 1,
-  //       ease: "easeIn",
-  //     },
-  //   },
-  // };
-
-  // const item: Variants = {
-  //   hidden: { opacity: 0, y: 10 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: 0.3,
-  //     },
-  //   },
-  // };
-
   return (
     <header className={styles.hero}>
       <Container className={styles.hero__container}>
