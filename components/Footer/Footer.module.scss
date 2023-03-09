@@ -4,11 +4,11 @@
 
 .footer {
   &__container {
-    padding-top: 7rem;
+    padding-top: 6rem;
     padding-bottom: 2rem;
 
     @include mixins.breakpoint(md) {
-      padding-top: 12rem;
+      padding-top: 7rem;
       padding-bottom: 3rem;
     }
   }
