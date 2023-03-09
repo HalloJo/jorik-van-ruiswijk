@@ -3,12 +3,13 @@ import styles from "../Brands/Brands.module.scss";
 import { brands } from "../../data/Brands";
 import Container from "../Container/Container";
 import SmallHeading from "../SmallHeading/SmallHeading";
+import Typography from "../Typography/Typography";
 
 const Brands = () => {
   return (
     <section className={styles.brands}>
       <Container className={styles.container}>
-        <SmallHeading label={"Worked for and with:"} className={styles.title} />
+        <Typography className={styles.title}>Worked for and with:</Typography>
         <ImageMarquee brands={brands} />
       </Container>
     </section>
