@@ -28,9 +28,7 @@ const SocialLinks = ({
         return (
           <li className={styles.socialLinks__item} key={index}>
             <a href={href} target="_blank" rel="noreferrer">
-              <Typography variant="body" size="small">
-                {label}
-              </Typography>
+              {label}
             </a>
           </li>
         );

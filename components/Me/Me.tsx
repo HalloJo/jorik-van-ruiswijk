@@ -4,6 +4,7 @@ import { experiences, skills } from "../../data/Skills";
 import { Social } from "../../data/Links";
 import Heading from "../Heading/Heading";
 import { motion as m, Variants } from "framer-motion";
+import * as Animation from "../../utils/animations";
 import Skill from "../Skill/Skill";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
@@ -11,39 +12,25 @@ import Column from "../Column/Column";
 import { Personal } from "../../data/Personal";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import SmallHeading from "../SmallHeading/SmallHeading";
+import Typography from "../Typography/Typography";
 
 const Me = () => {
-  const item: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.1,
-        // delayChildren: 1,
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <section id="me" className={styles.me}>
       <Container className={styles.me__container}>
         <Row className={styles.me__infoRow}>
           <Column width="12 md:6" className={styles.me__info}>
-            <Heading heading="About me" className={styles.me__heading} />
-            <m.p
-              variants={item}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+            <Typography variant="h2" className={styles.me__heading}>
+              About me
+            </Typography>
+            <Typography
+              variant="body"
+              as={m.div}
+              {...Animation.inViewChild}
               className={styles.me__text}
             >
               {Personal.synopsis}
-            </m.p>
+            </Typography>
             <SocialLinks socials={Social} className={styles.me__socials} />
           </Column>
           <Column
@@ -62,18 +49,13 @@ const Me = () => {
         </Row>
         <Row className={styles.me__skillRow}>
           <Column width="12 md:12">
-            <Heading heading="Skills" className={styles.me__skillTitle} />
-            <m.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={item}
-              className={styles.me__skillsGrid}
-            >
+            <Typography variant="h2" className={styles.me__skillTitle}>
+              Skills
+            </Typography>
+            <m.div className={styles.me__skillsGrid}>
               {skills.map((skill) => {
                 return (
                   <m.div
-                    variants={item}
                     className={styles.me__skillWrapper}
                     key={skill.skillTitle}
                   >
@@ -83,21 +65,13 @@ const Me = () => {
               })}
             </m.div>
             <div>
-              <SmallHeading
-                label={"And experience with.."}
-                className={styles.me__experienceTitle}
-              />
-              <m.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={item}
-                className={styles.me__skillsGrid}
-              >
+              <Typography className={styles.me__experienceTitle}>
+                And experience with..
+              </Typography>
+              <m.div className={styles.me__skillsGrid}>
                 {experiences.map((skill) => {
                   return (
                     <m.div
-                      variants={item}
                       className={styles.me__skillWrapper}
                       key={skill.skillTitle}
                     >
