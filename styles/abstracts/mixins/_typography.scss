@@ -40,6 +40,16 @@
   }
 }
 
+@mixin headingH3 {
+  @include fontDefault;
+
+  font-size: calc(24px + 6 * ((100vw - 20px) / 1000));
+
+  @include layout.breakpoint(md) {
+    font-size: calc(40px + 6 * ((100vw - 20px) / 1000));
+  }
+}
+
 // BODY
 
 @mixin bodySmall {
@@ -47,7 +57,7 @@
   font-size: calc(12px + 6 * (100vw - 20px) / 1000);
 
   @include layout.breakpoint(md) {
-    font-size: calc(8px + 6 * ((100vw - 20px) / 1000));
+    font-size: calc(6px + 6 * ((100vw - 20px) / 1000));
   }
 }
 

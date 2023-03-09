@@ -29,7 +29,6 @@
   &__synopsis {
     margin: 2rem 0;
     color: colors.$gray;
-    font-size: calc(12px + 6 * ((100vw - 20px) / 1000));
   }
 
   &__carousel {

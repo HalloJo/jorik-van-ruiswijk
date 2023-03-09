@@ -1,4 +1,5 @@
 @use "styles/abstracts/mixins";
+@use "styles/abstracts/variables/colors";
 
 .h1 {
   @include mixins.headingH1;
@@ -6,6 +7,11 @@
 
 .h2 {
   @include mixins.headingH2;
+  color: colors.$white;
+}
+
+.h3 {
+  @include mixins.headingH3;
 }
 
 .body {
