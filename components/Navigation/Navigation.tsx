@@ -7,6 +7,9 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import Container from "../Container/Container";
 import styles from "../Navigation/Navigation.module.scss";
 import Link from "next/link";
+import * as EN from "../../locales/Content_EN";
+import * as NL from "../../locales/Content_NL";
+import { useRouter } from "next/router";
 import { LinkProps } from "../../data/Links";
 import useScrollDirection from "../../utils/use-scroll-direction";
 import cn from "clsx";
@@ -21,6 +24,16 @@ const Navigation = ({
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const scrollDirection = useScrollDirection();
+
+  const router = useRouter();
+  const { locale } = router;
+
+  const translation = locale === "en" ? EN : NL;
+
+  const changeLanguage = (event) => {
+    const locale = event.target.value;
+    router.push("/", "/", { locale });
+  };
 
   return (
     <nav
@@ -38,12 +51,15 @@ const Navigation = ({
                 size="small"
                 className={styles.navigation__span}
               >
-                {Content.Hero.title}
+                {translation.Hero.title}
               </Typography>
             </a>
           </Link>
         </div>
-        <NavigationList navigation={navigation} />
+        <NavigationList
+          changeLanguage={changeLanguage}
+          navigation={navigation}
+        />
         <Hamburger open={open} setOpen={setOpen} />
       </Container>
       <HamburgerMenu

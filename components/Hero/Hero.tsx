@@ -2,6 +2,9 @@ import styles from "../Hero/Hero.module.scss";
 import { motion as m, Variants } from "framer-motion";
 import * as Animation from "../../utils/animations";
 import * as Content from "../../data/Content";
+import * as EN from "../../locales/Content_EN";
+import * as NL from "../../locales/Content_NL";
+import { useRouter } from "next/router";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
@@ -9,6 +12,11 @@ import Typography from "../Typography/Typography";
 import HeroArt from "../HeroArt/HeroArt";
 
 const Header = () => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const translation = locale === "en" ? EN : NL;
+
   return (
     <header className={styles.hero}>
       <Container className={styles.hero__container}>
@@ -25,7 +33,8 @@ const Header = () => {
               className={styles.hero__title}
               {...Animation.inViewChild}
             >
-              {Content.Hero.title}
+              {/* {Content.Hero.title} */}
+              {translation.Hero.title}
             </Typography>
             <Typography
               variant="h1"

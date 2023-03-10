@@ -1,7 +1,8 @@
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import styles from "../NavigationList/NavigationList.module.scss";
 import Typography from "../Typography/Typography";
 
-const NavigationList = ({ navigation }) => {
+const NavigationList = ({ navigation, changeLanguage }) => {
   return (
     <ul className={styles.navigationList}>
       {navigation.map((item) => {
@@ -13,6 +14,7 @@ const NavigationList = ({ navigation }) => {
           </a>
         );
       })}
+      <LanguageSelector changeLanguage={changeLanguage} />
     </ul>
   );
 };
