@@ -7,7 +7,7 @@ import Skill from "../Skill/Skill";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
-import { Personal } from "../../data/Personal";
+import * as Content from "../../data/Content";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import Typography from "../Typography/Typography";
 import Image from "next/image";
@@ -29,7 +29,7 @@ const Me = () => {
               {...Animation.inViewChild}
               className={styles.me__heading}
             >
-              About me
+              {Content.About.title}
             </Typography>
             <Typography
               variant="body"
@@ -37,7 +37,7 @@ const Me = () => {
               {...Animation.inViewChild}
               className={styles.me__text}
             >
-              {Personal.synopsis}
+              {Content.About.intro}
             </Typography>
             <SocialLinks socials={Social} className={styles.me__socials} />
           </Column>
@@ -69,7 +69,7 @@ const Me = () => {
               as={m.div}
               {...Animation.inViewChild}
             >
-              Skills
+              {Content.About.subTitle}
             </Typography>
             <m.div
               {...Animation.inViewContainer}
@@ -93,7 +93,7 @@ const Me = () => {
                 as={m.div}
                 {...Animation.inViewChild}
               >
-                And experience with..
+                {Content.About.moustache}
               </Typography>
               <m.div
                 className={styles.me__skillsGrid}

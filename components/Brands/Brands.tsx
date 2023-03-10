@@ -3,6 +3,7 @@ import styles from "../Brands/Brands.module.scss";
 import { brands } from "../../data/Brands";
 import { motion as m, Variants } from "framer-motion";
 import * as Animation from "../../utils/animations";
+import * as Content from "../../data/Content";
 import Container from "../Container/Container";
 import Typography from "../Typography/Typography";
 
@@ -19,7 +20,7 @@ const Brands = () => {
           as={m.div}
           {...Animation.inViewChild}
         >
-          Worked for and with:
+          {Content.Brands.title}
         </Typography>
         <m.div {...Animation.inViewChild}>
           <ImageMarquee brands={brands} />

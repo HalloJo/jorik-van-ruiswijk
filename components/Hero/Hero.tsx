@@ -1,6 +1,7 @@
 import styles from "../Hero/Hero.module.scss";
 import { motion as m, Variants } from "framer-motion";
 import * as Animation from "../../utils/animations";
+import * as Content from "../../data/Content";
 import Container from "../Container/Container";
 import Row from "../Row/Row";
 import Column from "../Column/Column";
@@ -24,7 +25,7 @@ const Header = () => {
               className={styles.hero__title}
               {...Animation.inViewChild}
             >
-              Jorik van Ruiswijk.
+              {Content.Hero.title}
             </Typography>
             <Typography
               variant="h1"
@@ -32,7 +33,7 @@ const Header = () => {
               {...Animation.inViewChild}
               className={styles.hero__subtitle}
             >
-              Designer & Developer.
+              {Content.Hero.subTitle}
             </Typography>
             <Typography
               variant="body"
@@ -40,9 +41,7 @@ const Header = () => {
               {...Animation.inViewChild}
               className={styles.hero__summary}
             >
-              Let me help you with identity, logo design, websites,
-              applications, illustrations, icon design and more. Check out my
-              work and let me know what you need.
+              {Content.Hero.intro}
             </Typography>
             <m.div {...Animation.arrows} className={styles.hero__arrows}>
               <Typography variant="body" className={styles.hero__arrow}>

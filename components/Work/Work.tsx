@@ -4,6 +4,7 @@ import WorkCard from "../WorkCard/WorkCard";
 import { motion as m, Variants } from "framer-motion";
 import Container from "../Container/Container";
 import * as Animation from "../../utils/animations";
+import * as Content from "../../data/Content";
 import Typography from "../Typography/Typography";
 
 const Work = () => {
@@ -20,7 +21,7 @@ const Work = () => {
           {...Animation.inViewChild}
           className={styles.work__heading}
         >
-          Work
+          {Content.Work.title}
         </Typography>
         <Typography
           variant="body"
@@ -28,8 +29,7 @@ const Work = () => {
           {...Animation.inViewChild}
           className={styles.work__synopsis}
         >
-          Below is a small grasp of projects. Projects that I have drawn,
-          designed, collaborated on and developed.
+          {Content.Work.intro}
         </Typography>
         <div className={styles.work__carouselContainer}>
           <m.ul

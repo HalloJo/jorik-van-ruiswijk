@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
+import * as Content from "../../data/Content";
 import NavigationList from "../NavigationList/NavigationList";
 import Hamburger from "../Hamburger/Hamburger";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
@@ -37,7 +38,7 @@ const Navigation = ({
                 size="small"
                 className={styles.navigation__span}
               >
-                Jorik van Ruiswijk
+                {Content.Hero.title}
               </Typography>
             </a>
           </Link>

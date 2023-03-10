@@ -11,7 +11,6 @@ const HeroArt = () => {
         viewBox="0 0 142.17 187.53"
       >
         <path
-          // stroke="#3c3c3c"
           strokeWidth={3}
           fill="none"
           className="cls-1"

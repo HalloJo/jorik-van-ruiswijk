@@ -5,6 +5,7 @@ import Column from "../Column/Column";
 import { LinkProps } from "../../data/Links";
 import { motion as m, Variants } from "framer-motion";
 import * as Animation from "../../utils/animations";
+import * as Content from "../../data/Content";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import Typography from "../Typography/Typography";
 
@@ -36,7 +37,7 @@ const Footer = ({
               as={m.div}
               {...Animation.inViewChild}
             >
-              Contact me
+              {Content.Footer.title}
             </Typography>
             <m.ul
               className={styles.footer__links}
@@ -76,12 +77,11 @@ const Footer = ({
               as={m.div}
               {...Animation.inViewChild}
             >
-              &copy; Jorik van Ruiswijk | {currentDate}
+              {currentDate} | &copy; {Content.Hero.title}
             </Typography>
           </Column>
         </Row>
       </Container>
-      {/* <Marquee item={"Have a great day! 🕶️"} /> */}
     </footer>
   );
 };
