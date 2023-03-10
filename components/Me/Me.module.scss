@@ -27,7 +27,7 @@
   }
 
   &__infoRow {
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     padding-bottom: 3rem;
 
     @include mixins.breakpoint(md) {
@@ -69,6 +69,7 @@
 
   &__pictureColumn {
     position: relative;
+    min-height: 200px;
   }
 
   &__picture {

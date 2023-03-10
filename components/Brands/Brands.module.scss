@@ -2,8 +2,13 @@
 @use "styles/abstracts/variables/colors";
 
 .brands {
-  width: 100%;
-  border-bottom: 1px solid colors.$darkGray;
+  display: none;
+
+  @include mixins.breakpoint(md) {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid colors.$darkGray;
+  }
 }
 
 .container {
