@@ -52,11 +52,10 @@ const Me = () => {
               className={styles.me__picture}
               {...Animation.inViewChild}
             >
-              <Image
+              <img
                 className={styles.me__image}
                 src="/assets/jorik.jpg"
                 alt="Jorik van Ruiswijk"
-                layout="fill"
               />
             </m.picture>
           </Column>
