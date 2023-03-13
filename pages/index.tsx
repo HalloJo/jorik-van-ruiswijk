@@ -12,6 +12,7 @@ const Home = () => {
       <Head>
         <title>Jorik - Design & Development</title>
         <meta name="title" content="Jorik - Design & Development" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Need help with design or development? Jorik can help you with identity and websites. Just what you need."
