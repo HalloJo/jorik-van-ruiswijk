@@ -6,6 +6,7 @@
   font-family: fonts.$body;
   color: colors.$lightGray;
   font-weight: 400;
+  font-style: normal;
   font-size: calc(16px + 6 * ((100vw - 20px) / 1000));
 
   @include layout.breakpoint(md) {
