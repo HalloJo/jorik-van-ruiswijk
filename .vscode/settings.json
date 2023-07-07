@@ -7,7 +7,7 @@
         "sideBar.foreground":"#86a4a6",
         "list.activeSelectionBackground":"#3a4f5d",
         "list.activeSelectionForeground":"#fefefe",
-        
+        "support.class.component.tsx": "#fefefe"
     },
     
     }

@@ -1,5 +1,5 @@
-@use "styles/abstracts/mixins";
-@use "styles/abstracts/variables/colors";
+@use 'styles/abstracts/mixins';
+@use 'styles/abstracts/variables/colors';
 
 @keyframes scroll {
   0% {
@@ -23,7 +23,7 @@
 
   &:before {
     pointer-events: none;
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 15%;
@@ -36,7 +36,7 @@
 
   &:after {
     pointer-events: none;
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 15%;

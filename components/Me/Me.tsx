@@ -1,16 +1,16 @@
-import styles from "../Me/Me.module.scss";
-import { experiences, skills } from "../../data/Skills";
-import { Social } from "../../data/Links";
-import { motion as m, Variants } from "framer-motion";
-import * as Animation from "../../utils/animations";
-import Skill from "../Skill/Skill";
-import Container from "../Container/Container";
-import Row from "../Row/Row";
-import Column from "../Column/Column";
-import * as Content from "../../data/Content";
-import SocialLinks from "../SocialLinks/SocialLinks";
-import Typography from "../Typography/Typography";
-import Image from "next/image";
+import styles from '../Me/Me.module.scss';
+import { experiences, skills } from '../../data/Skills';
+import { Social } from '../../data/Links';
+import { motion as m, Variants } from 'framer-motion';
+import * as Animation from '../../utils/animations';
+import Skill from '../Skill/Skill';
+import Container from '../Container/Container';
+import Row from '../Row/Row';
+import Column from '../Column/Column';
+import * as Content from '../../data/Content';
+import SocialLinks from '../SocialLinks/SocialLinks';
+import Typography from '../Typography/Typography';
+import Image from 'next/image';
 
 const Me = () => {
   return (
@@ -52,10 +52,13 @@ const Me = () => {
               className={styles.me__picture}
               {...Animation.inViewChild}
             >
-              <img
+              <Image
                 className={styles.me__image}
                 src="/assets/jorik.jpg"
                 alt="Jorik van Ruiswijk"
+                loading="lazy"
+                layout="fill"
+                objectFit="cover"
               />
             </m.picture>
           </Column>

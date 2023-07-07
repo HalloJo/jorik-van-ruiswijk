@@ -1,5 +1,5 @@
-@use "styles/abstracts/mixins";
-@use "styles/abstracts/variables/colors";
+@use 'styles/abstracts/mixins';
+@use 'styles/abstracts/variables/colors';
 
 @keyframes gradient {
   0% {
@@ -46,24 +46,24 @@
   &__info {
     display: grid;
     grid-template:
-      "heading  " 0.75fr
-      "text     " 1fr
-      "socials  " 0.5fr;
+      'heading  ' 0.75fr
+      'text     ' 1fr
+      'socials  ' 0.5fr;
 
     @include mixins.breakpoint(xs) {
       grid-template:
-        "heading  " 0.75fr
-        "text     " 1fr
-        ".        " 1rem
-        "socials  " 0.5fr;
+        'heading  ' 0.75fr
+        'text     ' 1fr
+        '.        ' 1rem
+        'socials  ' 0.5fr;
     }
 
     @include mixins.breakpoint(sm) {
       grid-template:
-        "heading  " 1fr
-        "text     " 1fr
-        ".        " 2rem
-        "socials  " 1.5fr;
+        'heading  ' 1fr
+        'text     ' 1fr
+        '.        ' 2rem
+        'socials  ' 1.5fr;
     }
   }
 
@@ -88,9 +88,9 @@
   }
 
   &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
   }
 
   &__socials {

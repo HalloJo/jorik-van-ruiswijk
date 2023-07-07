@@ -1,6 +1,6 @@
-@use "styles/abstracts/mixins";
-@use "styles/abstracts/mixins/typography";
-@use "styles/abstracts/variables/colors";
+@use 'styles/abstracts/mixins';
+@use 'styles/abstracts/mixins/typography';
+@use 'styles/abstracts/variables/colors';
 
 .workCard {
   position: relative;
@@ -30,6 +30,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    min-height: 225px;
 
     @include mixins.breakpoint(md) {
       filter: grayscale(100%);
@@ -49,9 +50,9 @@
     z-index: 10;
     display: grid;
     grid-template:
-      "title  " auto
-      ".      " 1rem
-      "list   " auto;
+      'title  ' auto
+      '.      ' 1rem
+      'list   ' auto;
 
     width: 100%;
     padding: 1.5rem;

@@ -1,5 +1,5 @@
-@use "styles/abstracts/mixins";
-@use "styles/abstracts/variables/colors";
+@use 'styles/abstracts/mixins';
+@use 'styles/abstracts/variables/colors';
 
 .skill {
   display: flex;
@@ -23,8 +23,6 @@
   }
 
   &__icon {
-    height: 1rem;
-    width: 1.25rem;
     display: flex;
 
     @include mixins.breakpoint(md) {

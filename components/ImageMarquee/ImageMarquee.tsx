@@ -1,4 +1,4 @@
-import styles from "../ImageMarquee/ImageMarquee.module.scss";
+import styles from '../ImageMarquee/ImageMarquee.module.scss';
 
 interface Brand {
   src: string;
@@ -17,7 +17,7 @@ const ImageMarquee = ({ brands }: ImageMarqueeProps) => {
           return (
             <li key={item.alt} className={styles.marquee__item}>
               <picture>
-                <img src={item.src} alt={item.alt} />
+                <img src={item.src} alt={item.alt} loading="lazy" />
               </picture>
             </li>
           );
