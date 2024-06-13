@@ -16,15 +16,16 @@ export const skills: SkillsProps[] = [
     alt: "Next.js",
   },
   {
+    icon: "/assets/skills/angular.svg",
+    skillTitle: "Angular",
+    alt: "Angular",
+  },
+  {
     icon: "/assets/skills/keyboard-solid.svg",
     skillTitle: "TypeScript",
     alt: "TypeScript",
   },
-  {
-    icon: "/assets/skills/hand-peace-solid.svg",
-    skillTitle: "Vue.js",
-    alt: "Vue.js",
-  },
+
   {
     icon: "/assets/skills/spider-solid.svg",
     skillTitle: "Webdesign",
@@ -39,6 +40,11 @@ export const skills: SkillsProps[] = [
     icon: "/assets/skills/pencil-solid.svg",
     skillTitle: "Illustration",
     alt: "Illustration",
+  },
+  {
+    icon: "/assets/skills/database.svg",
+    skillTitle: "Strapi",
+    alt: "Strapi",
   },
   {
     icon: "/assets/skills/right-left-solid.svg",
@@ -59,6 +65,11 @@ export const skills: SkillsProps[] = [
     icon: "/assets/skills/css3-alt.svg",
     skillTitle: "(S)CSS",
     alt: "(S)CSS",
+  },
+  {
+    icon: "/assets/skills/wind.svg",
+    skillTitle: "Tailwind.css",
+    alt: "Tailwind.css",
   },
   {
     icon: "/assets/skills/figma.svg",
@@ -114,6 +125,11 @@ export const experiences: SkillsProps[] = [
     alt: "Three.js",
   },
   {
+    icon: "/assets/skills/hand-peace-solid.svg",
+    skillTitle: "Vue.js",
+    alt: "Vue.js",
+  },
+  {
     icon: "/assets/skills/user-astronaut-solid.svg",
     skillTitle: "Astro",
     alt: "Astro",
@@ -123,11 +139,7 @@ export const experiences: SkillsProps[] = [
     skillTitle: "Storybook",
     alt: "Storybook",
   },
-  {
-    icon: "/assets/skills/wind.svg",
-    skillTitle: "Tailwind.css",
-    alt: "Tailwind.css",
-  },
+
   {
     icon: "/assets/skills/jest.svg",
     skillTitle: "Jest",

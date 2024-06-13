@@ -27,7 +27,7 @@ export const Work: ContentProps = {
 export const About: ContentProps = {
   title: "About me",
   intro:
-    "Jorik van Ruiswijk. 31 years of age. Based in the Netherlands. Self-taught front-end developer. Graduated graphic designer and illustrator. Enjoys designing and building interactive websites. With or without animations. Has a keen eye for details. Always trying to improve his skillset. Let him help you.",
+    "Jorik van Ruiswijk. 33 years of age. Based in the Netherlands. Self-taught front-end developer. Graduated graphic designer and illustrator. Enjoys designing and building interactive websites. With or without animations. Has a keen eye for details. Always trying to improve his skillset. Let him help you.",
   subTitle: "Skills",
   moustache: "And some experience with..",
 };
