@@ -53,12 +53,13 @@ export const carouselData: WorkCard[] = [
   },
 
   {
-    href: "https://www.oceansewagealliance.org/",
-    src: "/assets/work/osa.png",
-    alt: "Ocean Sewage Alliance logo",
-    title: "Ocean Sewage Alliance website.",
-    labels: ["Website", "Vue.js", "Nuxt", "TypeScript", "GSAP", "SCSS"],
+    href: "https://lens-of-truth.netlify.app/",
+    src: "/assets/work/lens.png",
+    alt: "Lens of Truth logo",
+    title: "Lens of Truth",
+    labels: ["Canvas", "Javascript", "HTML5"],
   },
+
   // {
   //   href: "https://react-zesty.netlify.app/",
   //   src: "/assets/work/zesty.png",
@@ -87,13 +88,7 @@ export const carouselData: WorkCard[] = [
     title: "Rokt: Relevancy in ecommerce.",
     labels: ["Website", "Astro", "JavaScript", "SCSS"],
   },
-  // {
-  //   href: "https://shapes-in-space.netlify.app/",
-  //   src: "/assets/work/shapes.png",
-  //   alt: "Shapes logo",
-  //   title: "Shapes in space.",
-  //   labels: ["Three.js", "HTML5", "SCSS", "Canvas", "JavaScript"],
-  // },
+
   // {
   //   href: "https://react-lostintokyo.netlify.app/",
   //   src: "/assets/work/tokyo.png",
@@ -102,11 +97,18 @@ export const carouselData: WorkCard[] = [
   //   labels: ["Website", "React.js", "Tachyons"],
   // },
   {
-    href: "https://3-type-checker.superhi.com/",
+    href: "https://fancy-pancy-type-checker.vercel.app/",
     src: "/assets/work/typechecker.png",
     alt: "Type Checker logo",
     title: "Type Checker app.",
-    labels: ["Application", "JavaScript", "HTML5", "CSS"],
+    labels: ["Application", "React.js", "TypeScript"],
+  },
+  {
+    href: "https://www.oceansewagealliance.org/",
+    src: "/assets/work/osa.png",
+    alt: "Ocean Sewage Alliance logo",
+    title: "Ocean Sewage Alliance website.",
+    labels: ["Website", "Vue.js", "Nuxt", "TypeScript", "GSAP", "SCSS"],
   },
   // {
   //   href: "https://1-project-fifty-festival.superhi.com/",
@@ -134,12 +136,5 @@ export const carouselData: WorkCard[] = [
   //     src: "/assets/work/milkymood.png",
   //     alt: "Milkymood logo",
   //     label: "Website / React "
-  // },
-
-  // {
-  //     href: "https://lens-of-truth.netlify.app/",
-  //     src: "/assets/work/lens.png",
-  //     alt: "Lens of Truth logo",
-  //     label: "Canvas / Javascript / HTML5"
   // },
 ];
