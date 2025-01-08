@@ -26,7 +26,7 @@ export const Social: LinkProps[] = [
     label: "LinkedIn",
   },
   {
-    href: "https://www.instagram.com/jorik.van.ruiswijk/",
+    href: "https://www.instagram.com/jorik.tsx/",
     label: "Instagram",
   },
   {
