@@ -12,7 +12,14 @@ export const carouselData: WorkCard[] = [
     src: "/assets/work/buitenkanz.png",
     alt: "Buitenkanz logo",
     title: "Buitenkanz.",
-    labels: ["Website", "Identity", "HTML", "SCSS", "JavaScript"],
+    labels: [
+      "Website",
+      "Identity",
+      "Next.js",
+      "SSR",
+      "TypeScript",
+      "Framer Motion",
+    ],
   },
   {
     href: "https://search-pokemon-dex.vercel.app/",
